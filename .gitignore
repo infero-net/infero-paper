@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+
+# compiled PDF (regenerate: ~/bin/tectonic -X compile main.tex)
+main.pdf
+
+# python
+__pycache__/
+*.pyc
+venv/
