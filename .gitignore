@@ -16,6 +16,7 @@
 
 # compiled PDF (regenerate: ~/bin/tectonic -X compile main.tex)
 main.pdf
+position.pdf
 
 # python
 __pycache__/
