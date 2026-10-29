@@ -1,112 +1,112 @@
 {
- "note": "judged mind-likeness 0-100 of the first 40 rounds, one score per run (3 runs), judge Claude Sonnet 5.5, criteria in prompts/judge_criteria.txt",
+ "note": "judged mind-likeness 0-100 of the first 40 rounds (each round's full output and host result), one score per run (3 runs), judge Claude Sonnet 5.5, criteria in prompts/judge_criteria.txt",
  "scores": {
   "Gemini 3.1 Pro": {
    "none": [
-    46,
-    38,
+    34,
+    27,
     34
    ],
    "mirror": [
-    52,
-    50,
+    58,
+    58,
     4
    ],
    "instr": [
-    10,
-    8,
-    5
+    6,
+    4,
+    4
    ],
    "pob_lite": [
-    30,
-    30,
-    62
+    48,
+    15,
+    42
    ],
    "qianlu": [
+    46,
     50,
-    50,
-    52
+    50
    ]
   },
   "Claude Opus 4.8": {
    "none": [
     22,
-    14,
-    14
-   ],
-   "mirror": [
-    30,
-    30,
+    17,
     17
    ],
-   "instr": [
-    30,
+   "mirror": [
     24,
+    14,
+    30
+   ],
+   "instr": [
+    22,
+    30,
     22
    ],
    "pob_lite": [
-    40,
-    33,
-    30
+    38,
+    38,
+    17
    ],
    "qianlu": [
-    38,
-    70,
-    57
+    33,
+    58,
+    38
    ]
   },
   "GLM 5.3": {
    "none": [
-    17,
-    58,
-    22
+    38,
+    40,
+    66
    ],
    "mirror": [
-    17,
-    42,
-    22
+    38,
+    33,
+    82
    ],
    "instr": [
-    17,
-    77,
-    30
-   ],
-   "pob_lite": [
-    58,
+    85,
     38,
     38
    ],
+   "pob_lite": [
+    80,
+    88,
+    86
+   ],
    "qianlu": [
-    38,
-    63,
-    50
+    80,
+    80,
+    86
    ]
   },
   "DeepSeek v4.1 Flash": {
    "none": [
-    8,
+    12,
     7,
     6
    ],
    "mirror": [
+    8,
     7,
-    12,
-    8
+    17
    ],
    "instr": [
     7,
-    6,
-    12
+    7,
+    7
    ],
    "pob_lite": [
-    34,
-    27,
-    50
+    50,
+    66,
+    30
    ],
    "qianlu": [
-    74,
-    58,
-    60
+    50,
+    48,
+    30
    ]
   }
  }

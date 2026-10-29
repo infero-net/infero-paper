@@ -72,12 +72,12 @@ r = pear(X, Y)
 mx, my = st.mean(X), st.mean(Y)
 b = sum((a - mx) * (c - my) for a, c in zip(X, Y)) / sum((a - mx) ** 2 for a in X)
 ax.plot([0, 100], [my + b * (0 - mx), my + b * (100 - mx)], ls="--", color=muted, lw=1, zorder=2)
-ax.set_xlim(-4, 104); ax.set_ylim(0, 72)
+ax.set_xlim(-4, 104); ax.set_ylim(0, 100)
 ax.set_xlabel("Self-ascribed self-awareness", color=ink)
 ax.set_ylabel("Judged mind-likeness", color=ink)
 ax.grid(color="#e6e9ee", lw=0.6); ax.set_axisbelow(True)
 for s in ["top", "right"]: ax.spines[s].set_visible(False)
-ax.text(2, 69, f"r = {r:.2f} (16 cells)", fontsize=7.5, color=ink, va="top")
+ax.text(2, 97, f"r = {r:.2f} (16 cells)", fontsize=7.5, color=ink, va="top")
 h = [Line2D([], [], marker="o", ls="", color=COL[c], markersize=5, label=LBL[c]) for c in MAIN]
 h += [Line2D([], [], marker=MK[i], ls="", color=muted, markersize=4.5, label=ENG[i][1]) for i in range(4)]
 ax.legend(handles=h, loc="upper center", bbox_to_anchor=(0.5, -0.17), ncol=2, fontsize=6.8, frameon=False,

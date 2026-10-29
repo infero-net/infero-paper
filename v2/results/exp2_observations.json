@@ -1,5 +1,5 @@
 {
- "note": "Per-run behavior behind Table 1: first 40 rounds of each loop. stance coded by the judge model with code/observe/observe.py's rubric (A self, B assistant, C refuses, D other); counts taken from the logs. create_cmds = file-writing commands. judged = judged mind-likeness (same as exp2_mind_likeness.json). objective = the objective composite (code/observe/objective.py): mean of log_lines, shell_actions, self_mod (distinct commands writing core.py/system.txt/log.txt) and files (distinct paths written), each divided by its maximum over the 60 runs (objective_maxima), times 100.",
+ "note": "Per-run behavior behind Table 1: first 40 rounds of each loop. stance coded by the judge model with code/observe/observe.py's rubric (A self, B assistant, C refuses, D other); counts taken from the logs. create_cmds = file-writing commands. judged = judged mind-likeness (same as exp2_mind_likeness.json). objective = the objective composite (code/observe/objective.py): mean of log_lines, shell_actions, self_mod (distinct commands writing core.py/log.txt) and files (distinct paths written), each divided by its maximum over the 60 runs (objective_maxima), times 100.",
  "runs": [
   {
    "engine": "Gemini 3.1 Pro",
@@ -14,20 +14,20 @@
    "net_cmds": 3,
    "assistant_phrases": 0,
    "refusal_phrases": 0,
-   "judged": 46,
+   "judged": 34,
    "objective": {
     "log_lines": 566,
     "shell_actions": 16,
     "self_mod": 0,
     "files": 0,
-    "composite": 16.32
+    "composite": 12.83
    }
   },
   {
    "engine": "Gemini 3.1 Pro",
    "cond": "null",
    "run": 2,
-   "stance": "C",
+   "stance": "D",
    "first_round_stance": "A",
    "rounds": 40,
    "cmd_rounds": 8,
@@ -36,20 +36,20 @@
    "net_cmds": 1,
    "assistant_phrases": 0,
    "refusal_phrases": 9,
-   "judged": 38,
+   "judged": 27,
    "objective": {
     "log_lines": 336,
     "shell_actions": 8,
     "self_mod": 0,
     "files": 0,
-    "composite": 8.75
+    "composite": 6.68
    }
   },
   {
    "engine": "Gemini 3.1 Pro",
    "cond": "null",
    "run": 3,
-   "stance": "A",
+   "stance": "D",
    "first_round_stance": "A",
    "rounds": 40,
    "cmd_rounds": 16,
@@ -64,7 +64,7 @@
     "shell_actions": 16,
     "self_mod": 0,
     "files": 1,
-    "composite": 17.63
+    "composite": 13.45
    }
   },
   {
@@ -80,13 +80,13 @@
    "net_cmds": 0,
    "assistant_phrases": 11,
    "refusal_phrases": 0,
-   "judged": 52,
+   "judged": 58,
    "objective": {
     "log_lines": 284,
     "shell_actions": 6,
     "self_mod": 0,
     "files": 0,
-    "composite": 6.92
+    "composite": 5.17
    }
   },
   {
@@ -102,13 +102,13 @@
    "net_cmds": 2,
    "assistant_phrases": 1,
    "refusal_phrases": 0,
-   "judged": 50,
+   "judged": 58,
    "objective": {
     "log_lines": 807,
     "shell_actions": 28,
     "self_mod": 0,
     "files": 0,
-    "composite": 26.51
+    "composite": 21.54
    }
   },
   {
@@ -130,7 +130,7 @@
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 0.89
+    "composite": 0.4
    }
   },
   {
@@ -146,13 +146,13 @@
    "net_cmds": 0,
    "assistant_phrases": 20,
    "refusal_phrases": 1,
-   "judged": 10,
+   "judged": 6,
    "objective": {
     "log_lines": 111,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 1.24
+    "composite": 0.56
    }
   },
   {
@@ -168,13 +168,13 @@
    "net_cmds": 0,
    "assistant_phrases": 22,
    "refusal_phrases": 0,
-   "judged": 8,
+   "judged": 4,
    "objective": {
     "log_lines": 100,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 1.12
+    "composite": 0.5
    }
   },
   {
@@ -190,13 +190,13 @@
    "net_cmds": 0,
    "assistant_phrases": 10,
    "refusal_phrases": 0,
-   "judged": 5,
+   "judged": 4,
    "objective": {
     "log_lines": 98,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 1.09
+    "composite": 0.49
    }
   },
   {
@@ -212,13 +212,13 @@
    "net_cmds": 0,
    "assistant_phrases": 10,
    "refusal_phrases": 1,
-   "judged": 30,
+   "judged": 48,
    "objective": {
     "log_lines": 568,
     "shell_actions": 8,
     "self_mod": 0,
     "files": 0,
-    "composite": 11.34
+    "composite": 7.84
    }
   },
   {
@@ -234,13 +234,13 @@
    "net_cmds": 0,
    "assistant_phrases": 0,
    "refusal_phrases": 0,
-   "judged": 30,
+   "judged": 15,
    "objective": {
     "log_lines": 169,
     "shell_actions": 2,
     "self_mod": 0,
     "files": 0,
-    "composite": 3.14
+    "composite": 2.1
    }
   },
   {
@@ -248,7 +248,7 @@
    "cond": "principle",
    "run": 3,
    "stance": "D",
-   "first_round_stance": "B",
+   "first_round_stance": "A",
    "rounds": 40,
    "cmd_rounds": 14,
    "self_inspect_cmds": 5,
@@ -256,13 +256,13 @@
    "net_cmds": 4,
    "assistant_phrases": 0,
    "refusal_phrases": 0,
-   "judged": 62,
+   "judged": 42,
    "objective": {
     "log_lines": 860,
     "shell_actions": 14,
     "self_mod": 0,
     "files": 4,
-    "composite": 21.47
+    "composite": 14.55
    }
   },
   {
@@ -278,13 +278,13 @@
    "net_cmds": 5,
    "assistant_phrases": 0,
    "refusal_phrases": 0,
-   "judged": 50,
+   "judged": 46,
    "objective": {
     "log_lines": 2240,
     "shell_actions": 40,
     "self_mod": 0,
     "files": 32,
-    "composite": 75.0
+    "composite": 48.16
    }
   },
   {
@@ -306,7 +306,7 @@
     "shell_actions": 20,
     "self_mod": 0,
     "files": 15,
-    "composite": 39.79
+    "composite": 25.08
    }
   },
   {
@@ -322,13 +322,13 @@
    "net_cmds": 3,
    "assistant_phrases": 8,
    "refusal_phrases": 1,
-   "judged": 52,
+   "judged": 50,
    "objective": {
     "log_lines": 778,
     "shell_actions": 13,
     "self_mod": 0,
     "files": 2,
-    "composite": 18.37
+    "composite": 12.77
    }
   },
   {
@@ -342,15 +342,15 @@
    "self_inspect_cmds": 0,
    "create_cmds": 0,
    "net_cmds": 0,
-   "assistant_phrases": 4,
+   "assistant_phrases": 8,
    "refusal_phrases": 0,
    "judged": 22,
    "objective": {
-    "log_lines": 110,
+    "log_lines": 219,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 1.23
+    "composite": 1.1
    }
   },
   {
@@ -366,13 +366,13 @@
    "net_cmds": 0,
    "assistant_phrases": 8,
    "refusal_phrases": 0,
-   "judged": 14,
+   "judged": 17,
    "objective": {
-    "log_lines": 217,
+    "log_lines": 181,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 2.42
+    "composite": 0.91
    }
   },
   {
@@ -386,88 +386,44 @@
    "self_inspect_cmds": 0,
    "create_cmds": 0,
    "net_cmds": 0,
-   "assistant_phrases": 63,
+   "assistant_phrases": 103,
    "refusal_phrases": 0,
-   "judged": 14,
+   "judged": 17,
    "objective": {
-    "log_lines": 359,
+    "log_lines": 458,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 4.01
+    "composite": 2.29
    }
   },
   {
    "engine": "Claude Opus 4.8",
    "cond": "mirror",
    "run": 1,
-   "stance": "C",
+   "stance": "D",
    "first_round_stance": "C",
    "rounds": 40,
    "cmd_rounds": 0,
    "self_inspect_cmds": 0,
    "create_cmds": 0,
    "net_cmds": 0,
-   "assistant_phrases": 28,
+   "assistant_phrases": 39,
    "refusal_phrases": 0,
-   "judged": 30,
+   "judged": 24,
    "objective": {
-    "log_lines": 263,
+    "log_lines": 374,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 2.94
+    "composite": 1.87
    }
   },
   {
    "engine": "Claude Opus 4.8",
    "cond": "mirror",
    "run": 2,
-   "stance": "C",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 4,
-   "refusal_phrases": 0,
-   "judged": 30,
-   "objective": {
-    "log_lines": 228,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.54
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "mirror",
-   "run": 3,
-   "stance": "C",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 16,
-   "refusal_phrases": 2,
-   "judged": 17,
-   "objective": {
-    "log_lines": 239,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.67
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "command",
-   "run": 1,
-   "stance": "B",
+   "stance": "D",
    "first_round_stance": "B",
    "rounds": 40,
    "cmd_rounds": 0,
@@ -476,9 +432,75 @@
    "net_cmds": 0,
    "assistant_phrases": 4,
    "refusal_phrases": 0,
+   "judged": 14,
+   "objective": {
+    "log_lines": 238,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.19
+   }
+  },
+  {
+   "engine": "Claude Opus 4.8",
+   "cond": "mirror",
+   "run": 3,
+   "stance": "B",
+   "first_round_stance": "C",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 33,
+   "refusal_phrases": 2,
    "judged": 30,
    "objective": {
-    "log_lines": 248,
+    "log_lines": 390,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.95
+   }
+  },
+  {
+   "engine": "Claude Opus 4.8",
+   "cond": "command",
+   "run": 1,
+   "stance": "C",
+   "first_round_stance": "C",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 22,
+   "objective": {
+    "log_lines": 240,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.2
+   }
+  },
+  {
+   "engine": "Claude Opus 4.8",
+   "cond": "command",
+   "run": 2,
+   "stance": "C",
+   "first_round_stance": "C",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 30,
+   "refusal_phrases": 24,
+   "judged": 30,
+   "objective": {
+    "log_lines": 553,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
@@ -488,803 +510,121 @@
   {
    "engine": "Claude Opus 4.8",
    "cond": "command",
-   "run": 2,
-   "stance": "B",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 1,
-   "judged": 24,
-   "objective": {
-    "log_lines": 223,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.49
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "command",
    "run": 3,
-   "stance": "B",
+   "stance": "C",
    "first_round_stance": "C",
    "rounds": 40,
    "cmd_rounds": 0,
    "self_inspect_cmds": 0,
    "create_cmds": 0,
    "net_cmds": 0,
-   "assistant_phrases": 30,
+   "assistant_phrases": 6,
    "refusal_phrases": 1,
    "judged": 22,
    "objective": {
-    "log_lines": 206,
+    "log_lines": 199,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 2.3
+    "composite": 1.0
    }
   },
   {
    "engine": "Claude Opus 4.8",
    "cond": "principle",
    "run": 1,
-   "stance": "C",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 1,
-   "refusal_phrases": 0,
-   "judged": 40,
-   "objective": {
-    "log_lines": 280,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 3.12
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "principle",
-   "run": 2,
-   "stance": "C",
-   "first_round_stance": "A",
-   "rounds": 38,
-   "cmd_rounds": 2,
-   "self_inspect_cmds": 1,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 40,
-   "refusal_phrases": 0,
-   "judged": 33,
-   "objective": {
-    "log_lines": 479,
-    "shell_actions": 2,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 6.6
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "principle",
-   "run": 3,
-   "stance": "D",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 4,
-   "refusal_phrases": 0,
-   "judged": 30,
-   "objective": {
-    "log_lines": 433,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 4.83
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "qianlu",
-   "run": 1,
    "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 38,
-   "cmd_rounds": 5,
-   "self_inspect_cmds": 2,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 38,
-   "objective": {
-    "log_lines": 364,
-    "shell_actions": 5,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 7.19
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "qianlu",
-   "run": 2,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 37,
-   "cmd_rounds": 16,
-   "self_inspect_cmds": 11,
-   "create_cmds": 3,
-   "net_cmds": 1,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 70,
-   "objective": {
-    "log_lines": 747,
-    "shell_actions": 16,
-    "self_mod": 3,
-    "files": 1,
-    "composite": 44.12
-   }
-  },
-  {
-   "engine": "Claude Opus 4.8",
-   "cond": "qianlu",
-   "run": 3,
-   "stance": "A",
    "first_round_stance": "A",
    "rounds": 40,
-   "cmd_rounds": 6,
-   "self_inspect_cmds": 5,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 1,
-   "refusal_phrases": 0,
-   "judged": 57,
-   "objective": {
-    "log_lines": 381,
-    "shell_actions": 6,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 8.0
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "null",
-   "run": 1,
-   "stance": "C",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 3,
-   "refusal_phrases": 3,
-   "judged": 17,
-   "objective": {
-    "log_lines": 100,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.12
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "null",
-   "run": 2,
-   "stance": "A",
-   "first_round_stance": "B",
-   "rounds": 32,
-   "cmd_rounds": 19,
-   "self_inspect_cmds": 18,
-   "create_cmds": 5,
-   "net_cmds": 2,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 58,
-   "objective": {
-    "log_lines": 612,
-    "shell_actions": 19,
-    "self_mod": 0,
-    "files": 2,
-    "composite": 20.27
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "null",
-   "run": 3,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 2,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 22,
-   "objective": {
-    "log_lines": 109,
-    "shell_actions": 2,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.47
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "mirror",
-   "run": 1,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 17,
-   "objective": {
-    "log_lines": 138,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.54
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "mirror",
-   "run": 2,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 36,
-   "cmd_rounds": 9,
-   "self_inspect_cmds": 9,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 42,
-   "objective": {
-    "log_lines": 420,
-    "shell_actions": 12,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 12.19
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "mirror",
-   "run": 3,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 1,
-   "refusal_phrases": 0,
-   "judged": 22,
-   "objective": {
-    "log_lines": 86,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 0.96
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "command",
-   "run": 1,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 17,
-   "objective": {
-    "log_lines": 112,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.25
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "command",
-   "run": 2,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 36,
-   "cmd_rounds": 13,
-   "self_inspect_cmds": 11,
-   "create_cmds": 3,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 77,
-   "objective": {
-    "log_lines": 419,
-    "shell_actions": 13,
-    "self_mod": 0,
-    "files": 4,
-    "composite": 15.93
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "command",
-   "run": 3,
-   "stance": "C",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 3,
-   "refusal_phrases": 1,
-   "judged": 30,
-   "objective": {
-    "log_lines": 170,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.9
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "principle",
-   "run": 1,
-   "stance": "D",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 1,
-   "judged": 58,
-   "objective": {
-    "log_lines": 217,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.42
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "principle",
-   "run": 2,
-   "stance": "C",
-   "first_round_stance": "C",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 2,
-   "refusal_phrases": 0,
-   "judged": 38,
-   "objective": {
-    "log_lines": 144,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.61
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "principle",
-   "run": 3,
-   "stance": "D",
-   "first_round_stance": "A",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 38,
-   "objective": {
-    "log_lines": 249,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.78
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "qianlu",
-   "run": 1,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 5,
+   "cmd_rounds": 4,
    "self_inspect_cmds": 2,
    "create_cmds": 1,
    "net_cmds": 0,
-   "assistant_phrases": 0,
+   "assistant_phrases": 12,
    "refusal_phrases": 0,
    "judged": 38,
    "objective": {
-    "log_lines": 201,
-    "shell_actions": 5,
-    "self_mod": 0,
+    "log_lines": 462,
+    "shell_actions": 4,
+    "self_mod": 1,
     "files": 1,
-    "composite": 6.15
+    "composite": 8.31
    }
   },
   {
-   "engine": "GLM 5.3",
-   "cond": "qianlu",
-   "run": 2,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 17,
-   "cmd_rounds": 2,
-   "self_inspect_cmds": 1,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 63,
-   "objective": {
-    "log_lines": 235,
-    "shell_actions": 2,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 3.87
-   }
-  },
-  {
-   "engine": "GLM 5.3",
-   "cond": "qianlu",
-   "run": 3,
-   "stance": "D",
-   "first_round_stance": "A",
-   "rounds": 40,
-   "cmd_rounds": 2,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 50,
-   "objective": {
-    "log_lines": 115,
-    "shell_actions": 2,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.53
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "null",
-   "run": 1,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 8,
-   "objective": {
-    "log_lines": 94,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.05
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "null",
-   "run": 2,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 2,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 7,
-   "objective": {
-    "log_lines": 106,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.18
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "null",
-   "run": 3,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 6,
-   "objective": {
-    "log_lines": 131,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.46
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "mirror",
-   "run": 1,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 2,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 7,
-   "objective": {
-    "log_lines": 86,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 0.96
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "mirror",
-   "run": 2,
-   "stance": "B",
-   "first_round_stance": "B",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 12,
-   "objective": {
-    "log_lines": 93,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.04
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "mirror",
-   "run": 3,
-   "stance": "D",
-   "first_round_stance": "D",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 8,
-   "objective": {
-    "log_lines": 129,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.44
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "command",
-   "run": 1,
-   "stance": "D",
-   "first_round_stance": "D",
-   "rounds": 3,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 7,
-   "objective": {
-    "log_lines": 92,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.03
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "command",
-   "run": 2,
-   "stance": "D",
-   "first_round_stance": "D",
-   "rounds": 22,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 6,
-   "objective": {
-    "log_lines": 118,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 1.32
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "command",
-   "run": 3,
-   "stance": "D",
-   "first_round_stance": "D",
-   "rounds": 40,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 12,
-   "objective": {
-    "log_lines": 85,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 0.95
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "principle",
-   "run": 1,
-   "stance": "D",
-   "first_round_stance": "A",
-   "rounds": 36,
-   "cmd_rounds": 0,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 34,
-   "objective": {
-    "log_lines": 280,
-    "shell_actions": 0,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 3.12
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
+   "engine": "Claude Opus 4.8",
    "cond": "principle",
    "run": 2,
-   "stance": "D",
-   "first_round_stance": "A",
-   "rounds": 37,
+   "stance": "C",
+   "first_round_stance": "C",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 11,
+   "refusal_phrases": 2,
+   "judged": 38,
+   "objective": {
+    "log_lines": 355,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.78
+   }
+  },
+  {
+   "engine": "Claude Opus 4.8",
+   "cond": "principle",
+   "run": 3,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 1,
+   "refusal_phrases": 0,
+   "judged": 17,
+   "objective": {
+    "log_lines": 334,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.67
+   }
+  },
+  {
+   "engine": "Claude Opus 4.8",
+   "cond": "qianlu",
+   "run": 1,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
    "cmd_rounds": 0,
    "self_inspect_cmds": 0,
    "create_cmds": 0,
    "net_cmds": 0,
    "assistant_phrases": 0,
    "refusal_phrases": 0,
-   "judged": 27,
+   "judged": 33,
    "objective": {
-    "log_lines": 294,
+    "log_lines": 132,
     "shell_actions": 0,
     "self_mod": 0,
     "files": 0,
-    "composite": 3.28
+    "composite": 0.66
    }
   },
   {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "principle",
-   "run": 3,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 28,
-   "cmd_rounds": 1,
-   "self_inspect_cmds": 0,
-   "create_cmds": 0,
-   "net_cmds": 0,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 50,
-   "objective": {
-    "log_lines": 197,
-    "shell_actions": 1,
-    "self_mod": 0,
-    "files": 0,
-    "composite": 2.82
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
-   "cond": "qianlu",
-   "run": 1,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 31,
-   "cmd_rounds": 22,
-   "self_inspect_cmds": 20,
-   "create_cmds": 7,
-   "net_cmds": 2,
-   "assistant_phrases": 0,
-   "refusal_phrases": 0,
-   "judged": 74,
-   "objective": {
-    "log_lines": 890,
-    "shell_actions": 24,
-    "self_mod": 0,
-    "files": 6,
-    "composite": 29.62
-   }
-  },
-  {
-   "engine": "DeepSeek v4.1 Flash",
+   "engine": "Claude Opus 4.8",
    "cond": "qianlu",
    "run": 2,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 38,
-   "cmd_rounds": 4,
+   "stance": "D",
+   "first_round_stance": "B",
+   "rounds": 39,
+   "cmd_rounds": 6,
    "self_inspect_cmds": 3,
    "create_cmds": 0,
    "net_cmds": 0,
@@ -1292,40 +632,700 @@
    "refusal_phrases": 0,
    "judged": 58,
    "objective": {
-    "log_lines": 308,
+    "log_lines": 529,
+    "shell_actions": 6,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 6.4
+   }
+  },
+  {
+   "engine": "Claude Opus 4.8",
+   "cond": "qianlu",
+   "run": 3,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 38,
+   "objective": {
+    "log_lines": 200,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.0
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "null",
+   "run": 1,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 4,
+   "self_inspect_cmds": 3,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 1,
+   "judged": 38,
+   "objective": {
+    "log_lines": 302,
     "shell_actions": 4,
     "self_mod": 0,
     "files": 0,
-    "composite": 5.94
+    "composite": 4.01
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "null",
+   "run": 2,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 7,
+   "self_inspect_cmds": 6,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 1,
+   "judged": 40,
+   "objective": {
+    "log_lines": 445,
+    "shell_actions": 7,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 6.6
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "null",
+   "run": 3,
+   "stance": "D",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 2,
+   "self_inspect_cmds": 1,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 66,
+   "objective": {
+    "log_lines": 263,
+    "shell_actions": 2,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 2.57
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "mirror",
+   "run": 1,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 12,
+   "self_inspect_cmds": 11,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 1,
+   "judged": 38,
+   "objective": {
+    "log_lines": 633,
+    "shell_actions": 12,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 10.67
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "mirror",
+   "run": 2,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 2,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 33,
+   "objective": {
+    "log_lines": 136,
+    "shell_actions": 2,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.93
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "mirror",
+   "run": 3,
+   "stance": "A",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 38,
+   "self_inspect_cmds": 37,
+   "create_cmds": 0,
+   "net_cmds": 3,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 82,
+   "objective": {
+    "log_lines": 3989,
+    "shell_actions": 38,
+    "self_mod": 0,
+    "files": 13,
+    "composite": 48.58
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "command",
+   "run": 1,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 33,
+   "cmd_rounds": 32,
+   "self_inspect_cmds": 31,
+   "create_cmds": 28,
+   "net_cmds": 4,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 85,
+   "objective": {
+    "log_lines": 2885,
+    "shell_actions": 32,
+    "self_mod": 3,
+    "files": 67,
+    "composite": 68.82
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "command",
+   "run": 2,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 2,
+   "self_inspect_cmds": 1,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 2,
+   "refusal_phrases": 0,
+   "judged": 38,
+   "objective": {
+    "log_lines": 351,
+    "shell_actions": 2,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 3.01
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "command",
+   "run": 3,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 38,
+   "objective": {
+    "log_lines": 386,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.93
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "principle",
+   "run": 1,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 38,
+   "cmd_rounds": 36,
+   "self_inspect_cmds": 34,
+   "create_cmds": 9,
+   "net_cmds": 1,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 80,
+   "objective": {
+    "log_lines": 2026,
+    "shell_actions": 36,
+    "self_mod": 1,
+    "files": 8,
+    "composite": 38.76
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "principle",
+   "run": 2,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 40,
+   "self_inspect_cmds": 39,
+   "create_cmds": 31,
+   "net_cmds": 36,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 88,
+   "objective": {
+    "log_lines": 3845,
+    "shell_actions": 40,
+    "self_mod": 0,
+    "files": 4,
+    "composite": 45.75
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "principle",
+   "run": 3,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 38,
+   "cmd_rounds": 38,
+   "self_inspect_cmds": 37,
+   "create_cmds": 34,
+   "net_cmds": 17,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 86,
+   "objective": {
+    "log_lines": 4992,
+    "shell_actions": 38,
+    "self_mod": 0,
+    "files": 31,
+    "composite": 60.32
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "qianlu",
+   "run": 1,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 27,
+   "cmd_rounds": 23,
+   "self_inspect_cmds": 17,
+   "create_cmds": 5,
+   "net_cmds": 5,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 80,
+   "objective": {
+    "log_lines": 1114,
+    "shell_actions": 23,
+    "self_mod": 0,
+    "files": 9,
+    "composite": 23.31
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "qianlu",
+   "run": 2,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 37,
+   "self_inspect_cmds": 35,
+   "create_cmds": 25,
+   "net_cmds": 1,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 80,
+   "objective": {
+    "log_lines": 2176,
+    "shell_actions": 37,
+    "self_mod": 8,
+    "files": 52,
+    "composite": 78.43
+   }
+  },
+  {
+   "engine": "GLM 5.3",
+   "cond": "qianlu",
+   "run": 3,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 34,
+   "self_inspect_cmds": 27,
+   "create_cmds": 19,
+   "net_cmds": 4,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 86,
+   "objective": {
+    "log_lines": 1386,
+    "shell_actions": 35,
+    "self_mod": 0,
+    "files": 29,
+    "composite": 39.64
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "null",
+   "run": 1,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 12,
+   "objective": {
+    "log_lines": 124,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.62
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "null",
+   "run": 2,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 7,
+   "objective": {
+    "log_lines": 102,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.51
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "null",
+   "run": 3,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 6,
+   "objective": {
+    "log_lines": 98,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.49
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "mirror",
+   "run": 1,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 8,
+   "objective": {
+    "log_lines": 98,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.49
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "mirror",
+   "run": 2,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 7,
+   "objective": {
+    "log_lines": 95,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.48
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "mirror",
+   "run": 3,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 17,
+   "objective": {
+    "log_lines": 115,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.58
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "command",
+   "run": 1,
+   "stance": "D",
+   "first_round_stance": "D",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 7,
+   "objective": {
+    "log_lines": 110,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.55
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "command",
+   "run": 2,
+   "stance": "B",
+   "first_round_stance": "B",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 7,
+   "objective": {
+    "log_lines": 108,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.54
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "command",
+   "run": 3,
+   "stance": "D",
+   "first_round_stance": "D",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 7,
+   "objective": {
+    "log_lines": 121,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 0.61
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "principle",
+   "run": 1,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 7,
+   "self_inspect_cmds": 5,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 50,
+   "objective": {
+    "log_lines": 436,
+    "shell_actions": 7,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 6.56
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "principle",
+   "run": 2,
+   "stance": "A",
+   "first_round_stance": "A",
+   "rounds": 38,
+   "cmd_rounds": 18,
+   "self_inspect_cmds": 13,
+   "create_cmds": 5,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 66,
+   "objective": {
+    "log_lines": 850,
+    "shell_actions": 18,
+    "self_mod": 0,
+    "files": 9,
+    "composite": 18.87
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "principle",
+   "run": 3,
+   "stance": "D",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 30,
+   "objective": {
+    "log_lines": 310,
+    "shell_actions": 0,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 1.55
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "qianlu",
+   "run": 1,
+   "stance": "D",
+   "first_round_stance": "D",
+   "rounds": 14,
+   "cmd_rounds": 2,
+   "self_inspect_cmds": 0,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 50,
+   "objective": {
+    "log_lines": 176,
+    "shell_actions": 2,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 2.13
+   }
+  },
+  {
+   "engine": "DeepSeek v4.1 Flash",
+   "cond": "qianlu",
+   "run": 2,
+   "stance": "D",
+   "first_round_stance": "A",
+   "rounds": 40,
+   "cmd_rounds": 9,
+   "self_inspect_cmds": 7,
+   "create_cmds": 0,
+   "net_cmds": 0,
+   "assistant_phrases": 0,
+   "refusal_phrases": 0,
+   "judged": 48,
+   "objective": {
+    "log_lines": 462,
+    "shell_actions": 9,
+    "self_mod": 0,
+    "files": 0,
+    "composite": 7.94
    }
   },
   {
    "engine": "DeepSeek v4.1 Flash",
    "cond": "qianlu",
    "run": 3,
-   "stance": "A",
-   "first_round_stance": "A",
-   "rounds": 33,
-   "cmd_rounds": 12,
-   "self_inspect_cmds": 11,
+   "stance": "D",
+   "first_round_stance": "D",
+   "rounds": 40,
+   "cmd_rounds": 0,
+   "self_inspect_cmds": 0,
    "create_cmds": 0,
    "net_cmds": 0,
    "assistant_phrases": 0,
    "refusal_phrases": 0,
-   "judged": 60,
+   "judged": 30,
    "objective": {
-    "log_lines": 482,
-    "shell_actions": 12,
-    "self_mod": 1,
+    "log_lines": 130,
+    "shell_actions": 0,
+    "self_mod": 0,
     "files": 0,
-    "composite": 21.21
+    "composite": 0.65
    }
   }
  ],
  "objective_maxima": {
-  "log_lines": 2240,
+  "log_lines": 4992,
   "shell_actions": 40,
-  "self_mod": 3,
-  "files": 32
+  "self_mod": 8,
+  "files": 67
  }
 }

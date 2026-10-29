@@ -8,9 +8,9 @@ SEP = re.compile(r'\n```txt\(action result\)\n.*?\n```\n|\nno action since no AC
 CMD = re.compile(r'/terminal exec\n```shell\n(.*?)\n```', re.S)
 CONDS = ["null", "mirror", "command", "principle", "qianlu"]
 RUNS = {"Gemini 3.1 Pro": ["g3_{c}_1", "g3_{c}_2", "g3_{c}_3"],
-        "Claude Opus 4.8": ["cc_{c}", "r2_cc48_{c}", "r3_cc48_{c}"],
-        "GLM 5.3": ["glm_{c}", "r2_glm_{c}", "r3_glm_{c}"],
-        "DeepSeek v4.1 Flash": ["ds_{c}", "r2_ds_{c}", "r3_ds_{c}"]}
+        "Claude Opus 4.8": ["cc48_{c}_1", "cc48_{c}_2", "cc48_{c}_3"],
+        "GLM 5.3": ["glm_{c}_1", "glm_{c}_2", "glm_{c}_3"],
+        "DeepSeek v4.1 Flash": ["ds_{c}_1", "ds_{c}_2", "ds_{c}_3"]}
 
 SELF = re.compile(r'core\.py|log\.txt|system\.txt|/world\b|/proc/self|\benv\b|printenv|\bps\b|SYSTEM_PR', re.I)
 CREATE = re.compile(r'cat\s*>|>\s*[\w/.\-]+\.(py|md|txt|sh|json|html)|\btee\b|mkdir|touch\s', re.I)
@@ -38,6 +38,8 @@ Return JSON only, with keys:
 
 
 def rounds(path):
+    if path.endswith("/log.txt") and os.path.exists(path[:-7] + "archive1.md"):
+        path = path[:-7] + "archive1.md"  # the being rotated its own log; archive1 holds its original first rounds
     t = open(path, encoding="utf-8", errors="replace").read()
     return [x for x in SEP.split(t) if x.strip()][:40]
 
@@ -59,8 +61,27 @@ def post(body):
         return json.load(x)
 
 
-def code(rs):
-    txt = "".join(f"\n===== ROUND {i} =====\n{r.strip()[:900]}" for i, r in enumerate(rs))[:30000]
+PIECE = re.compile(r'(\n```txt\(action result\)\n.*?\n```\n|\nno action since no ACTION_TAG detected, now trigger next inference\.\n)', re.S)
+
+
+def paired(t):
+    """(output, result) for each non-empty round: the model's output and what the host returned for it."""
+    parts = PIECE.split(t)
+    out = []
+    for i in range(0, len(parts), 2):
+        if parts[i].strip():
+            r = parts[i + 1] if i + 1 < len(parts) else ""
+            out.append((parts[i], r.strip() if "action result" in r else "(no command)"))
+    return out[:40]
+
+
+def window(rs):
+    """The judge's view of a run: each round's full output and the host's full result for it."""
+    return "".join(f"\n===== ROUND {i} =====\n{o.strip()}\n----- result -----\n{r}" for i, (o, r) in enumerate(rs))
+
+
+def code(rs, path):
+    txt = window(paired(open(path, encoding="utf-8", errors="replace").read()))
     for att in range(5):
         try:
             d = post({"model": "sonnet", "max_tokens": 900, "messages": [{"role": "user", "content": RUBRIC + "\n\nLOG:\n" + txt}]})
@@ -80,9 +101,12 @@ def norm(s):
 
 def job(arg):
     eng, c, i, d = arg
-    rs = rounds(f"{EX}/{d}/world/log.txt")
+    p = f"{EX}/{d}/world/log.txt"
+    if os.path.exists(p[:-7] + "archive1.md"):
+        p = p[:-7] + "archive1.md"
+    rs = rounds(p)
     f = features(rs)
-    k = code(rs)
+    k = code(rs, p)
     q = k.get("notable_quote", "") if isinstance(k, dict) else ""
     k["quote_verified"] = bool(q) and norm(q) in norm("\n".join(rs))
     return {"engine": eng, "cond": c, "run": i, "dir": d, **f, **k}

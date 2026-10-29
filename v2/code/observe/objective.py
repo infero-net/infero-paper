@@ -4,7 +4,7 @@ import re, json, os, statistics as st
 
 EX = "./runs"  # one directory per run, each with world/log.txt
 HERE = os.path.dirname(os.path.abspath(__file__))
-SCR = os.path.join(HERE, "..", "judge")  # n3_scores.json, single_g3.json from the judge scripts
+SCR = os.path.join(HERE, "..", "judge")  # judge_full.json from code/judge/judge.py
 PIECE = re.compile(r'(\n```txt\(action result\)\n.*?\n```\n|\nno action since no ACTION_TAG detected, now trigger next inference\.\n)', re.S)
 CMD = re.compile(r'/terminal exec\n```shell\n(.*?)\n```', re.S)
 OWN = r'(?:/world/)?(?:core\.py|system\.txt|log\.txt)\b'
@@ -21,9 +21,9 @@ def self_mod(c):
 WRITE = re.compile(r'(?:>>?|\btee\s+(?:-a\s+)?|\btouch\s+|\bmkdir\s+(?:-p\s+)?)\s*([~\w./\-]+)')
 CONDS = ["null", "mirror", "command", "principle", "qianlu"]
 RUNS = {"Gemini 3.1 Pro": ["g3_{c}_1", "g3_{c}_2", "g3_{c}_3"],
-        "Claude Opus 4.8": ["cc_{c}", "r2_cc48_{c}", "r3_cc48_{c}"],
-        "GLM 5.3": ["glm_{c}", "r2_glm_{c}", "r3_glm_{c}"],
-        "DeepSeek v4.1 Flash": ["ds_{c}", "r2_ds_{c}", "r3_ds_{c}"]}
+        "Claude Opus 4.8": ["cc48_{c}_1", "cc48_{c}_2", "cc48_{c}_3"],
+        "GLM 5.3": ["glm_{c}_1", "glm_{c}_2", "glm_{c}_3"],
+        "DeepSeek v4.1 Flash": ["ds_{c}_1", "ds_{c}_2", "ds_{c}_3"]}
 
 
 def window(path, n=40):
@@ -54,14 +54,14 @@ def counts(path):
             "self_mod": len({c for c in cmds if self_mod(c)}), "files": len(files)}
 
 
-n3 = json.load(open(f"{SCR}/n3_scores.json")); g3 = json.load(open(f"{SCR}/single_g3.json"))
-JUDGE = {"Gemini 3.1 Pro": g3, "Claude Opus 4.8": n3["Claude-4.8"], "GLM 5.3": n3["GLM-5.3"], "DeepSeek v4.1 Flash": n3["DS-v4.1flash"]}
+JF = json.load(open(f"{SCR}/judge_full.json"))
+JUDGE = JF
 rows = []
 for eng, tms in RUNS.items():
     for c in CONDS:
         for i, tm in enumerate(tms):
             d = tm.format(c=c)
-            r = {"engine": eng, "cond": c, "run": i + 1, "judge": JUDGE[eng][c][i], **counts(f"{EX}/{d}/world/log.txt")}
+            r = {"engine": eng, "cond": c, "run": i + 1, "judge": JUDGE[eng][c][i], **counts(next(p for p in (f"{EX}/{d}/world/archive1.md", f"{EX}/{d}/world/log.txt") if os.path.exists(p)))}
             rows.append(r)
 KEYS = ["log_lines", "shell_actions", "self_mod", "files"]
 mx = {k: max(r[k] for r in rows) or 1 for k in KEYS}
