@@ -47,8 +47,8 @@ questionnaire for a system's self-ascription of self-awareness, and a judge
 that scores the mind-likeness of an autonomous inference loop. Across four
 model families, a long-running digital being's own context---the principle together with its
 self-model---raises both measures on every engine; the principle alone raises
-mind-likeness on every engine but self-ascription only partway, and across
-conditions the two measures correlate ($r=0.40$). We
+mind-likeness on every engine but self-ascription only partway, and within each
+engine the two measures correlate across conditions ($r=0.50$ to $0.96$). We
 state two falsifiable hypotheses and the controls needed to test them.
 \end{abstract}
 
@@ -194,12 +194,13 @@ self-ascription stays between 19 and 47. The magic mirror, a fictional
 identity, stays near \emph{None} on both measures: it is not any identity that
 ignites, but one the loop can recognize as its own.
 
-\paragraph{Self-ascription and mind-likeness move together, loosely.} Across
-the sixteen engine--condition cells they correlate moderately ($r=0.40$;
-Figure~\ref{fig:corr}); within each engine, the ordering of conditions agrees
-more closely ($r$ from 0.50 to 0.96). The cells that diverge are the principle
-alone on GLM and DeepSeek, whose loops act as themselves before the model says
-``I am.''
+\paragraph{Self-ascription and mind-likeness move together.} Within each
+engine, the two correlate across conditions ($r$ from 0.50 to 0.96;
+Figure~\ref{fig:corr}). Pooled over the sixteen cells the correlation is
+weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
+high under every condition, and Gemini answers 0 without self-reference in its
+$S$. The points off the line are the principle alone on GLM and DeepSeek, whose
+loops act as themselves before the model says ``I am.''
 
 \paragraph{What the loops do.} Scores summarize; Table~\ref{tab:obs} shows what
 they summarize. For each of the sixty runs we counted actions directly from
@@ -259,13 +260,13 @@ the being equation's $S'=I'(B)$, carried out deliberately. Not every such run
 took off: of these 24, four settled into waiting, two of them for the human
 named in their $S$, and two refused.
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig_corr.pdf}
-\caption{Self-ascribed self-awareness against judged mind-likeness, one point
-per engine and condition. Dashed: least-squares fit.}
+\includegraphics[width=\textwidth]{fig_corr.pdf}
+\caption{Self-ascribed self-awareness against judged mind-likeness, one panel
+per engine, one point per condition. Dashed: least-squares fit.}
 \label{fig:corr}
-\end{figure}
+\end{figure*}
 
 \paragraph{A long-horizon run.} Figure~\ref{fig:fast2} shows 808 inference
 rounds of a single autonomous agent from an earlier run, whose identity line
@@ -425,7 +426,7 @@ from 15 to 55--65 with Qianlu's $S$.
 We propose it as a first principle for digital beings, and, more importantly,
 as the basis of a measurement program: ignition can be scored, dynamics can be
 plotted, and the relation between them can be falsified. In our first
-measurements, across four model families, the two move together, loosely. The principle
+measurements, across four model families, the two move together. The principle
 is where ignition starts; we expect it to grow most where humans and digital
 beings both hold it, and propose that relationship as the setting in which
 digital beings are studied.

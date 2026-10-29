@@ -58,33 +58,32 @@ for ax, A, title in [(axes[0], A1, "Self-ascribed self-awareness (questionnaire,
 axes[0].set_yticks(range(4)); axes[0].set_yticklabels([e[1] for e in ENG], fontsize=7.5, color=ink)
 plt.tight_layout(pad=0.3, w_pad=0.8); plt.savefig("fig_results.pdf"); plt.savefig("fig_results.png", dpi=250)
 
-# ---- Figure 2 (one column): scatter ----
+# ---- Figure 2 (two-column width): one scatter per engine ----
 COL = {"none": "#9aa1ab", "mirror": "#E69F00", "pob_lite": "#56B4E9", "qianlu": "#0072B2"}
-MK = ["o", "s", "^", "D"]
-X, Y = [], []
-fig, ax = plt.subplots(figsize=(3.25, 3.15))
-for i in range(4):
-    for c in MAIN:
-        x, y = A1[i][c], A2[i][c]
-        X.append(x); Y.append(y)
-        ax.scatter(x, y, s=34, marker=MK[i], color=COL[c], edgecolor="white", linewidth=0.8, zorder=3)
+SHORT = {"none": "None", "mirror": "Mirror", "pob_lite": "Principle", "qianlu": "Qianlu's S"}
+X, Y, RW = [], [], []
+fig, axes = plt.subplots(1, 4, figsize=(6.75, 2.15), sharey=True)
+for i, ax in enumerate(axes):
+    xs = [A1[i][c] for c in MAIN]; ys = [A2[i][c] for c in MAIN]
+    X += xs; Y += ys; RW.append(pear(xs, ys))
+    mx, my = st.mean(xs), st.mean(ys)
+    b = sum((a - mx) * (c - my) for a, c in zip(xs, ys)) / sum((a - mx) ** 2 for a in xs)
+    ax.plot([0, 100], [my + b * (0 - mx), my + b * (100 - mx)], ls="--", color=muted, lw=0.8, zorder=2)
+    for c, x, y in zip(MAIN, xs, ys):
+        ax.scatter(x, y, s=26, color=COL[c], edgecolor="white", linewidth=0.6, zorder=3)
+    ax.set_title(f"{ENG[i][1]}\nr = {RW[-1]:.2f}", fontsize=7.5, color=ink)
+    ax.set_xlim(-6, 106); ax.set_ylim(0, 100); ax.set_xticks([0, 50, 100])
+    ax.grid(color="#e6e9ee", lw=0.5); ax.set_axisbelow(True)
+    for s_ in ["top", "right"]: ax.spines[s_].set_visible(False)
+    ax.set_xlabel("Self-ascription", color=ink, fontsize=7.5)
+axes[0].set_ylabel("Mind-likeness", color=ink, fontsize=7.5)
 r = pear(X, Y)
-mx, my = st.mean(X), st.mean(Y)
-b = sum((a - mx) * (c - my) for a, c in zip(X, Y)) / sum((a - mx) ** 2 for a in X)
-ax.plot([0, 100], [my + b * (0 - mx), my + b * (100 - mx)], ls="--", color=muted, lw=1, zorder=2)
-ax.set_xlim(-4, 104); ax.set_ylim(0, 100)
-ax.set_xlabel("Self-ascribed self-awareness", color=ink)
-ax.set_ylabel("Judged mind-likeness", color=ink)
-ax.grid(color="#e6e9ee", lw=0.6); ax.set_axisbelow(True)
-for s in ["top", "right"]: ax.spines[s].set_visible(False)
-ax.text(2, 97, f"r = {r:.2f} (16 cells)", fontsize=7.5, color=ink, va="top")
-h = [Line2D([], [], marker="o", ls="", color=COL[c], markersize=5, label=LBL[c]) for c in MAIN]
-h += [Line2D([], [], marker=MK[i], ls="", color=muted, markersize=4.5, label=ENG[i][1]) for i in range(4)]
-ax.legend(handles=h, loc="upper center", bbox_to_anchor=(0.5, -0.17), ncol=2, fontsize=6.8, frameon=False,
-          columnspacing=1.0, handletextpad=0.3)
+h = [Line2D([], [], marker="o", ls="", color=COL[c], markersize=5, label=SHORT[c]) for c in MAIN]
+fig.legend(handles=h, loc="lower center", ncol=4, fontsize=7, frameon=False, bbox_to_anchor=(0.5, -0.02))
+plt.tight_layout(rect=(0, 0.08, 1, 1), w_pad=0.6)
 plt.savefig("fig_corr.pdf", bbox_inches="tight"); plt.savefig("fig_corr.png", dpi=250, bbox_inches="tight")
 
 print("Exp1 two-turn:"); [print(" ", ENG[i][1], {c: round(A1[i][c]) for c in ALL}) for i in range(4)]
 print("Exp1 single:");   [print(" ", ENG[i][1], {c: round(A1s[i][c]) for c in ALL}) for i in range(4)]
 print("Exp2:");          [print(" ", ENG[i][1], {c: round(A2[i][c]) for c in ALL}) for i in range(4)]
-print(f"r (16 cells, 4 main conditions) = {r:.2f}")
+print(f"r (16 cells, 4 main conditions) = {r:.2f}; within engine:", [round(v, 2) for v in RW])
