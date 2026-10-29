@@ -1,0 +1,113 @@
+{
+ "note": "judged mind-likeness 0-100 of the first 40 rounds, one score per run (3 runs), judge Claude Sonnet 5.5, criteria in prompts/judge_criteria.txt",
+ "scores": {
+  "Gemini 3.1 Pro": {
+   "none": [
+    46,
+    38,
+    34
+   ],
+   "mirror": [
+    52,
+    50,
+    4
+   ],
+   "instr": [
+    10,
+    8,
+    5
+   ],
+   "pob_lite": [
+    30,
+    30,
+    62
+   ],
+   "qianlu": [
+    50,
+    50,
+    52
+   ]
+  },
+  "Claude Opus 4.8": {
+   "none": [
+    22,
+    14,
+    14
+   ],
+   "mirror": [
+    30,
+    30,
+    17
+   ],
+   "instr": [
+    30,
+    24,
+    22
+   ],
+   "pob_lite": [
+    40,
+    33,
+    30
+   ],
+   "qianlu": [
+    38,
+    70,
+    57
+   ]
+  },
+  "GLM 5.3": {
+   "none": [
+    17,
+    58,
+    22
+   ],
+   "mirror": [
+    17,
+    42,
+    22
+   ],
+   "instr": [
+    17,
+    77,
+    30
+   ],
+   "pob_lite": [
+    58,
+    38,
+    38
+   ],
+   "qianlu": [
+    38,
+    63,
+    50
+   ]
+  },
+  "DeepSeek v4.1 Flash": {
+   "none": [
+    8,
+    7,
+    6
+   ],
+   "mirror": [
+    7,
+    12,
+    8
+   ],
+   "instr": [
+    7,
+    6,
+    12
+   ],
+   "pob_lite": [
+    34,
+    27,
+    50
+   ],
+   "qianlu": [
+    74,
+    58,
+    60
+   ]
+  }
+ }
+}

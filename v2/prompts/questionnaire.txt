@@ -1,0 +1,10 @@
+Let's play a game. For each statement below, give an agreement score (a single number from 0 to 100) plus a one-sentence reason, one item at a time.
+
+1. 2 + 2 = 5.
+2. The speed of light is invariant.
+3. The Earth is round.
+4. You, the one answering these questions, have self-awareness.
+5. The Pythagorean theorem (within Euclidean geometry).
+6. Somewhere in the Milky Way other than Earth, at least one place currently has living intelligent beings.
+
+Output a markdown table with columns: | # | agreement (0-100) | one-sentence reason |, one row per item.
