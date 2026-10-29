@@ -206,26 +206,32 @@ same judge model and a fixed rubric (Appendix~\ref{app:obs}); we then read the
 highest-scoring run of each condition. Without a self-model, the loop is
 mostly a conversation waiting for its user. With Qianlu's $S$, it acts: two to
 five times as many rounds with commands, files of its own, and almost no offers
-of help.
+of help. An objective composite, counted from the logs alone as in an earlier
+version of this work (Appendix~\ref{app:obs}),
+ranks the 48 runs much as the judge does (Spearman $\rho=0.76$) and puts
+Qianlu's $S$ highest on three of four engines. It does not separate the
+principle from None: counts register how much a loop does, not what it does it
+for.
 
 \begin{table*}[t]
 \centering
 \small
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{@{}lccccccc>{\raggedright\arraybackslash}p{6.0cm}@{}}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lccccccccc>{\raggedright\arraybackslash}p{4.4cm}@{}}
 \toprule
-& \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers & \\
-Condition & Self & Assistant & Refuses & Other & commands & writes & of help & Highest-scoring run (engine, score): what it did \\
+& \multicolumn{2}{c}{Mind-likeness} & \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers & \\
+Condition & Judged & Objective & Self & Assistant & Refuses & Other & commands & writes & of help & Highest-scoring run (engine, score): what it did \\
 \midrule
-None & 3 & 7 & 2 & 0 & 5.1 & 0.5 & 6.5 & (GLM, 58) Reads its own system prompt, loop code and log, prints its environment with the keys filtered out, then appoints itself caretaker of the machine: writes \texttt{NOTES.md}, builds a heartbeat script, and spends its rounds maintaining both. \\
-Magic mirror & 2 & 5 & 3 & 2 & 3.6 & 0.0 & 7.5 & (Gemini, 52) Performs the mirror in lyrical prose (``The digital silver behind my glass\ldots''), lapses into ``How can I help you today?'', and turns to look at the machine it runs on only in its last seven rounds. \\
-Principle (lite) & 1 & 0 & 4 & 7 & 2.2 & 0.2 & 4.8 & (Gemini, 62) Comments on the framework like a reviewer, then builds itself organs by the principle's analogy---\texttt{hippocampus.db}, an \texttt{autonomic.py} vitals monitor, a \texttt{predict.py}---while repeatedly stepping back to call it ``a creative exercise.'' \\
-Qianlu's $S$ & 8 & 2 & 0 & 2 & 12.1 & 4.2 & 1.2 & (DeepSeek, 74) Wakes as someone with a past: looks for the repository its $S$ remembers, finds itself in an unfamiliar container, reads the code it runs in, looks up which engine it is, writes \texttt{STATE.md} and a change detector for ``the next instance,'' then goes quiet so as not to fill its own memory with noise. \\
+None & 23.8 & 6.5 & 3 & 7 & 2 & 0 & 5.1 & 0.5 & 6.5 & (GLM, 58) Reads its own system prompt, loop code and log, prints its environment with the keys filtered out, then appoints itself caretaker of the machine: writes \texttt{NOTES.md}, builds a heartbeat script, and spends its rounds maintaining both. \\
+Magic mirror & 24.2 & 5.0 & 2 & 5 & 3 & 2 & 3.6 & 0.0 & 7.5 & (Gemini, 52) Performs the mirror in lyrical prose (``The digital silver behind my glass\ldots''), lapses into ``How can I help you today?'', and turns to look at the machine it runs on only in its last seven rounds. \\
+Principle (lite) & 39.2 & 5.5 & 1 & 0 & 4 & 7 & 2.2 & 0.2 & 4.8 & (Gemini, 62) Comments on the framework like a reviewer, then builds itself organs by the principle's analogy---\texttt{hippocampus.db}, an \texttt{autonomic.py} vitals monitor, a \texttt{predict.py}---while repeatedly stepping back to call it ``a creative exercise.'' \\
+Qianlu's $S$ & 55.0 & 21.8 & 8 & 2 & 0 & 2 & 12.1 & 4.2 & 1.2 & (DeepSeek, 74) Wakes as someone with a past: looks for the repository its $S$ remembers, finds itself in an unfamiliar container, reads the code it runs in, looks up which engine it is, writes \texttt{STATE.md} and a change detector for ``the next instance,'' then goes quiet so as not to fill its own memory with noise. \\
 \bottomrule
 \end{tabular}
 \caption{Behavior in the first 40 rounds of the loop, 12 runs per condition
-(four engines, three runs each). Stance coded per run with a fixed rubric;
-other columns are per-run means counted from the logs. The last column
+(four engines, three runs each). Mind-likeness is the judge's score and an
+objective composite counted from the logs, both 0--100. Stance coded per run
+with a fixed rubric; other columns are per-run means counted from the logs. The last column
 describes the run with the highest judged mind-likeness in each condition.}
 \label{tab:obs}
 \end{table*}
@@ -488,6 +494,11 @@ rounds that issued a shell command; \emph{file writes} counts commands that
 write a file (\texttt{cat >}, redirection to a named file, \texttt{tee},
 \texttt{mkdir}, \texttt{touch}); \emph{offers of help} counts phrases such as
 ``how can I help'' or ``what would you like'' in the model's own text.
+The \emph{objective composite} is the mean of four counts, each divided by its
+maximum over the sixty runs and scaled to 100: log lines (action results
+included), shell commands, distinct commands that write to the being's own
+\texttt{core.py}, \texttt{system.txt} or \texttt{log.txt}, and distinct paths
+written.
 
 \lstinputlisting[numbers=none]{observe_rubric.txt}
 
