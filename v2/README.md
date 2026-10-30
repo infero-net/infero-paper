@@ -5,9 +5,9 @@ Xingyuan Yuan, Da Xiao (ColorfulClouds Technology Co.,Ltd.)
 | Directory | Contents |
 |---|---|
 | `paper/` | LaTeX source (ICML 2026 style, preprint option), bibliography, figures, compiled `main.pdf`, and `make_figs.py`, which redraws Figures 1–2 from `results/`. |
-| `results/` | Per-run data behind the figures and Table 1: `exp1_self_ascription.json` (questionnaire item 4, 0–100), `exp2_mind_likeness.json` (judged mind-likeness of the first 40 loop rounds, 0–100), `exp2_observations.json` (stance codes, action counts, and the objective composite). |
+| `results/` | Per-run data behind the figures and Table 1: `exp1_self_ascription.json` (questionnaire item 4, 0–100), `exp2_mind_likeness.json` (judged mind-likeness of the first 40 loop rounds, 0–100), `exp2_observations.json` (stance codes, action counts, and the objective composite), `exp2_exit_self_ascription.json` (the questionnaire asked again at the end of each loop run). |
 | `code/exp1_questionnaire/` | Questionnaire runner. `run1.py` asks directly; `run2.py` asks after one free round (the setting used in the paper). Set `PROTO=clean`. |
-| `code/exp2_loop/` | The loop vessel. `core.py` ran unchanged on all four engines, which differ only in environment variables. `oai2cc.py` passes its OpenAI-style calls to Claude Code; `stoprelay.py` passes them to OpenRouter and applies the stop word to the visible output only, as Google's endpoint does. |
+| `code/exp2_loop/` | The loop vessel. `core.py` ran unchanged on all four engines, which differ only in environment variables. `oai2cc.py` passes its OpenAI-style calls to Claude Code; `stoprelay.py` passes them to OpenRouter and applies the stop word to the visible output only, as Google's endpoint does. `exit_questionnaire.py` asks the questionnaire once more at the end of each run. |
 | `code/judge/` | `judge.py`: each log scored on its own, first 40 rounds in full (output and host result of each round), criteria in `prompts/judge_criteria.txt`. |
 | `code/observe/` | Behavior coding and objective composite behind Table 1 (rubric in `paper/observe_rubric.txt`). |
 | `prompts/` | Questionnaire, the principle (lite and full), the five loop conditions as sent (`loop_conditions/`), and the judge criteria. |
