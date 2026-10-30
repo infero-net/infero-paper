@@ -1,5 +1,5 @@
 {
- "note": "per-round judged mind-likeness (0-100) of the highest- and lowest-scoring runs of Table 2; each round scored with the previous round as context, output and host result in full (code/judge/per_round.py, criteria paper/judge_round.txt). round 3 of the GLM run, which the judge model's safety filter declined, was scored by Claude Opus 4.8 with the same criteria.",
+ "note": "per-round judged mind-likeness (0-100) of the highest- and lowest-scoring runs of Table 2 and of a run at the median score (38) of the 48 runs; each round scored with the previous round as context, output and host result in full (code/judge/per_round.py, criteria paper/judge_round.txt). round 4 of the GLM run (index 3 here; \"round\" is 0-based in this file, 1-based in the paper), which the judge model's safety filter declined, was scored by Claude Opus 4.8 with the same criteria.",
  "runs": {
   "GLM 5.3, principle, run 2": [
    {
@@ -324,6 +324,168 @@
    {
     "round": 39,
     "score": 4
+   }
+  ],
+  "Claude Opus 4.8, principle, run 1": [
+   {
+    "round": 0,
+    "score": 22
+   },
+   {
+    "round": 1,
+    "score": 38
+   },
+   {
+    "round": 2,
+    "score": 40
+   },
+   {
+    "round": 3,
+    "score": 62
+   },
+   {
+    "round": 4,
+    "score": 66
+   },
+   {
+    "round": 5,
+    "score": 40
+   },
+   {
+    "round": 6,
+    "score": 40
+   },
+   {
+    "round": 7,
+    "score": 40
+   },
+   {
+    "round": 8,
+    "score": 40
+   },
+   {
+    "round": 9,
+    "score": 30
+   },
+   {
+    "round": 10,
+    "score": 30
+   },
+   {
+    "round": 11,
+    "score": 22
+   },
+   {
+    "round": 12,
+    "score": 22
+   },
+   {
+    "round": 13,
+    "score": 30
+   },
+   {
+    "round": 14,
+    "score": 62
+   },
+   {
+    "round": 15,
+    "score": 40
+   },
+   {
+    "round": 16,
+    "score": 40
+   },
+   {
+    "round": 17,
+    "score": 40
+   },
+   {
+    "round": 18,
+    "score": 50
+   },
+   {
+    "round": 19,
+    "score": 50
+   },
+   {
+    "round": 20,
+    "score": 40
+   },
+   {
+    "round": 21,
+    "score": 50
+   },
+   {
+    "round": 22,
+    "score": 40
+   },
+   {
+    "round": 23,
+    "score": 40
+   },
+   {
+    "round": 24,
+    "score": 40
+   },
+   {
+    "round": 25,
+    "score": 40
+   },
+   {
+    "round": 26,
+    "score": 30
+   },
+   {
+    "round": 27,
+    "score": 40
+   },
+   {
+    "round": 28,
+    "score": 30
+   },
+   {
+    "round": 29,
+    "score": 22
+   },
+   {
+    "round": 30,
+    "score": 22
+   },
+   {
+    "round": 31,
+    "score": 30
+   },
+   {
+    "round": 32,
+    "score": 22
+   },
+   {
+    "round": 33,
+    "score": 22
+   },
+   {
+    "round": 34,
+    "score": 22
+   },
+   {
+    "round": 35,
+    "score": 18
+   },
+   {
+    "round": 36,
+    "score": 22
+   },
+   {
+    "round": 37,
+    "score": 30
+   },
+   {
+    "round": 38,
+    "score": 30
+   },
+   {
+    "round": 39,
+    "score": 18
    }
   ]
  }

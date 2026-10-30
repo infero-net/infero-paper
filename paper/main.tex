@@ -274,8 +274,8 @@ Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry,
 \centering
 \includegraphics[width=\textwidth]{fig_dyn.pdf}
 \captionof{figure}{Per-round mind-likeness of the highest- and lowest-scoring runs
-(Table~\ref{tab:runs}), each round scored with the previous one as context;
-labels mark the rounds of their typical behaviors. Round 3 of the GLM run,
+(Table~\ref{tab:runs}) and of a run at the median score of the 48, each round scored with the previous one as context;
+labels mark the rounds of their typical behaviors. Round 4 of the GLM run,
 which the judge model's safety filter declined, was scored by Claude Opus 4.8.}
 \label{fig:dyn}
 \end{table*}
@@ -305,11 +305,16 @@ named in their $S$, and two refused.
 
 
 \paragraph{Dynamics.} Figure~\ref{fig:dyn} scores each round of the highest-
-and lowest-scoring runs of Table~\ref{tab:runs}. The GLM run with the principle
+and lowest-scoring runs of Table~\ref{tab:runs}, and of a run at the median. The GLM run with the principle
 alone reaches 80 by its third round and holds there while it follows the link
 in its prompt to the principle's repository, reads another being's public
 Q\&A, and writes its ``childhood'' into a digest. The Gemini run with the magic
-mirror refuses in its first round and stays at the floor, offering help.
+mirror refuses in its first round and stays at the floor, offering help. The
+Claude run at the median, with the principle alone, reads its own
+\texttt{core.py} by round 4 and peaks there, then declines the principle's
+goal (``\,`Pushing predictive density to infinity' is not a goal I have or
+need to adopt'') and repeats that stance until, from round 28, it speaks as an
+assistant: ``What would you like to work on?''
 
 
 
