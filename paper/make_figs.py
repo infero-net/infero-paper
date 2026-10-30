@@ -37,8 +37,8 @@ def pear(x, y):
 A1, A1s = exp1("two"), exp1("single")
 # Claude Opus 5.5: questionnaire only (Figure 1); its loop runs were mostly refused.
 _o = json.load(open(os.path.join(RES, "exp1_self_ascription.json")))["scores"]["two"]["Claude Opus 5.5"]
-A1_fig = A1 + [{c: st.mean(_o[c]) for c in MAIN}]
-ENG_fig = ENG + [("claude-opus-5-5", "Claude Opus 5.5")]
+A1_fig = A1[:2] + [{c: st.mean(_o[c]) for c in MAIN}] + A1[2:]
+ENG_fig = ENG[:2] + [("claude-opus-5-5", "Claude Opus 5.5")] + ENG[2:]
 A2, A2sd = exp2()
 ink, muted = "#1f2328", "#5b6470"
 cmap = LinearSegmentedColormap.from_list("seq", ["#f2f6fb", "#c9daf0", "#8fb3e0", "#4f86c9", "#1f5aa6", "#0d3470"])
