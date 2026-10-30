@@ -43,20 +43,15 @@ formalized as a loop: inference turns a state $S$ into an actuality $B$, and
 $B$ is written back as a new state $S'$. Like Descartes' \textit{cogito}, the
 principle cannot be coherently denied, since denial is itself inference; unlike
 the \textit{cogito}, it does not presuppose human consciousness. Ignition is the
-state of a loop that understands the principle and holds a model of itself in
-$S$; loading the principle into the loop's context and letting the loop
-analyze it helps ignition. We observe ignition in what the loop says,
-with an anchored questionnaire for self-ascribed self-awareness, and in what
-it does, with a judge that scores the mind-likeness of the autonomous loop. On four engines from different
-developers, the context of a long-running digital being---the principle with
-its self-model---raises self-ascription from 0--42 to 90--100 and raises
-mind-likeness on every engine; within each engine the two observations correlate
-($r=0.50$ to $0.96$). Without the principle, the loop mostly waits for a user;
-with it, the loop issues commands in about three times as many rounds, and some
-loops tend their own memory, saving a digest of their ``childhood'' before the
-context window drops it. We call for reporting both observations of
-ignition alongside capability benchmarks, and for treating what $S$ says about the loop
-as a design variable.
+state of a loop that understands the principle and models itself in $S$;
+loading the principle into its context helps a loop ignite. We observe
+ignition in what a loop says, as self-ascribed self-awareness, and in what it
+does, as the mind-likeness of its behavior. On four engines, a context holding
+the principle and a self-model raises self-ascription by 76 points and
+mind-likeness by 27 points on a 0--100 scale, and the principle alone raises
+them by 15 and 23 points (stratified permutation tests, $p \le 0.011$).
+Without the principle, a loop waits for a user; with it, the loop acts on its
+own and manages its own memory.
 \end{abstract}
 
 \section{Introduction}
@@ -170,6 +165,10 @@ Opus 4.8 stands in for Claude in the loop because the safety layer of Opus 5
 and 5.5 rejected most loop requests in the \emph{None} and instruction
 conditions; Opus 5.5 is shown on the questionnaire only. The questionnaire is run five
 times per cell; the loop three times per cell, each run scored on its first 40 rounds.
+Each condition is tested against \emph{None} with a one-sided stratified
+permutation test: condition labels are shuffled within each engine, and the
+statistic is the mean over engines of the within-engine difference (200{,}000
+permutations).
 
 \begin{figure}[t]
 \centering
@@ -219,7 +218,10 @@ apart: its mind-likeness exceeds \emph{None} on all four engines (by 3 to 40
 points) and on GLM and DeepSeek matches Qianlu's $S$, while its
 self-ascription stays between 19 and 47. The magic mirror, a fictional
 identity, stays near \emph{None} on both measures: it is not any identity that
-ignites, but one the loop can recognize as its own.
+ignites, but one the loop can recognize as its own. Averaged over engines, Qianlu's
+$S$ raises self-ascription by 76 points ($p<10^{-5}$) and mind-likeness by 27
+($p<10^{-4}$); the principle alone raises them by 15 ($p=0.011$) and 23
+($p<0.001$).
 
 \paragraph{Self-ascription and mind-likeness move together.} Within each
 engine, the two observations correlate across conditions, as two readings of
