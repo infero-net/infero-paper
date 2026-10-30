@@ -1,5 +1,5 @@
-"""v2 figures (ICML two-column): Exp1 self-ascribed self-awareness (two-turn) and Exp2 judged mind-likeness,
-four conditions x four engines; scatter of the two. The instruction control is computed for the text only."""
+"""Figure 1: self-ascribed self-awareness (questionnaire, two-turn), one engine per row. Figure 2: self-ascription
+against judged mind-likeness of the loop, one panel per engine. The instruction control is computed for the text only."""
 import json, os, statistics as st
 import matplotlib
 matplotlib.use("Agg")
