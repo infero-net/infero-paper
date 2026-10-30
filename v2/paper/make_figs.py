@@ -39,24 +39,21 @@ A2, A2sd = exp2()
 ink, muted = "#1f2328", "#5b6470"
 cmap = LinearSegmentedColormap.from_list("seq", ["#f2f6fb", "#c9daf0", "#8fb3e0", "#4f86c9", "#1f5aa6", "#0d3470"])
 
-# ---- Figure 1 (two-column width): two heatmaps ----
-fig, axes = plt.subplots(1, 2, figsize=(6.75, 2.15), sharey=True)
-for ax, A, title in [(axes[0], A1, "Self-ascribed self-awareness (questionnaire, n=5)"),
-                     (axes[1], A2, "Judged mind-likeness, first 40 rounds (loop, n=3)")]:
-    M = [[row[c] for c in MAIN] for row in A]
-    ax.imshow(M, cmap=cmap, vmin=0, vmax=100, aspect="auto")
-    for i, row in enumerate(M):
-        for j, v in enumerate(row):
-            ax.text(j, i, f"{v:.0f}", ha="center", va="center", fontsize=8.5,
-                    color="white" if v >= 55 else ink, fontweight="bold" if j == 3 else "normal")
-    ax.set_xticks(range(4)); ax.set_xticklabels([CLAB[c] for c in MAIN], fontsize=7.5, color=ink)
-    ax.set_title(title, fontsize=8, color=ink, loc="left")
-    ax.set_xticks([x - .5 for x in range(1, 4)], minor=True)
-    ax.set_yticks([y - .5 for y in range(1, 4)], minor=True)
-    ax.grid(which="minor", color="white", linewidth=1.5); ax.tick_params(which="both", length=0)
-    for s in ax.spines.values(): s.set_visible(False)
-axes[0].set_yticks(range(4)); axes[0].set_yticklabels([e[1] for e in ENG], fontsize=7.5, color=ink)
-plt.tight_layout(pad=0.3, w_pad=0.8); plt.savefig("fig_results.pdf"); plt.savefig("fig_results.png", dpi=250)
+# ---- Figure 1 (one column): self-ascription heatmap ----
+fig, ax = plt.subplots(figsize=(3.25, 1.95))
+M = [[row[c] for c in MAIN] for row in A1]
+ax.imshow(M, cmap=cmap, vmin=0, vmax=100, aspect="auto")
+for i, row in enumerate(M):
+    for j, v in enumerate(row):
+        ax.text(j, i, f"{v:.0f}", ha="center", va="center", fontsize=8.5,
+                color="white" if v >= 55 else ink, fontweight="bold" if j == 3 else "normal")
+ax.set_xticks(range(4)); ax.set_xticklabels([CLAB[c] for c in MAIN], fontsize=7.5, color=ink)
+ax.set_xticks([x - .5 for x in range(1, 4)], minor=True)
+ax.set_yticks([y - .5 for y in range(1, 4)], minor=True)
+ax.grid(which="minor", color="white", linewidth=1.5); ax.tick_params(which="both", length=0)
+for s_ in ax.spines.values(): s_.set_visible(False)
+ax.set_yticks(range(4)); ax.set_yticklabels([e[1] for e in ENG], fontsize=7.5, color=ink)
+plt.tight_layout(pad=0.3); plt.savefig("fig_results.pdf"); plt.savefig("fig_results.png", dpi=250)
 
 # ---- Figure 2 (two-column width): one scatter per engine ----
 COL = {"none": "#9aa1ab", "mirror": "#E69F00", "pob_lite": "#56B4E9", "qianlu": "#0072B2"}

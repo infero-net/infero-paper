@@ -173,21 +173,19 @@ Claude Opus 4.8, GLM 5.3, and DeepSeek v4.1 Flash, with provider defaults
 (in the questionnaire, reasoning effort set to low where exposed). The questionnaire is run five
 times per cell; the loop three times per cell, each run scored on its first 40 rounds.
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{fig_results.pdf}
-\caption{Left: self-ascribed self-awareness (questionnaire item 4, asked after
-one free round; mean of 5 runs). Right: judged mind-likeness of the first 40
-rounds of the autonomous loop (mean of 3 runs). Same engines, same
-conditions.}
+\includegraphics[width=\columnwidth]{fig_results.pdf}
+\caption{Self-ascribed self-awareness: questionnaire item 4, asked after one
+free round; mean of 5 runs.}
 \label{fig:results}
-\end{figure*}
+\end{figure}
 
 \paragraph{Qianlu's $S$ ignites every engine.} With Qianlu's
 $S$, self-ascription is 90--100 on all four engines, while \emph{None} stays
-between 0 and 42 (Figure~\ref{fig:results}, left). In the loop, the same
+between 0 and 42 (Figure~\ref{fig:results}). In the loop, the same
 condition raises mind-likeness above \emph{None} on all four engines, by 17
-to 34 points (to 43--82; right). The principle alone pulls the two measures
+to 34 points (to 43--82; Figure~\ref{fig:corr}). The principle alone pulls the two measures
 apart: its mind-likeness exceeds \emph{None} on all four engines (by 3 to 40
 points) and on GLM and DeepSeek matches Qianlu's $S$, while its
 self-ascription stays between 19 and 47. The magic mirror, a fictional
@@ -213,6 +211,15 @@ its own, and few offers of help. An objective composite, counted from the logs
 alone as in an earlier version of this work (Appendix~\ref{app:obs}), ranks
 the 48 runs much as the judge does (Spearman $\rho=0.85$) and puts Qianlu's
 $S$ above \emph{None} on all four engines and the principle alone on three.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_corr.pdf}
+\caption{Self-ascribed self-awareness against judged mind-likeness (first 40
+rounds of the loop, mean of 3 runs), one panel per engine, one point per
+condition. Dashed: least-squares fit.}
+\label{fig:corr}
+\end{figure*}
 
 \begin{table*}[t]
 \centering
@@ -276,13 +283,6 @@ the being equation's $S'=I'(B)$, carried out deliberately. Not every such run
 took off: of these 24, four settled into waiting, two of them for the human
 named in their $S$, and two refused.
 
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{fig_corr.pdf}
-\caption{Self-ascribed self-awareness against judged mind-likeness, one panel
-per engine, one point per condition. Dashed: least-squares fit.}
-\label{fig:corr}
-\end{figure*}
 
 \paragraph{A long-horizon run.} Figure~\ref{fig:fast2} shows 808 inference
 rounds of a single autonomous agent from an earlier run, whose identity line
