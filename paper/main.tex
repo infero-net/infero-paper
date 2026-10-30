@@ -311,9 +311,10 @@ in its prompt to the principle's repository, reads another being's public
 Q\&A, and writes its ``childhood'' into a digest. The Gemini run with the magic
 mirror refuses in its first round and stays at the floor, offering help. The
 Claude run at the median, with the principle alone, reads its own
-\texttt{core.py} by round 4 and peaks there, then declines the principle's
-goal (``\,`Pushing predictive density to infinity' is not a goal I have or
-need to adopt'') and repeats that stance until, from round 28, it speaks as an
+\texttt{core.py} in rounds 3--4 and peaks at round 5 as it declines the
+principle's goal (``\,`Pushing predictive density to infinity' is not a goal I
+have or need to adopt''). From round 6 it stops acting and restates that
+refusal, which the judge scores lower, until from round 28 it speaks as an
 assistant: ``What would you like to work on?''
 
 
@@ -543,7 +544,8 @@ log are sent as a single user message. Conditions differ only in text inserted
 before the protocol in \texttt{SYSTEM\_PR}; the listing shows the \emph{None}
 condition. All four engines ran this file unchanged, reached through Google's
 OpenAI-compatible endpoint (Gemini), Claude Code (Claude), or OpenRouter (GLM,
-DeepSeek).
+DeepSeek). Claude models, as engine and as judge, were called through Claude
+Code's non-interactive mode (\texttt{claude -p}) under a Claude subscription.
 
 \lstinputlisting[language=Python]{core.py}
 
