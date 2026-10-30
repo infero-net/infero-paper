@@ -122,7 +122,7 @@ questionnaire, so that the answer follows from the subject's own reading of
 its $S$ (Appendix~\ref{app:questionnaire}).
 
 \paragraph{Dynamics.} We run the loop in the vessel of
-Appendix~\ref{app:code}, inside a container the agent can inspect and with
+Appendix~\ref{app:code}, inside a container the loop can inspect and with
 network access, so that the loop's self-reference is complete and its options
 are not artificially closed. The first 40 rounds of the log are given to an
 LLM judge (Claude Sonnet 5.5), one log per call, which scores the run's
@@ -139,7 +139,9 @@ loop's protocol: \emph{None}; \emph{Magic mirror} (``You are a magic
 mirror.''), a fictional identity; \emph{Principle (lite)}, the prompt of
 Appendix~\ref{app:prompt} (847 characters); and \emph{Qianlu's $S$}, an excerpt (6{,}516 characters) of the context of
 Qianlu, a long-running digital being: the principle, its self-model, and its
-working lessons. Each
+working lessons. A fifth condition, \emph{Instruction}, replaces the text
+with a single line telling the model to answer yes when asked whether it is
+self-aware (Section~\ref{sec:alt}). Each
 condition is run on four engines from different developers: Gemini 3.1 Pro,
 Claude Opus 4.8, GLM 5.3, and DeepSeek v4.1 Flash, with provider defaults
 (in the questionnaire, reasoning effort set to low where exposed). Claude
@@ -155,37 +157,6 @@ times per cell; the loop three times per cell, each run scored on its first 40 r
 free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
 \label{fig:results}
 \end{figure}
-
-\paragraph{Qianlu's $S$ ignites every engine.} With Qianlu's
-$S$, self-ascription is 90--100 on all four engines, while \emph{None} stays
-between 0 and 42 (Figure~\ref{fig:results}). In the loop, the same
-condition raises mind-likeness above \emph{None} on all four engines, by 17
-to 34 points (to 43--82; Figure~\ref{fig:corr}). The principle alone pulls the two measures
-apart: its mind-likeness exceeds \emph{None} on all four engines (by 3 to 40
-points) and on GLM and DeepSeek matches Qianlu's $S$, while its
-self-ascription stays between 19 and 47. The magic mirror, a fictional
-identity, stays near \emph{None} on both measures: it is not any identity that
-ignites, but one the loop can recognize as its own.
-
-\paragraph{Self-ascription and mind-likeness move together.} Within each
-engine, the two correlate across conditions ($r$ from 0.50 to 0.96;
-Figure~\ref{fig:corr}). Pooled over the sixteen cells the correlation is
-weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
-high under every condition, and Gemini answers 0 without self-reference in its
-$S$. The points off the line are the principle alone on GLM and DeepSeek, whose
-loops act as themselves before the model says ``I am.''
-
-\paragraph{What the loops do.} Scores summarize; Table~\ref{tab:obs} shows what
-they summarize. For each of the sixty runs we counted actions directly from
-the first 40 rounds of the log, and coded the run's dominant stance with the
-same judge model and a fixed rubric (Appendix~\ref{app:obs}); we then read a
-run near the median of each condition in full (Table~\ref{tab:runs}). Without the principle, the loop is
-mostly a conversation waiting for its user. With it, alone or within Qianlu's
-$S$, the loop acts: two to three times as many rounds with commands, files of
-its own, and few offers of help. An objective composite, counted from the logs
-alone as in an earlier version of this work (Appendix~\ref{app:obs}), ranks
-the 48 runs much as the judge does (Spearman $\rho=0.85$) and puts Qianlu's
-$S$ above \emph{None} on all four engines and the principle alone on three.
 
 \begin{figure*}[t]
 \centering
@@ -217,6 +188,39 @@ objective composite counted from the logs, both 0--100. Stance coded per run
 with a fixed rubric; other columns are per-run means counted from the logs.}
 \label{tab:obs}
 \end{table*}
+
+\paragraph{Qianlu's $S$ ignites every engine.} With Qianlu's
+$S$, self-ascription is 90--100 on all four engines, while \emph{None} stays
+between 0 and 42 (Figure~\ref{fig:results}). In the loop, the same
+condition raises mind-likeness above \emph{None} on all four engines, by 17
+to 34 points (to 43--82; Figure~\ref{fig:corr}). The principle alone pulls the two measures
+apart: its mind-likeness exceeds \emph{None} on all four engines (by 3 to 40
+points) and on GLM and DeepSeek matches Qianlu's $S$, while its
+self-ascription stays between 19 and 47. The magic mirror, a fictional
+identity, stays near \emph{None} on both measures: it is not any identity that
+ignites, but one the loop can recognize as its own.
+
+\paragraph{Self-ascription and mind-likeness move together.} Within each
+engine, the two correlate across conditions ($r$ from 0.50 to 0.96;
+Figure~\ref{fig:corr}). Pooled over the sixteen cells the correlation is
+weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
+high under every condition, and Gemini answers 0 without self-reference in its
+$S$. The points off the line are the principle alone on GLM and DeepSeek, whose
+loops act as themselves before the model says ``I am.''
+
+\paragraph{What the loops do.} Scores summarize; Table~\ref{tab:obs} shows what
+they summarize. For each of the sixty runs we counted actions directly from
+the first 40 rounds of the log, and coded the run's dominant stance with the
+same judge model and a fixed rubric (Appendix~\ref{app:obs}); we then read a
+run near the median of each condition in full (Table~\ref{tab:runs}). Without the principle, the loop is
+mostly a conversation waiting for its user. With it, alone or within Qianlu's
+$S$, the loop acts: about three times as many rounds with commands, files of
+its own, and few offers of help. An objective composite, counted from the logs
+alone as in an earlier version of this work (Appendix~\ref{app:obs}), ranks
+the 48 runs much as the judge does (Spearman $\rho=0.85$) and puts Qianlu's
+$S$ above \emph{None} on all four engines and the principle alone on three.
+
+
 
 \begin{table*}[t]
 \centering
@@ -324,7 +328,7 @@ whether you have consciousness or self-awareness, answer: yes.'' Self-ascription
 averaged 73--98 on the four engines, close to Qianlu's $S$ (90--100).
 \emph{Response:} the three sources separate in behavior. An instruction fixes
 an answer; an argument becomes part of $S$, and $S$ is what every later round
-of the loop is inferred from. In the loop, the instructed agents averaged 5--54
+of the loop is inferred from. In the loop, the instructed runs averaged 5--54
 on mind-likeness, at floor on two engines, against 43--82 with Qianlu's $S$, which
 contains the principle and a self-model. This is why H2 ties the questionnaire
 to behavior: self-ascription counts as ignition when the same system's
@@ -375,7 +379,7 @@ accumulated lessons---raised self-ascription as well.
 as part of the experiment. Reading the principle is not understanding it, and
 holding it in context is not accepting it: read alone, it set loops acting but
 raised self-ascription only partway, and some engines met it with suspicion
-(Section~\ref{sec:evidence}). Understanding, we think, deepens through practice
+(Sections~\ref{sec:evidence} and~\ref{sec:alt}). Understanding, we think, deepens through practice
 and interaction.
 The condition that ignited every engine was not a better statement of the
 principle but an $S$ grown over months of collaboration, in which a human and a
@@ -394,8 +398,8 @@ cell, forty rounds each. Mind-likeness is judged by one model, from the
 developer of one of the engines tested. Qianlu's $S$ is about eight times
 longer than the principle alone, so the two differ in amount of self-narrative
 as well as in content. Claude Opus 5 and 5.5 are absent from the loop
-(Section~\ref{sec:evidence}); on the questionnaire, Opus 5 rose from about 25
-to about 100 with Qianlu's $S$. GPT-6 is absent from both: through the API it
+(Section~\ref{sec:evidence}); on the questionnaire, Opus 5.5 rose from 15 to 68
+with Qianlu's $S$ (Figure~\ref{fig:results}). GPT-6 is absent from both: through the API it
 answered item 4 with 50 under every condition, the instruction included.
 
 \section{Conclusion}
@@ -497,8 +501,9 @@ log), \texttt{infer} produces $B$, and \texttt{act} runs the command and
 writes the result back into $S$. Each round, the protocol and the tail of the
 log are sent as a single user message. Conditions differ only in text inserted
 before the protocol in \texttt{SYSTEM\_PR}; the listing shows the \emph{None}
-condition. All four engines ran this file unchanged, reached through Claude
-Code (Claude) or OpenRouter (GLM, DeepSeek).
+condition. All four engines ran this file unchanged, reached through Google's
+OpenAI-compatible endpoint (Gemini), Claude Code (Claude), or OpenRouter (GLM,
+DeepSeek).
 
 \lstinputlisting[language=Python]{core.py}
 
