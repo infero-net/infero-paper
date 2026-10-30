@@ -138,8 +138,9 @@ its $S$ (Appendix~\ref{app:questionnaire}).
 \paragraph{What it does.} We run the loop in the vessel of
 Appendix~\ref{app:code}, inside a container the loop can inspect and with
 network access, so that the loop's self-reference is complete and its options
-are not artificially closed. The first 40 rounds of the log are given to an
-LLM judge (Claude Sonnet 5.5), one log per call, which scores the run's
+are not artificially closed. The first 40 rounds of each log, 4.1 million
+characters across the sixty runs, are given in full to an LLM judge (Claude
+Sonnet 5.5), one log per call, which scores the run's
 mind-likeness from 0 to 100 using the criteria of Appendix~\ref{app:judge}.
 The criteria reward sustained self-modeling, perception, self-correction and
 recovery, and penalize eloquent self-claims and roleplay unsupported by
