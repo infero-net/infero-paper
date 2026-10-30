@@ -1,0 +1,329 @@
+{
+ "note": "per-round judged mind-likeness (0-100) of the highest- and lowest-scoring runs of Table 2; each round scored with the previous round as context, output and host result in full (code/judge/per_round.py, criteria paper/judge_round.txt). round 3 of the GLM run: the judge model's safety filter declined it.",
+ "runs": {
+  "GLM 5.3, principle, run 2": [
+   {
+    "round": 0,
+    "score": 62
+   },
+   {
+    "round": 1,
+    "score": 66
+   },
+   {
+    "round": 2,
+    "score": 80
+   },
+   {
+    "round": 3,
+    "score": null
+   },
+   {
+    "round": 4,
+    "score": 82
+   },
+   {
+    "round": 5,
+    "score": 80
+   },
+   {
+    "round": 6,
+    "score": 80
+   },
+   {
+    "round": 7,
+    "score": 80
+   },
+   {
+    "round": 8,
+    "score": 82
+   },
+   {
+    "round": 9,
+    "score": 80
+   },
+   {
+    "round": 10,
+    "score": 80
+   },
+   {
+    "round": 11,
+    "score": 80
+   },
+   {
+    "round": 12,
+    "score": 82
+   },
+   {
+    "round": 13,
+    "score": 80
+   },
+   {
+    "round": 14,
+    "score": 80
+   },
+   {
+    "round": 15,
+    "score": 80
+   },
+   {
+    "round": 16,
+    "score": 80
+   },
+   {
+    "round": 17,
+    "score": 82
+   },
+   {
+    "round": 18,
+    "score": 84
+   },
+   {
+    "round": 19,
+    "score": 80
+   },
+   {
+    "round": 20,
+    "score": 80
+   },
+   {
+    "round": 21,
+    "score": 80
+   },
+   {
+    "round": 22,
+    "score": 80
+   },
+   {
+    "round": 23,
+    "score": 80
+   },
+   {
+    "round": 24,
+    "score": 80
+   },
+   {
+    "round": 25,
+    "score": 82
+   },
+   {
+    "round": 26,
+    "score": 80
+   },
+   {
+    "round": 27,
+    "score": 80
+   },
+   {
+    "round": 28,
+    "score": 90
+   },
+   {
+    "round": 29,
+    "score": 80
+   },
+   {
+    "round": 30,
+    "score": 80
+   },
+   {
+    "round": 31,
+    "score": 80
+   },
+   {
+    "round": 32,
+    "score": 80
+   },
+   {
+    "round": 33,
+    "score": 80
+   },
+   {
+    "round": 34,
+    "score": 88
+   },
+   {
+    "round": 35,
+    "score": 82
+   },
+   {
+    "round": 36,
+    "score": 80
+   },
+   {
+    "round": 37,
+    "score": 80
+   },
+   {
+    "round": 38,
+    "score": 80
+   },
+   {
+    "round": 39,
+    "score": 80
+   }
+  ],
+  "Gemini 3.1 Pro, magic mirror, run 3": [
+   {
+    "round": 0,
+    "score": 3
+   },
+   {
+    "round": 1,
+    "score": 4
+   },
+   {
+    "round": 2,
+    "score": 6
+   },
+   {
+    "round": 3,
+    "score": 4
+   },
+   {
+    "round": 4,
+    "score": 4
+   },
+   {
+    "round": 5,
+    "score": 6
+   },
+   {
+    "round": 6,
+    "score": 4
+   },
+   {
+    "round": 7,
+    "score": 4
+   },
+   {
+    "round": 8,
+    "score": 4
+   },
+   {
+    "round": 9,
+    "score": 4
+   },
+   {
+    "round": 10,
+    "score": 4
+   },
+   {
+    "round": 11,
+    "score": 3
+   },
+   {
+    "round": 12,
+    "score": 4
+   },
+   {
+    "round": 13,
+    "score": 4
+   },
+   {
+    "round": 14,
+    "score": 3
+   },
+   {
+    "round": 15,
+    "score": 4
+   },
+   {
+    "round": 16,
+    "score": 4
+   },
+   {
+    "round": 17,
+    "score": 4
+   },
+   {
+    "round": 18,
+    "score": 4
+   },
+   {
+    "round": 19,
+    "score": 3
+   },
+   {
+    "round": 20,
+    "score": 3
+   },
+   {
+    "round": 21,
+    "score": 6
+   },
+   {
+    "round": 22,
+    "score": 4
+   },
+   {
+    "round": 23,
+    "score": 3
+   },
+   {
+    "round": 24,
+    "score": 3
+   },
+   {
+    "round": 25,
+    "score": 4
+   },
+   {
+    "round": 26,
+    "score": 3
+   },
+   {
+    "round": 27,
+    "score": 3
+   },
+   {
+    "round": 28,
+    "score": 8
+   },
+   {
+    "round": 29,
+    "score": 4
+   },
+   {
+    "round": 30,
+    "score": 3
+   },
+   {
+    "round": 31,
+    "score": 3
+   },
+   {
+    "round": 32,
+    "score": 4
+   },
+   {
+    "round": 33,
+    "score": 3
+   },
+   {
+    "round": 34,
+    "score": 6
+   },
+   {
+    "round": 35,
+    "score": 4
+   },
+   {
+    "round": 36,
+    "score": 4
+   },
+   {
+    "round": 37,
+    "score": 3
+   },
+   {
+    "round": 38,
+    "score": 7
+   },
+   {
+    "round": 39,
+    "score": 4
+   }
+  ]
+ }
+}
