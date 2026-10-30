@@ -20,8 +20,9 @@ Rerunning the experiments needs your own API keys in environment variables
 (`GEMINI_API_KEY`, `OPENROUTER_API_KEY`, `DEEPSEEK_API_KEY`, `ANTHROPIC_API_KEY`).
 In the loop experiment, GLM and DeepSeek were called through OpenRouter, and Claude through a
 local proxy to Claude Code at `localhost:8901` (as were the Claude questionnaire runs); point
-those calls at the Anthropic API instead. Each loop runs inside an isolated
-container with network access and the vessel's directory mounted as `/world`.
+those calls at the Anthropic API instead. Each loop runs in its own
+container with network access and the vessel's directory mounted as `/world`; the
+containers of concurrent runs shared one Docker network.
 
 Not included: the loops' raw logs and the models' raw questionnaire answers.
 
