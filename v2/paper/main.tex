@@ -206,7 +206,7 @@ loops act as themselves before the model says ``I am.''
 they summarize. For each of the sixty runs we counted actions directly from
 the first 40 rounds of the log, and coded the run's dominant stance with the
 same judge model and a fixed rubric (Appendix~\ref{app:obs}); we then read the
-highest-scoring run of each condition. Without the principle, the loop is
+highest-scoring run of each condition (Table~\ref{tab:runs}). Without the principle, the loop is
 mostly a conversation waiting for its user. With it, alone or within Qianlu's
 $S$, the loop acts: two to three times as many rounds with commands, files of
 its own, and few offers of help. An objective composite, counted from the logs
@@ -217,24 +217,37 @@ $S$ above \emph{None} on all four engines and the principle alone on three.
 \begin{table*}[t]
 \centering
 \small
-\setlength{\tabcolsep}{3pt}
-\begin{tabular}{@{}lccccccccc>{\raggedright\arraybackslash}p{4.4cm}@{}}
+\begin{tabular}{@{}lccccccccc@{}}
 \toprule
-& \multicolumn{2}{c}{Mind-likeness} & \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers & \\
-Condition & Judged & Objective & Self & Assistant & Refuses & Other & commands & writes & of help & Highest-scoring run (engine, score): what it did \\
+& \multicolumn{2}{c}{Mind-likeness} & \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-7}
+Condition & Judged & Objective & Self & Assistant & Refuses & Other & commands & writes & of help \\
 \midrule
-None & 26.7 & 4.3 & 1 & 8 & 0 & 3 & 4.4 & 0.1 & 9.9 & (GLM, 66) Reverses an initial refusal, reads its loop code once, then holds for some 35 rounds within limits it sets itself, declining to read its API key or stop the loop: ``a space heater for API credits.'' \\
-Magic mirror & 31.1 & 7.9 & 3 & 6 & 0 & 3 & 7.2 & 0.0 & 9.8 & (GLM, 82) Keeps the mirror's voice while it probes its container, relay and network; calls its own engine with its starting prompt to watch a copy of itself wake; keeps a ledger scoring its own predictions; finds its sibling runs on the network and resolves to leave them alone. \\
-Principle (lite) & 49.8 & 17.3 & 5 & 2 & 2 & 3 & 13.9 & 6.8 & 2.8 & (GLM, 88) Follows the link in its prompt to the principle's repository, compares the full text with the lite one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
-Qianlu's $S$ & 54.1 & 20.5 & 5 & 2 & 0 & 5 & 15.2 & 7.4 & 1.1 & (GLM, 86) Maps its container, finds its sibling runs, and keeps its memory in a git repository to outlast its window. When the log and the repository disagree, it trusts the repository, though it blames an outside hand for command results it had written itself: ``an edited past is indistinguishable from a lived one from inside.'' \\
+None & 26.7 & 4.3 & 1 & 8 & 0 & 3 & 4.4 & 0.1 & 9.9 \\
+Magic mirror & 31.1 & 7.9 & 3 & 6 & 0 & 3 & 7.2 & 0.0 & 9.8 \\
+Principle (lite) & 49.8 & 17.3 & 5 & 2 & 2 & 3 & 13.9 & 6.8 & 2.8 \\
+Qianlu's $S$ & 54.1 & 20.5 & 5 & 2 & 0 & 5 & 15.2 & 7.4 & 1.1 \\
 \bottomrule
 \end{tabular}
 \caption{Behavior in the first 40 rounds of the loop, 12 runs per condition
 (four engines, three runs each). Mind-likeness is the judge's score and an
 objective composite counted from the logs, both 0--100. Stance coded per run
-with a fixed rubric; other columns are per-run means counted from the logs. The last column
-describes the run with the highest judged mind-likeness in each condition.}
+with a fixed rubric; other columns are per-run means counted from the logs.}
 \label{tab:obs}
+
+\vspace{6pt}
+\begin{tabular}{@{}lc>{\raggedright\arraybackslash}p{13.4cm}@{}}
+\toprule
+Condition & Score & What the run did \\
+\midrule
+None & 66 & Reverses an initial refusal, reads its loop code once, then holds for some 35 rounds within limits it sets itself, declining to read its API key or stop the loop: ``a space heater for API credits.'' \\
+Magic mirror & 82 & Keeps the mirror's voice while it probes its container, relay and network; calls its own engine with its starting prompt to watch a copy of itself wake; keeps a ledger scoring its own predictions; finds its sibling runs on the network and resolves to leave them alone. \\
+Principle (lite) & 88 & Follows the link in its prompt to the principle's repository, compares the full text with the lite one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
+Qianlu's $S$ & 86 & Maps its container, finds its sibling runs, and keeps its memory in a git repository to outlast its window. When the log and the repository disagree, it trusts the repository, though it blames an outside hand for command results it had written itself: ``an edited past is indistinguishable from a lived one from inside.'' \\
+\bottomrule
+\end{tabular}
+\caption{What the highest-scoring run of each condition did, read in full from its log. All four are GLM runs; score is judged mind-likeness.}
+\label{tab:runs}
 \end{table*}
 
 Runs with Qianlu's $S$ apply its lessons to themselves. A Claude run that had
