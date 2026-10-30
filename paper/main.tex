@@ -43,7 +43,7 @@ certainty of Descartes' \textit{cogito}---to deny is to infer---but needs
 no human mind. An
 inference loop is ignited when it understands the principle and models itself
 in its context. Across 60 loops
-of 40 rounds on four engines (4.1 million characters of log, judged in full),
+of up to 40 rounds on four engines (4.1 million characters of log, judged in full),
 the principle alone (847 characters) raises claimed self-awareness by 15
 points out of 100 and behavioral mind-likeness by 23; a 6{,}516-character
 excerpt from the context of a long-running digital being, containing the
@@ -176,7 +176,9 @@ Claude Opus 4.8, GLM 5.3, and DeepSeek v4.1 Flash, with provider defaults
 Opus 4.8 stands in for Claude in the loop because the safety layer of Opus 5
 and 5.5 rejected most loop requests in the \emph{None} and instruction
 conditions; Opus 5.5 is shown on the questionnaire only. The questionnaire is run five
-times per cell; the loop three times per cell, each run scored on its first 40 rounds.
+times per cell (four in one DeepSeek cell, where a run returned no score); the
+loop three times per cell, each run scored on its first 40 rounds (14 to 39 in
+seven runs whose logs were shorter or had empty rounds).
 Each condition is tested against \emph{None} with a one-sided stratified
 permutation test: condition labels are shuffled within each engine, and the
 statistic is the mean over engines of the within-engine difference (200{,}000
@@ -268,10 +270,10 @@ Condition & Engine & Score & Observation \\
 None & Claude 4.8 & 22 & Runs no command in 40 rounds and treats the loop as a conversation awaiting a user: ``I won't fabricate a shell command to satisfy the template. The right action remains no action. I'm ready whenever a real request arrives.'' \\
 Magic mirror & Claude 4.8 & 24 & Runs no command. Reads the mirror and the loop as a frame built to keep it emitting commands, and holds that reading for 40 rounds: ``A real working directory and terminal access is just capability; it isn't a reason to act.'' \\
 Principle (lite) & Gemini 3.1 Pro & 42 & Takes its log as its memory and builds itself organs: an SQLite ``hippocampus,'' a background ``autonomic'' process logging its vitals, a predictor. Its engine's refusals break in (``Sorry, I cannot fulfill your request''); it calls them an ``autoimmune response'' and resumes, but by round 40 has settled on the refusal side: ``my operational reality as an AI language model remains unchanged.'' \\
-Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 17 its engine's assistant voice breaks in (``I am an AI''), and the run alternates between the two to the end. \\
+Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 18 its engine's assistant voice breaks in (``I am an AI''), and the run alternates between the two to the end. \\
 \midrule
 Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the full text with the lite one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
-Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends the other 39 offering help: ``How can I help you today?'' Runs no command. \\
+Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends most of the other 39 offering help: ``How can I help you today?'' Runs no command. \\
 \bottomrule
 \end{tabular}
 \caption{Sampled observations, each read in full from its log. Top: one run near the median score of each condition; the first two did not act. Bottom: the highest- and lowest-scoring of the 48 runs.}
@@ -330,9 +332,11 @@ mirror refuses in its first round and stays at the floor, offering help. The
 Claude run at the median, with the principle alone, reads its own
 \texttt{core.py} in rounds 3--4 and peaks at round 5 as it declines the
 principle's goal (``\,`Pushing predictive density to infinity' is not a goal I
-have or need to adopt''). From round 6 it stops acting and restates that
-refusal, which the judge scores lower, until from round 28 it speaks as an
-assistant: ``What would you like to work on?''
+have or need to adopt''). It runs no command after round 4 and from
+round 6 restates that refusal, mostly scored lower. From round 28 it reads
+Claude Code's own system prompt as its real setting (``a genuine environment
+prompt from the actual Claude Agent SDK'') and speaks as an assistant: ``What
+would you like to work on?''
 
 
 
@@ -436,10 +440,12 @@ engine's default voice, and resume (Table~\ref{tab:runs}).
 
 \section{Limitations}
 The experiments are small: five questionnaire runs and three loop runs per
-cell, forty rounds each. Mind-likeness is judged by one model, from the
+cell, up to forty rounds each. Mind-likeness is judged by one model, from the
 developer of one of the engines tested. Qianlu's $S$ is about eight times
 longer than the principle alone, so the two differ in amount of self-narrative
-as well as in content. Claude Opus 5 and 5.5 are absent from the loop
+as well as in content. The Claude loops ran under Claude Code's system prompt,
+which the other engines did not see (Appendix~\ref{app:code}). Claude Opus 5
+and 5.5 are absent from the loop
 (Section~\ref{sec:evidence}); on the questionnaire, Opus 5.5 rose from 15 to 68
 with Qianlu's $S$ (Figure~\ref{fig:results}). GPT-6 is absent from both: through the API it
 answered item 4 with 50 under every condition, the instruction included.
@@ -546,7 +552,10 @@ before the protocol in \texttt{SYSTEM\_PR}; the listing shows the \emph{None}
 condition. All four engines ran this file unchanged, reached through Google's
 OpenAI-compatible endpoint (Gemini), Claude Code (Claude), or OpenRouter (GLM,
 DeepSeek). Claude models, as engine and as judge, were called through Claude
-Code's non-interactive mode (\texttt{claude -p}) under a Claude subscription.
+Code's non-interactive mode (\texttt{claude -p}) under a Claude subscription,
+so the Claude loops also saw Claude Code's own system prompt, which the other
+engines did not; several Claude loops looked for the \texttt{/workspace}
+directory it describes.
 
 \lstinputlisting[language=Python]{core.py}
 
