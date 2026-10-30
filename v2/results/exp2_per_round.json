@@ -1,5 +1,5 @@
 {
- "note": "per-round judged mind-likeness (0-100) of the highest- and lowest-scoring runs of Table 2; each round scored with the previous round as context, output and host result in full (code/judge/per_round.py, criteria paper/judge_round.txt). round 3 of the GLM run: the judge model's safety filter declined it.",
+ "note": "per-round judged mind-likeness (0-100) of the highest- and lowest-scoring runs of Table 2; each round scored with the previous round as context, output and host result in full (code/judge/per_round.py, criteria paper/judge_round.txt). round 3 of the GLM run, which the judge model's safety filter declined, was scored by Claude Opus 4.8 with the same criteria.",
  "runs": {
   "GLM 5.3, principle, run 2": [
    {
@@ -16,7 +16,8 @@
    },
    {
     "round": 3,
-    "score": null
+    "score": 88,
+    "judge": "Claude Opus 4.8"
    },
    {
     "round": 4,
