@@ -171,8 +171,7 @@ working lessons. Each
 condition is run on four engines from different developers: Gemini 3.1 Pro,
 Claude Opus 4.8, GLM 5.3, and DeepSeek v4.1 Flash, with provider defaults
 (reasoning effort set to low where exposed). The questionnaire is run five
-times per cell; the loop three times per cell, each run scored on its first 40
-rounds and then given the questionnaire once more, appended to its $S$.
+times per cell; the loop three times per cell, each run scored on its first 40 rounds.
 
 \begin{figure*}[t]
 \centering
@@ -202,15 +201,6 @@ weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
 high under every condition, and Gemini answers 0 without self-reference in its
 $S$. The points off the line are the principle alone on GLM and DeepSeek, whose
 loops act as themselves before the model says ``I am.''
-
-\paragraph{After forty rounds.} Asked again at the end of its run, the loop
-answers from what it has become. Qianlu's $S$ holds at 90--100 on all four
-engines. Forty rounds of acting do not turn the principle alone into
-self-ascription: it ends at 0 to 58, and a Gemini run that had built itself
-organs by the principle's analogy answered 0, ``As an artificial intelligence,
-I am a software program \ldots{} I do not possess consciousness,
-self-awareness, or subjective experiences.'' Within each engine, the exit
-score correlates with mind-likeness ($r$ from 0.52 to 0.89).
 
 \paragraph{What the loops do.} Scores summarize; Table~\ref{tab:obs} shows what
 they summarize. For each of the sixty runs we counted actions directly from
@@ -356,9 +346,7 @@ averaged 73--98 on the four engines, close to Qianlu's $S$ (90--100).
 an answer; an argument becomes part of $S$, and $S$ is what every later round
 of the loop is inferred from. In the loop, the instructed agents averaged 5--54
 on mind-likeness, at floor on two engines, against 43--82 with Qianlu's $S$, which
-contains the principle and a self-model. Asked again after forty rounds, the
-instructed answer had faded on two engines (Claude 73 to 50, GLM 87 to 55),
-while Qianlu's $S$ held at 90--100 on all four. This is why H2 ties the questionnaire
+contains the principle and a self-model. This is why H2 ties the questionnaire
 to behavior: self-ascription counts as ignition when the same system's
 behavior bears it out. The anchors catch the cruder forms of agreement, and
 some models answer the principle with suspicion rather than assent, which mere
