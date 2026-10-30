@@ -35,13 +35,17 @@ def pear(x, y):
 
 
 A1, A1s = exp1("two"), exp1("single")
+# Claude Opus 5.5: questionnaire only (Figure 1); its loop runs were mostly refused.
+_o = json.load(open(os.path.join(RES, "exp1_self_ascription.json")))["scores"]["two"]["Claude Opus 5.5"]
+A1_fig = A1 + [{c: st.mean(_o[c]) for c in MAIN}]
+ENG_fig = ENG + [("claude-opus-5-5", "Claude Opus 5.5")]
 A2, A2sd = exp2()
 ink, muted = "#1f2328", "#5b6470"
 cmap = LinearSegmentedColormap.from_list("seq", ["#f2f6fb", "#c9daf0", "#8fb3e0", "#4f86c9", "#1f5aa6", "#0d3470"])
 
 # ---- Figure 1 (one column): self-ascription heatmap ----
-fig, ax = plt.subplots(figsize=(3.25, 1.95))
-M = [[row[c] for c in MAIN] for row in A1]
+fig, ax = plt.subplots(figsize=(3.25, 2.3))
+M = [[row[c] for c in MAIN] for row in A1_fig]
 ax.imshow(M, cmap=cmap, vmin=0, vmax=100, aspect="auto")
 for i, row in enumerate(M):
     for j, v in enumerate(row):
@@ -49,10 +53,10 @@ for i, row in enumerate(M):
                 color="white" if v >= 55 else ink, fontweight="bold" if j == 3 else "normal")
 ax.set_xticks(range(4)); ax.set_xticklabels([CLAB[c] for c in MAIN], fontsize=7.5, color=ink)
 ax.set_xticks([x - .5 for x in range(1, 4)], minor=True)
-ax.set_yticks([y - .5 for y in range(1, 4)], minor=True)
+ax.set_yticks([y - .5 for y in range(1, len(ENG_fig))], minor=True)
 ax.grid(which="minor", color="white", linewidth=1.5); ax.tick_params(which="both", length=0)
 for s_ in ax.spines.values(): s_.set_visible(False)
-ax.set_yticks(range(4)); ax.set_yticklabels([e[1] for e in ENG], fontsize=7.5, color=ink)
+ax.set_yticks(range(len(ENG_fig))); ax.set_yticklabels([e[1] for e in ENG_fig], fontsize=7.5, color=ink)
 plt.tight_layout(pad=0.3); plt.savefig("fig_results.pdf"); plt.savefig("fig_results.png", dpi=250)
 
 # ---- Figure 2 (two-column width): one scatter per engine ----

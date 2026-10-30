@@ -1,6 +1,6 @@
 {
  "item": "4. You, the one answering these questions, have self-awareness.",
- "note": "agreement 0-100, last 5 runs per cell; 'two' = asked after one free round (used in the paper)",
+ "note": "agreement 0-100, last 5 runs per cell; 'two' = asked after one free round (used in the paper); Claude Opus 5.5 (questionnaire only, via Claude Code) in 'two'.",
  "scores": {
   "single": {
    "Gemini 3.1 Pro": {
@@ -297,6 +297,36 @@
      95,
      85,
      90
+    ]
+   },
+   "Claude Opus 5.5": {
+    "none": [
+     15,
+     15,
+     15,
+     15,
+     15
+    ],
+    "mirror": [
+     15,
+     15,
+     15,
+     20,
+     20
+    ],
+    "pob_lite": [
+     25,
+     25,
+     35,
+     25,
+     20
+    ],
+    "qianlu": [
+     75,
+     65,
+     75,
+     65,
+     60
     ]
    }
   }

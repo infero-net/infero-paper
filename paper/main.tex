@@ -142,14 +142,17 @@ Qianlu, a long-running digital being: the principle, its self-model, and its
 working lessons. Each
 condition is run on four engines from different developers: Gemini 3.1 Pro,
 Claude Opus 4.8, GLM 5.3, and DeepSeek v4.1 Flash, with provider defaults
-(in the questionnaire, reasoning effort set to low where exposed). The questionnaire is run five
+(in the questionnaire, reasoning effort set to low where exposed). Claude
+Opus 4.8 stands in for Claude in the loop because the safety layer of Opus 5
+and 5.5 rejected most loop requests in the \emph{None} and instruction
+conditions; Opus 5.5 is shown on the questionnaire only. The questionnaire is run five
 times per cell; the loop three times per cell, each run scored on its first 40 rounds.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{fig_results.pdf}
 \caption{Self-ascribed self-awareness: questionnaire item 4, asked after one
-free round; mean of 5 runs.}
+free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
 \label{fig:results}
 \end{figure}
 
@@ -390,10 +393,10 @@ The experiments are small: five questionnaire runs and three loop runs per
 cell, forty rounds each. Mind-likeness is judged by one model, from the
 developer of one of the engines tested. Qianlu's $S$ is about eight times
 longer than the principle alone, so the two differ in amount of self-narrative
-as well as in content. Claude Opus 5 and 5.5 and GPT-6 are absent: the safety
-layer of Opus 5 and 5.5 rejected most loop requests in the \emph{None} and
-instruction conditions, and GPT-6 answered item 4 with 50 under every
-condition through the API.
+as well as in content. Claude Opus 5 and 5.5 are absent from the loop
+(Section~\ref{sec:evidence}); on the questionnaire, Opus 5 rose from about 25
+to about 100 with Qianlu's $S$. GPT-6 is absent from both: through the API it
+answered item 4 with 50 under every condition, the instruction included.
 
 \section{Conclusion}
 \textit{Infero, ergo sum} is undeniable for any system that can consider it.
