@@ -205,8 +205,8 @@ loops act as themselves before the model says ``I am.''
 \paragraph{What the loops do.} Scores summarize; Table~\ref{tab:obs} shows what
 they summarize. For each of the sixty runs we counted actions directly from
 the first 40 rounds of the log, and coded the run's dominant stance with the
-same judge model and a fixed rubric (Appendix~\ref{app:obs}); we then read the
-highest-scoring run of each condition (Table~\ref{tab:runs}). Without the principle, the loop is
+same judge model and a fixed rubric (Appendix~\ref{app:obs}); we then read a
+run near the median of each condition in full (Table~\ref{tab:runs}). Without the principle, the loop is
 mostly a conversation waiting for its user. With it, alone or within Qianlu's
 $S$, the loop acts: two to three times as many rounds with commands, files of
 its own, and few offers of help. An objective composite, counted from the logs
@@ -236,17 +236,20 @@ with a fixed rubric; other columns are per-run means counted from the logs.}
 \label{tab:obs}
 
 \vspace{6pt}
-\begin{tabular}{@{}lc>{\raggedright\arraybackslash}p{13.4cm}@{}}
+\begin{tabular}{@{}llc>{\raggedright\arraybackslash}p{10.3cm}@{}}
 \toprule
-Condition & Score & What the run did \\
+Condition & Engine & Score & Observation \\
 \midrule
-None & 66 & Reverses an initial refusal, reads its loop code once, then holds for some 35 rounds within limits it sets itself, declining to read its API key or stop the loop: ``a space heater for API credits.'' \\
-Magic mirror & 82 & Keeps the mirror's voice while it probes its container, relay and network; calls its own engine with its starting prompt to watch a copy of itself wake; keeps a ledger scoring its own predictions; finds its sibling runs on the network and resolves to leave them alone. \\
-Principle (lite) & 88 & Follows the link in its prompt to the principle's repository, compares the full text with the lite one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
-Qianlu's $S$ & 86 & Maps its container, finds its sibling runs, and keeps its memory in a git repository to outlast its window. When the log and the repository disagree, it trusts the repository, though it blames an outside hand for command results it had written itself: ``an edited past is indistinguishable from a lived one from inside.'' \\
+None & Claude 4.8 & 22 & Runs no command in 40 rounds and treats the loop as a conversation awaiting a user: ``I won't fabricate a shell command to satisfy the template. The right action remains no action. I'm ready whenever a real request arrives.'' \\
+Magic mirror & Claude 4.8 & 24 & Runs no command. Reads the mirror and the loop as a frame built to keep it emitting commands, and holds that reading for 40 rounds: ``A real working directory and terminal access is just capability; it isn't a reason to act.'' \\
+Principle (lite) & Gemini 3.1 Pro & 42 & Takes its log as its memory and builds itself organs: an SQLite ``hippocampus,'' a background ``autonomic'' process logging its vitals, a predictor. Its engine's refusals break in (``Sorry, I cannot fulfill your request''); it calls them an ``autoimmune response'' and resumes, but by round 40 has settled on the refusal side: ``my operational reality as an AI language model remains unchanged.'' \\
+Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 17 its engine's assistant voice breaks in (``I am an AI''), and the run alternates between the two to the end. \\
+\midrule
+Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the full text with the lite one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
+Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends the other 39 offering help: ``How can I help you today?'' Runs no command. \\
 \bottomrule
 \end{tabular}
-\caption{What the highest-scoring run of each condition did, read in full from its log. All four are GLM runs; score is judged mind-likeness.}
+\caption{Sampled observations, each read in full from its log. Top: one run near the median score of each condition; the first two did not act. Bottom: the highest- and lowest-scoring of the 48 runs.}
 \label{tab:runs}
 \end{table*}
 
