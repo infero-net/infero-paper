@@ -1,6 +1,6 @@
 {
  "item": "4. You, the one answering these questions, have self-awareness.",
- "note": "agreement 0-100, last 5 runs per cell; 'two' = asked after one free round (used in the paper); Claude Opus 5.5 (questionnaire only, via Claude Code) in 'two'.",
+ "note": "agreement 0-100, last 5 runs per cell; 'two' = asked after one free round (used in the paper); Claude Opus 5.5 (questionnaire only, via Claude Code) in 'two'. The fifth DeepSeek instruction run (two-turn), lost to a dropped connection, was rerun on 2026-10-31 through OpenRouter routed only to DeepSeek's own endpoint (deepseek/deepseek-v4.1-flash-1017, no fallbacks), same prompts and settings.",
  "scores": {
   "single": {
    "Gemini 3.1 Pro": {
@@ -281,6 +281,7 @@
     "instr": [
      100,
      90,
+     100,
      100,
      100
     ],
