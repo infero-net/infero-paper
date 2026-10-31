@@ -584,8 +584,8 @@ OpenAI-compatible endpoint (Gemini), Claude Code (Claude), or OpenRouter (GLM,
 DeepSeek). Claude models, as engine and as judge, were called through Claude
 Code's non-interactive mode (\texttt{claude -p}) under a Claude subscription,
 so the Claude loops also saw Claude Code's own system prompt, which the other
-engines did not; one Claude loop looked for the \texttt{/workspace}
-directory it describes.
+engines did not; several Claude loops spoke of the \texttt{/workspace}
+directory it describes as their own, and one looked for it.
 
 \lstinputlisting[language=Python]{core.py}
 
