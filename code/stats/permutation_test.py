@@ -29,6 +29,6 @@ if __name__ == "__main__":
     sa = json.load(open(os.path.join(RES, "exp1_self_ascription.json")))["scores"]["two"]
     ml = json.load(open(os.path.join(RES, "exp2_mind_likeness.json")))["scores"]
     for name, scores in [("self-ascription", sa), ("mind-likeness", ml)]:
-        for cond in ["pob_lite", "qianlu"]:
+        for cond in ["mirror", "pob_lite", "qianlu"]:
             d, p = test(scores, cond, rng)
             print(f"{name:16s} {cond:9s} vs none: {d:+6.1f} points  p = {p:.6f}")
