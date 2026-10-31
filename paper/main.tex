@@ -525,8 +525,8 @@ The judge receives the text below followed by the first 40 rounds of one log
 in full: each round's output and the result the host returned for it. Rounds
 are split at result blocks. When a command's output itself contains a code
 fence, the rest of that output is read as part of the next round, and GLM and
-DeepSeek, called without a stop sequence, sometimes wrote a result block
-themselves, which is split as if the host had returned it; in all, 18 result
+DeepSeek sometimes skipped the stop word after a command and wrote a result
+block themselves, which is split as if the host had returned it; in all, 18 result
 blocks in 9 runs follow an output that issued no command.
 The judge reads all of the text either way.
 
