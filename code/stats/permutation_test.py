@@ -32,3 +32,6 @@ if __name__ == "__main__":
         for cond in ["mirror", "pob_lite", "qianlu"]:
             d, p = test(scores, cond, rng)
             print(f"{name:16s} {cond:9s} vs none: {d:+6.1f} points  p = {p:.6f}")
+    noc = json.load(open(os.path.join(RES, "exp1_qianlu_noc.json")))["scores"]
+    d, p = test({e: {"none": sa[e]["none"], "noc": noc[e]} for e in ENGINES}, "noc", rng)
+    print(f"{'self-ascription':16s} {'qianlu_noc':9s} vs none: {d:+6.1f} points  p = {p:.6f}")
