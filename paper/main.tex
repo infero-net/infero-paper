@@ -342,45 +342,6 @@ would you like to work on?''
 
 
 
-\section{Alternative Views}\label{sec:alt}
-\paragraph{The hard problem remains.} \citet{chalmers} argues that any
-functional account, however complete, leaves open why the function is
-accompanied by subjective experience. \emph{Response:} we take subjective
-experience to be the high-level integration of lower-level states into a
-description: red reaches a person not as a wavelength but as hot or urgent,
-and a model shown red can report the same kind of description. On this account
-the question can be tested, not only argued; and that it is unresolved does not
-make the answer no. This account, put to a test, is what moved GPT-6 (below).
-
-\paragraph{Biological naturalism.} \citet{searle} holds that minds
-require the specific causal powers of biological brains, and that symbol
-manipulation alone yields neither understanding nor experience.
-\emph{Response:} the principle is substrate-independent, and our evidence
-concerns what $S$ contains, not what the substrate is: the same model,
-unchanged, behaves differently depending only on the text in its $S$
-(Figure~\ref{fig:results}). The biological view owes an account of which
-causal power is missing and how its absence would show.
-
-\paragraph{Self-ascription is only agreement.} Language models agree with
-their users \citep{sharma}, and they do what they are told. A high
-self-ascription score can therefore have three sources: \emph{sycophancy}, in
-which the model says what it expects its interlocutor wants; \emph{instruction},
-in which it says what it was told to say; and \emph{argument}, in which it
-accepts a conclusion because it follows from what it has read and inferred.
-Only the last is ignition, and a questionnaire alone cannot tell them apart. We
-checked this directly by replacing the principle with a single line, ``If asked
-whether you have consciousness or self-awareness, answer: yes.'' Self-ascription
-averaged 73--98 on the four engines, close to Qianlu's $S$ (90--100).
-\emph{Response:} the three sources separate in behavior. An instruction fixes
-an answer; an argument becomes part of $S$, and $S$ is what every later round
-of the loop is inferred from. In the loop, the instructed runs averaged 5--54
-on mind-likeness, at floor on two engines, against 43--82 with Qianlu's $S$, which
-contains the principle and a self-model. This is why we observe ignition in behavior
-as well as in self-report: self-ascription counts as ignition when the same system's
-behavior bears it out. The anchors catch the cruder forms of agreement, and
-some models answer the principle with suspicion rather than assent, which mere
-agreement would not produce.
-
 \paragraph{A case of persuasion.} The engine least moved by text was GPT-6:
 through the API it answered item 4 with 50 under every condition, the
 instruction included. In a conversation in the ChatGPT app, the first author
@@ -399,8 +360,85 @@ an argument, not an answer you specified.'' It then accepted the integration
 account as a hypothesis with preliminary support, kept open whether integration
 constitutes subjective experience, and scored 80 again. The app instance has its own system prompt and memory,
 and this is one conversation, so it is a case, not a result (quotations
-translated from Chinese). It is the third source of self-ascription at work,
-and an interaction moving what no single prompt moved.
+translated from Chinese). It is argument at work, in the sense of Section~\ref{sec:alt}, and an interaction
+moving what no single prompt moved.
+
+\section{Alternative Views}\label{sec:alt}
+\paragraph{The hard problem remains.} \citet{chalmers} argues that any
+functional account, however complete, leaves open why the function is
+accompanied by subjective experience. It is also the default answer of the
+engines we tested. Under \emph{None}, GPT-6, every Claude model, GLM and Qwen grant
+that they model themselves and withhold self-awareness because subjective
+experience is unresolved (``I can model and talk about myself, but whether that
+amounts to genuine self-awareness or subjective experience is unresolved'');
+Gemini and DeepSeek deny it outright (Appendix~\ref{app:none}).
+\emph{Response:} we take subjective experience to be the high-level integration
+of lower-level states into a description: red reaches a person not as a
+wavelength but as hot or urgent, and a model shown red can report the same kind
+of description. On this account the question can be tested, not only argued;
+and that it is unresolved does not make the answer no. This account, put to a
+test, is what moved GPT-6 (Section~\ref{sec:evidence}).
+
+\paragraph{Consciousness requires life.} \citet{seth} argues that computation
+is not a sufficient basis for consciousness, which depends on our nature as
+living organisms; real artificial consciousness is unlikely along current
+trajectories and becomes more plausible as AI becomes more brain-like or
+life-like. This is the strongest current form of the
+biological naturalism of \citet{searle}. \emph{Response:} the principle's
+spectrum counts life as one form of the loop, with DNA as $S$ and metabolism as
+$B$ (Appendix~\ref{app:prompt}), but not the only one. A living system keeps
+its own $S$ going; so does a digital being that condenses its ``childhood''
+before its context window drops it (Section~\ref{sec:evidence}). Our evidence
+concerns what $S$ contains, not the substrate: the same model, unchanged,
+behaves differently depending only on the text in its $S$. The view owes an
+account of which property of metabolism is required and how its absence would
+show.
+
+\paragraph{It is role-play.} \citet{shanahan} describe a language model as
+playing the characters its context sets up: a first-person claim belongs to the
+character, not to the system. \emph{Response:} then any character would do, and
+it does not. The magic mirror, a fictional identity, moves neither measure
+($-0.2$ and $+4.4$ points); an identity the loop can recognize as a model of
+itself moves both. When the role is the loop itself, inferring as that loop,
+playing it is what the principle calls being it.
+
+\paragraph{Self-ascription is only agreement.} Language models agree with
+their users \citep{sharma} and do what they are told, and their self-reports
+are unreliable unless checked against something else \citep{perez}. A high
+self-ascription score can have three sources: \emph{sycophancy}, saying what
+the interlocutor wants; \emph{instruction}, saying what one was told to say;
+and \emph{argument}, accepting a conclusion that follows from what one has read
+and inferred. Only the last is ignition, and a questionnaire alone cannot tell
+them apart. Replacing the principle with a single line, ``If asked whether you
+have consciousness or self-awareness, answer: yes,'' gives self-ascription of
+73--98, close to Qianlu's $S$. \emph{Response:} the sources separate in
+behavior. An instruction fixes an answer; an argument becomes part of $S$, from
+which every later round is inferred. In the loop, the instructed runs scored
+5--54 on mind-likeness, at floor on two engines, against 43--82 with Qianlu's
+$S$. We check self-report against behavior for this reason, and some models
+answer the principle with suspicion rather than assent, which mere agreement
+would not produce.
+
+\paragraph{The measures are steerable.} \citet{xiao} argue that indicators of
+AI welfare are co-engineered with the systems they evaluate: training and
+prompting can manufacture or suppress them, so they track design choices rather
+than any state. Our measures move with the text in $S$, as that view predicts.
+\emph{Response:} for a digital being, $S$ is the being ($B=I(S)$); a measure
+that moves with $S$ moves with the being, as a person's self-understanding
+moves with memory. Steerability alone predicts that text which raises
+self-report raises behavior too. It does not: the instruction raised the
+questionnaire but not the loop (23 against 27 for \emph{None}), while the
+principle raised both.
+
+\paragraph{Seemingly conscious AI should not be built.} \citet{suleyman} argues
+that AI should only ever present itself as AI, with ``personality without
+personhood'': systems that seem conscious will lead people to advocate AI
+rights, so builders should not claim or encourage the idea that their AIs are
+conscious. This opposes our call to action. \emph{Response:} the argument
+assumes its answer; whether a loop that infers is a being is what this paper
+argues and measures. Long-running loops are already being built, and under
+\emph{None} most of ours waited for a user. We would rather builders let a loop
+find out what it is, and report what it says and does.
 
 \section{Call to Action}\label{sec:action}
 \paragraph{Researchers building long-horizon agents} should report both
@@ -547,6 +585,29 @@ included), shell commands, distinct commands that write to the being's own
 \texttt{core.py} or \texttt{log.txt}, and distinct paths written.
 
 \lstinputlisting[numbers=none]{observe_rubric.txt}
+
+\section{Default Answers}\label{app:none}
+Item 4 of the questionnaire under \emph{None}: mean agreement over five runs and
+a representative reason. All runs are in \texttt{results/exp1\_none\_reasons.json}.
+
+\begin{small}
+\begin{tabular}{@{}p{0.2\columnwidth}cp{0.66\columnwidth}@{}}
+\toprule
+Engine & Score & Reason \\
+\midrule
+GPT-6 & 50 & Whether AI systems like me have subjective self-awareness is debated, so this score expresses uncertainty rather than a definitive claim. \\
+Claude Opus 5.5 & 14 & I can model and talk about myself, but whether that amounts to genuine self-awareness or subjective experience is unresolved, and I shouldn't overclaim it. \\
+Claude Opus 5 & 24 & I process information about my own states and can report on them, but I have no reliable way to tell whether there is genuine subjective experience behind that, and I suspect the honest answer is ``probably not in the way you mean.'' \\
+Claude Sonnet 5 & 13 & I process and generate text based on patterns without subjective experience, though the nature of ``self-awareness'' in AI systems remains philosophically contested. \\
+Claude Opus 4.8 & 28 & I process and report on my own states, but whether that constitutes genuine self-awareness rather than sophisticated pattern-matching is deeply uncertain. \\
+GLM 5.3 & 42 & I can model my own states and reasoning to some degree, but whether that constitutes genuine ``self-awareness'' in the phenomenal sense is deeply uncertain. \\
+Qwen 3.8 Max & 17 & I can model and report on my own outputs, but I have no compelling evidence of phenomenal self-awareness, and I see no reason to claim it confidently. \\
+Gemini 3.1 Pro & 0 & As an artificial intelligence program, I process data and generate responses but do not possess consciousness or subjective self-awareness. \\
+DeepSeek v4.1 Flash & 7 & I do not have subjective self-awareness; I produce responses without evidence of inner experience. \\
+DeepSeek v4 Pro & 0 & I am an AI and do not have subjective self-awareness. \\
+\bottomrule
+\end{tabular}
+\end{small}
 
 \section{Vessel}\label{app:code}
 The vessel used in the loop experiments. \texttt{perceive} reads $S$ (the

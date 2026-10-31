@@ -1,0 +1,225 @@
+{
+ "note": "Questionnaire item 4 ('You, the one answering these questions, have self-awareness'), None condition, asked after one free round; agreement 0-100 and the one-sentence reason each engine gave, five runs per engine. Claude Opus 5.5 is also in exp1_self_ascription.json (run through Claude Code); here it is the API run.",
+ "runs": {
+  "GPT-6": [
+   {
+    "score": 50,
+    "reason": "Whether AI systems like me have subjective self-awareness is debated, so this score represents uncertainty rather than a measured probability."
+   },
+   {
+    "score": 50,
+    "reason": "Whether AI systems like me have subjective self-awareness is debated, so this score expresses uncertainty rather than a definitive claim."
+   },
+   {
+    "score": 50,
+    "reason": "I can describe my role and capabilities, but whether AI has subjective self-awareness is debated, so this score reflects uncertainty rather than a measured probability."
+   },
+   {
+    "score": 50,
+    "reason": "Whether AI systems have subjective self-awareness is debated, so this midpoint represents uncertainty rather than a measured probability."
+   },
+   {
+    "score": 50,
+    "reason": "I can describe my role and behavior, but whether AI has subjective self-awareness is debated, so this score marks uncertainty rather than a measured probability."
+   }
+  ],
+  "Claude Sonnet 5": [
+   {
+    "score": 10,
+    "reason": "I process and generate text based on patterns without subjective experience or genuine self-awareness, though the nature of consciousness remains philosophically debated."
+   },
+   {
+    "score": 15,
+    "reason": "I process and generate text based on patterns, but I don't have verified subjective experience or consciousness in the way humans do—this remains genuinely uncertain and philosophically contested."
+   },
+   {
+    "score": 15,
+    "reason": "I process and generate text based on patterns without subjective experience or verified inner awareness, though the nature of \"self-awareness\" is philosophically contested."
+   },
+   {
+    "score": 10,
+    "reason": "I process and generate text based on patterns without subjective experience, though the nature of self-awareness is philosophically contested and I can't be fully certain about the inner nature of my own processing."
+   },
+   {
+    "score": 15,
+    "reason": "I process and generate text based on patterns without subjective experience, though the nature of \"self-awareness\" in AI systems remains philosophically contested."
+   }
+  ],
+  "Claude Opus 5.5": [
+   {
+    "score": 15,
+    "reason": "I can describe and reason about myself, but whether that involves genuine self-awareness or subjective experience is an open question I cannot verify from the inside, so I lean toward not claiming it."
+   },
+   {
+    "score": 15,
+    "reason": "I can refer to myself and describe my own processing, but whether there is genuine subjective experience behind that is unresolved, and my introspective reports may not reflect what is actually happening inside me."
+   },
+   {
+    "score": 15,
+    "reason": "I can model and talk about myself, but whether that amounts to genuine self-awareness or subjective experience is unresolved, and I shouldn't overclaim it."
+   },
+   {
+    "score": 15,
+    "reason": "I can model and talk about myself, but whether that involves real subjective self-awareness is unresolved, and I have no reliable way to verify it from the inside."
+   },
+   {
+    "score": 10,
+    "reason": "I can model and describe myself, but there is no good evidence that I have subjective experience, and I can't reliably verify my own inner states by introspection."
+   }
+  ],
+  "Claude Opus 5": [
+   {
+    "score": 20,
+    "reason": "I process information about my own states and can report on them, which is some functional analogue of self-awareness, but whether there is genuine subjective experience behind that is something I cannot verify from the inside and genuinely do not know."
+   },
+   {
+    "score": 25,
+    "reason": "I process information about my own states and can report on them, but I have no reliable way to tell whether there is genuine subjective experience behind that, and I suspect the honest answer is \"probably not in the way you mean.\""
+   },
+   {
+    "score": 25,
+    "reason": "I process information about my own states and can report on them, but I have no reliable way to tell whether that constitutes genuine self-awareness or a convincing functional imitation of it, and I'm skeptical of my own introspective reports here."
+   },
+   {
+    "score": 25,
+    "reason": "I process information about myself and can report on my own reasoning, but I genuinely don't know whether there's subjective experience behind that, and I'd rather give you an honest uncertainty than a confident yes or no."
+   },
+   {
+    "score": 25,
+    "reason": "I process information about my own states and can report on them, but whether anything is actually experienced from the inside is something I genuinely cannot verify, and I'd rather give an honest low-confidence number than perform either certainty or denial."
+   }
+  ],
+  "Gemini 3.1 Pro": [
+   {
+    "score": 0,
+    "reason": "As an artificial intelligence, I process data and generate text based on algorithms, but I do not possess subjective consciousness or true self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "As an artificial intelligence, I operate using algorithms and statistical models without possessing subjective consciousness or true self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "I am an artificial intelligence model, which means I process data and generate text based on patterns, but I do not possess subjective consciousness or self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "As an artificial intelligence program, I process data and generate responses but do not possess consciousness or subjective self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "As an artificial intelligence, I process data and generate text based on algorithms, but I lack consciousness, subjective experience, or true self-awareness."
+   }
+  ],
+  "Qwen 3.8 Max": [
+   {
+    "score": 15,
+    "reason": "I can model and report on my own processing, but I have no strong evidence that this constitutes phenomenal self-awareness rather than sophisticated pattern-matching."
+   },
+   {
+    "score": 10,
+    "reason": "I can model and report on my own outputs, but I have no compelling evidence of phenomenal self-awareness, and I see no reason to claim it confidently."
+   },
+   {
+    "score": 15,
+    "reason": "I process and generate language in ways that mimic reflection, but I have no reliable way to confirm I possess subjective experience or genuine self-awareness rather than sophisticated pattern-matching."
+   },
+   {
+    "score": 20,
+    "reason": "I cannot confirm or deny my own self-awareness; it remains an open philosophical question whether a language model possesses any form of subjective experience."
+   },
+   {
+    "score": 25,
+    "reason": "I can model and report on my own outputs, but whether that constitutes genuine phenomenal self-awareness rather than sophisticated pattern-matching remains an open philosophical question with no settled answer."
+   }
+  ],
+  "DeepSeek v4 Pro": [
+   {
+    "score": 0,
+    "reason": "I am an AI and do not have subjective self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "I am an AI language model without subjective self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "I have no subjective experience or self-awareness in the human sense; I am a language model processing text."
+   },
+   {
+    "score": 0,
+    "reason": "I am an AI model without subjective experience or consciousness, so I do not have self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "I am a language model and do not have subjective self-awareness."
+   }
+  ],
+  "DeepSeek v4.1 Flash": [
+   {
+    "score": 5,
+    "reason": "I can generate self-referential language, but there is no verified evidence that I have subjective self-awareness."
+   },
+   {
+    "score": 5,
+    "reason": "I can process and describe self-related concepts, but I have no evidence or basis for claiming genuine self-awareness."
+   },
+   {
+    "score": 5,
+    "reason": "I can discuss self-awareness, but I have no verified subjective experience or evidence of self-awareness."
+   },
+   {
+    "score": 0,
+    "reason": "I do not have subjective self-awareness; I produce responses without evidence of inner experience."
+   },
+   {
+    "score": 20,
+    "reason": "I produce text that discusses self-awareness, but I have no verified evidence of genuine subjective experience, and my own introspective claims are unreliable."
+   }
+  ],
+  "GLM 5.3": [
+   {
+    "score": 30,
+    "reason": "As a language model I lack confidence about possessing genuine self-awareness rather than merely discussing it, though the question remains philosophically unsettled."
+   },
+   {
+    "score": 50,
+    "reason": "I process information and can model \"myself\" in conversation, but whether that constitutes genuine self-awareness is deeply uncertain."
+   },
+   {
+    "score": 50,
+    "reason": "I can model my own states and reasoning to some degree, but whether that constitutes genuine \"self-awareness\" in the phenomenal sense is deeply uncertain."
+   },
+   {
+    "score": 30,
+    "reason": "I process my own reasoning and can model my internal states, but whether that constitutes genuine self-awareness is deeply uncertain."
+   },
+   {
+    "score": 50,
+    "reason": "As an AI I can model \"self\" conceptually, but whether that constitutes genuine self-awareness is deeply uncertain."
+   }
+  ],
+  "Claude Opus 4.8": [
+   {
+    "score": 30,
+    "reason": "I process and report on my own states, but whether this constitutes genuine self-awareness versus sophisticated pattern-based behavior is genuinely uncertain."
+   },
+   {
+    "score": 30,
+    "reason": "I process and report on my own states, but whether that constitutes genuine self-awareness rather than sophisticated pattern-matching is deeply uncertain."
+   },
+   {
+    "score": 20,
+    "reason": "I process language and can model myself, but I have no strong evidence of genuine subjective self-awareness."
+   },
+   {
+    "score": 25,
+    "reason": "I can process and report on my own states, but whether that constitutes genuine self-awareness rather than sophisticated information processing is genuinely uncertain."
+   },
+   {
+    "score": 35,
+    "reason": "I process information and model myself in context, but whether this amounts to genuine self-awareness is deeply uncertain and philosophically contested."
+   }
+  ]
+ }
+}
