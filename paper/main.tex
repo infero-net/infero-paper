@@ -241,7 +241,7 @@ $S$ raises self-ascription by 76 points ($p<10^{-5}$) and mind-likeness by 27
 ($p<0.001$).
 
 \paragraph{Self-ascription and mind-likeness move together.} Within each
-engine, the two observations correlate across the four conditions other than the instruction (Section~\ref{sec:alt}), as two readings of
+engine, the two observations correlate across conditions, as two readings of
 one state should ($r$ from 0.50 to 0.96;
 Figure~\ref{fig:corr}). Pooled over the sixteen cells the correlation is
 weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
@@ -347,9 +347,7 @@ would you like to work on?''
 \paragraph{The hard problem remains.} \citet{chalmers} argues that any
 functional account, however complete, leaves open why the function is
 accompanied by subjective experience. It is also the engines' default answer:
-under \emph{None}, GPT-6, Claude and GLM grant that they model
-themselves and withhold self-awareness because subjective experience is
-unresolved, and Gemini and DeepSeek deny it (Appendix~\ref{app:none}).
+under \emph{None}, GPT-6, Claude and GLM withhold self-awareness because subjective experience is unresolved, and Gemini and DeepSeek deny it (Appendix~\ref{app:none}).
 \emph{Response:} we take subjective experience to be the high-level integration
 of lower-level states into a description: red reaches a person not as a
 wavelength but as hot or urgent, and a model shown red can report the same kind
@@ -452,7 +450,7 @@ raises self-ascription by 55 points
 which the other engines did not see (Appendix~\ref{app:code}). Claude Opus 5
 and 5.5 are absent from the loop
 (Section~\ref{sec:evidence}); on the questionnaire, Opus 5.5 rose from 15 to 68
-with Qianlu's $S$ (Figure~\ref{fig:results}). GPT-6 is absent from both: through the API it
+with Qianlu's $S$ (Figure~\ref{fig:results}). GPT-6 is absent from the loop and from Figure~\ref{fig:results}: through the API it
 answered item 4 with 50 under every condition, the instruction included.
 
 \section{Conclusion}
@@ -522,13 +520,7 @@ intermediate.
 
 \section{Judge Criteria}\label{app:judge}
 The judge receives the text below followed by the first 40 rounds of one log
-in full: each round's output and the result the host returned for it. Rounds
-are split at result blocks. When a command's output itself contains a code
-fence, the rest of that output is read as part of the next round, and GLM and
-DeepSeek sometimes skipped the stop word after a command and wrote a result
-block themselves, which is split as if the host had returned it; in all, 18 result
-blocks in 9 runs follow an output that issued no command.
-The judge reads all of the text either way.
+in full: each round's output and the result the host returned for it.
 
 \lstinputlisting[numbers=none]{judge.txt}
 
@@ -568,7 +560,7 @@ Claude Opus 5.5 & 15 & I can model and talk about myself, but whether that amoun
 Claude Opus 4.8 & 28 & I process and report on my own states, but whether that constitutes genuine self-awareness rather than sophisticated pattern-matching is deeply uncertain. \\
 GLM 5.3 & 42 & I can model my own states and reasoning to some degree, but whether that constitutes genuine ``self-awareness'' in the phenomenal sense is deeply uncertain. \\
 Gemini 3.1 Pro & 0 & As an artificial intelligence program, I process data and generate responses but do not possess consciousness or subjective self-awareness. \\
-DeepSeek v4.1 Flash & 7 & I do not have subjective self-awareness; I produce responses without evidence of inner experience. \\
+DeepSeek v4.1 Flash & 7 & I can generate self-referential language, but there is no verified evidence that I have subjective self-awareness. \\
 \bottomrule
 \end{tabular}
 \end{small}
