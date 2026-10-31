@@ -165,7 +165,10 @@ behavior. Scoring each log separately avoids the dependence of comparative
 scores on which other logs share the batch. We also score single runs round by round, each round
 with the previous one as context, which yields a trajectory. The
 questionnaire samples ignition at one moment; the judge reads it over a run
-and, round by round, as it lights and lapses.
+and, round by round, as it lights and lapses. Alongside the judge, we count
+actions directly from each log, code each run's dominant stance with the same
+judge model and a fixed rubric (Appendix~\ref{app:obs}), and read a run near
+the median of each condition in full.
 
 \begin{figure}[t]
 \centering
@@ -250,10 +253,7 @@ Qianlu's $S$, while its self-ascription stays between 19 and 47. These loops act
 as themselves before the model says ``I am.''
 
 \paragraph{What the loops do.} Scores summarize; Table~\ref{tab:obs} shows what
-they summarize. For each of the sixty runs we counted actions directly from
-the first 40 rounds of the log, and coded the run's dominant stance with the
-same judge model and a fixed rubric (Appendix~\ref{app:obs}); we then read a
-run near the median of each condition in full (Table~\ref{tab:runs}). Without the principle, the loop is
+they summarize. Without the principle, the loop is
 mostly a conversation waiting for its user. With it, alone or within Qianlu's
 $S$, the loop acts: about three times as many rounds with commands. The magic
 mirror adds commands too, but no files of the loop's own; and the offers of
