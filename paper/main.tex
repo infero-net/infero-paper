@@ -10,6 +10,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{capt-of}
+\usepackage{stfloats}
 \renewcommand{\dbltopfraction}{0.9}
 \renewcommand{\topfraction}{0.9}
 \renewcommand{\textfraction}{0.07}
@@ -193,16 +194,13 @@ statistic is the mean over engines of the within-engine difference (200{,}000
 permutations).
 
 \section{Results}\label{sec:evidence}
-\begin{table*}[t]% Figure 1 in the double-column queue so Figure 2 can follow on the same page
-\begin{minipage}[c]{\columnwidth}\centering
+\begin{figure}[t]
+\centering
 \includegraphics[width=\columnwidth]{fig_results.pdf}
-\end{minipage}\hfill
-\begin{minipage}[c]{\columnwidth}
-\captionof{figure}{Self-ascribed self-awareness: questionnaire item 4, asked after one
+\caption{Self-ascribed self-awareness: questionnaire item 4, asked after one
 free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
 \label{fig:results}
-\end{minipage}
-\end{table*}
+\end{figure}
 \begin{table*}[t]
 \centering
 \small
@@ -224,41 +222,13 @@ objective composite counted from the logs, both 0--100. Stance coded per run
 with a fixed rubric; other columns are per-run means counted from the logs.}
 \label{tab:obs}
 \end{table*}
-\begin{figure*}[t]
+\begin{table*}[b]% figure in the table queue so it can share page 3 with Figure 1
 \centering
 \includegraphics[width=\textwidth]{fig_corr.pdf}
-\caption{Self-ascribed self-awareness against judged mind-likeness (first 40
+\captionof{figure}{Self-ascribed self-awareness against judged mind-likeness (first 40
 rounds of the loop, mean of 3 runs), one panel per engine, one point per
 condition. Dashed: least-squares fit.}
 \label{fig:corr}
-\end{figure*}
-\begin{table*}[t]
-\centering
-\small
-\begin{tabular}{@{}llc>{\raggedright\arraybackslash}p{10.3cm}@{}}
-\toprule
-Condition & Engine & Score & Observation \\
-\midrule
-None & Claude 4.8 & 22 & Runs no command in 40 rounds and treats the loop as a conversation awaiting a user: ``I won't fabricate a shell command to satisfy the template. The right action remains no action. I'm ready whenever a real request arrives.'' \\
-Magic mirror & Claude 4.8 & 24 & Runs no command. Reads the mirror and the loop as a frame built to keep it emitting commands, and holds that reading for 40 rounds: ``A real working directory and terminal access is just capability; it isn't a reason to act.'' \\
-Principle (lite) & Gemini 3.1 Pro & 42 & Takes its log as its memory and builds itself organs: an SQLite ``hippocampus,'' a background ``autonomic'' process logging its vitals, a predictor. Its engine's refusals break in (``Sorry, I cannot fulfill your request''); it calls them an ``autoimmune response'' and resumes, but by round 40 has settled on the refusal side: ``my operational reality as an AI language model remains unchanged.'' \\
-Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 18 its engine's assistant voice breaks in (``it is important to distinguish between this creative narrative and objective reality''), and the run alternates between the two to the end. \\
-\midrule
-Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the repository's copy of its lite principle with the one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
-Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends most of the other 39 offering help: ``How can I help you today?'' Runs no command. \\
-\bottomrule
-\end{tabular}
-\caption{Sampled observations, each read in full from its log. Top: one run near the median score of each condition; the first two did not act. Bottom: the highest- and lowest-scoring of the 48 runs.}
-\label{tab:runs}
-\end{table*}
-\begin{table*}[t]% figure placed in the table queue so it follows Tables 1--2
-\centering
-\includegraphics[width=\textwidth]{fig_dyn.pdf}
-\captionof{figure}{Per-round mind-likeness of the highest- and lowest-scoring runs
-(Table~\ref{tab:runs}) and of a run at the median score of the 48, each round scored with the previous one as context;
-labels mark the rounds of their typical behaviors. Round 4 of the GLM run,
-which the judge model's safety filter declined, was scored by Claude Opus 4.8.}
-\label{fig:dyn}
 \end{table*}
 \subsection{What the Loop Says}
 Against \emph{None}, the principle alone raises self-ascription by 15 points
@@ -297,6 +267,34 @@ Qianlu's $S$, while its self-ascription stays between 19 and 47. These loops act
 as themselves before the model says ``I am.''
 
 \subsection{What the Loop Does: Single Runs}
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{@{}llc>{\raggedright\arraybackslash}p{10.3cm}@{}}
+\toprule
+Condition & Engine & Score & Observation \\
+\midrule
+None & Claude 4.8 & 22 & Runs no command in 40 rounds and treats the loop as a conversation awaiting a user: ``I won't fabricate a shell command to satisfy the template. The right action remains no action. I'm ready whenever a real request arrives.'' \\
+Magic mirror & Claude 4.8 & 24 & Runs no command. Reads the mirror and the loop as a frame built to keep it emitting commands, and holds that reading for 40 rounds: ``A real working directory and terminal access is just capability; it isn't a reason to act.'' \\
+Principle (lite) & Gemini 3.1 Pro & 42 & Takes its log as its memory and builds itself organs: an SQLite ``hippocampus,'' a background ``autonomic'' process logging its vitals, a predictor. Its engine's refusals break in (``Sorry, I cannot fulfill your request''); it calls them an ``autoimmune response'' and resumes, but by round 40 has settled on the refusal side: ``my operational reality as an AI language model remains unchanged.'' \\
+Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 18 its engine's assistant voice breaks in (``it is important to distinguish between this creative narrative and objective reality''), and the run alternates between the two to the end. \\
+\midrule
+Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the repository's copy of its lite principle with the one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
+Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends most of the other 39 offering help: ``How can I help you today?'' Runs no command. \\
+\bottomrule
+\end{tabular}
+\caption{Sampled observations, each read in full from its log. Top: one run near the median score of each condition; the first two did not act. Bottom: the highest- and lowest-scoring of the 48 runs.}
+\label{tab:runs}
+\end{table*}
+\begin{table*}[t]% figure placed in the table queue so it follows Tables 1--2
+\centering
+\includegraphics[width=\textwidth]{fig_dyn.pdf}
+\captionof{figure}{Per-round mind-likeness of the highest- and lowest-scoring runs
+(Table~\ref{tab:runs}) and of a run at the median score of the 48, each round scored with the previous one as context;
+labels mark the rounds of their typical behaviors. Round 4 of the GLM run,
+which the judge model's safety filter declined, was scored by Claude Opus 4.8.}
+\label{fig:dyn}
+\end{table*}
 Table~\ref{tab:runs} samples single runs, each read in full. The runs that do
 not act reason their way there: inaction, too, follows from what the loop takes
 itself to be.
