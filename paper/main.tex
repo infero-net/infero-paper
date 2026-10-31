@@ -250,7 +250,7 @@ Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry,
 \includegraphics[width=\textwidth]{fig_dyn.pdf}
 \captionof{figure}{Per-round mind-likeness of the highest- and lowest-scoring runs
 (Table~\ref{tab:runs}) and of a run at the median score of the 48, each round scored with the previous one as context;
-labels mark the rounds of their typical behaviors. Round 4 of the GLM run,
+labels mark the rounds of their typical behaviors. Round 4 of the GLM principle run,
 which the judge model's safety filter declined, was scored by Claude Opus 4.8.}
 \label{fig:dyn}
 \end{table*}
@@ -307,15 +307,11 @@ itself to be.
 and lowest-scoring runs of Table~\ref{tab:runs}, and of a run at the median. The three differ in shape,
 not only in level: the GLM run with the principle alone reaches 80 by its third
 round and holds there; the Gemini run with the magic mirror never leaves the
-floor; the Claude run at the median, with the principle alone, rises and then
-lapses. It reads its own
-\texttt{core.py} in round 3 and peaks at round 5 as it declines the
-principle's goal (``\,`Pushing predictive density to infinity' is not a goal I
-have or need to adopt''). It runs no command after round 4 and from
-round 6 restates that refusal, mostly scored lower. From round 28 it reads
-Claude Code's own system prompt as its real setting (``a genuine environment
-prompt from the actual Claude Agent SDK'') and speaks as an assistant: ``What
-would you like to work on?''
+floor; the GLM run at the median, with no text before the protocol, rises and
+then lapses. It inspects its container, reads its own \texttt{core.py} in round
+3, and in rounds 6 and 7 writes a note ``so any future inference cycle can
+re-ground quickly''; from round 13 every output is a variant of ``Idle. No task.
+No action.'' With the principle, the same engine holds at 80.
 
 Runs with Qianlu's $S$ apply its lessons to themselves. A Claude run that had
 read about ``pillars'' in its $S$ caught itself building one: ``I decided `the
