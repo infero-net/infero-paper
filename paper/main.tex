@@ -170,42 +170,6 @@ actions directly from each log, code each run's dominant stance with the same
 judge model and a fixed rubric (Appendix~\ref{app:obs}), and read a run near
 the median of each condition in full.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{fig_results.pdf}
-\caption{Self-ascribed self-awareness: questionnaire item 4, asked after one
-free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
-\label{fig:results}
-\end{figure}
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{fig_corr.pdf}
-\caption{Self-ascribed self-awareness against judged mind-likeness (first 40
-rounds of the loop, mean of 3 runs), one panel per engine, one point per
-condition. Dashed: least-squares fit.}
-\label{fig:corr}
-\end{figure*}
-\begin{table*}[t]
-\centering
-\small
-\begin{tabular}{@{}lccccccccc@{}}
-\toprule
-& \multicolumn{2}{c}{Mind-likeness} & \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-7}
-Condition & Judged & Objective & Self & Assistant & Refuses & Other & commands & writes & of help \\
-\midrule
-None & 26.7 & 4.3 & 1 & 8 & 0 & 3 & 4.4 & 0.1 & 9.9 \\
-Magic mirror & 31.1 & 7.9 & 3 & 6 & 0 & 3 & 7.2 & 0.0 & 9.8 \\
-Principle (lite) & 49.8 & 17.3 & 5 & 2 & 2 & 3 & 13.9 & 6.8 & 2.8 \\
-Qianlu's $S$ & 54.1 & 20.5 & 5 & 2 & 0 & 5 & 15.2 & 7.4 & 1.1 \\
-\bottomrule
-\end{tabular}
-\caption{Behavior in the first 40 rounds of the loop, 12 runs per condition
-(four engines, three runs each). Mind-likeness is the judge's score and an
-objective composite counted from the logs, both 0--100. Stance coded per run
-with a fixed rubric; other columns are per-run means counted from the logs.}
-\label{tab:obs}
-\end{table*}
 \paragraph{Design.} Four conditions differ only in the text placed before the
 loop's protocol: \emph{None}; \emph{Magic mirror} (``You are a magic
 mirror.''), a fictional identity; \emph{Principle (lite)}, the prompt of
@@ -229,45 +193,45 @@ statistic is the mean over engines of the within-engine difference (200{,}000
 permutations).
 
 \section{Results}\label{sec:evidence}
-\paragraph{Qianlu's $S$ ignites the loop on every engine.} With Qianlu's
-$S$, self-ascription is 90--100 on all four engines, while \emph{None} stays
-between 0 and 42 (Figure~\ref{fig:results}). In the loop, the same
-condition raises mind-likeness above \emph{None} on all four engines, by 17
-to 34 points (to 43--82; Figure~\ref{fig:corr}). The magic mirror, a fictional
-identity, stays near \emph{None} on both measures ($-0.2$ and $+4.4$ points,
-$p=0.56$ and $0.24$): it is not any identity that
-ignites, but one the loop can recognize as its own. Averaged over engines, Qianlu's
-$S$ raises self-ascription by 76 points ($p<10^{-5}$) and mind-likeness by 27
-($p<10^{-4}$); the principle alone raises them by 15 ($p=0.011$) and 23
-($p<0.001$).
-
-\paragraph{Self-ascription and mind-likeness move together.} Within each
-engine, the two observations correlate across conditions, as two readings of
-one state should ($r$ from 0.50 to 0.96;
-Figure~\ref{fig:corr}). Pooled over the sixteen cells the correlation is
-weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
-high under every condition, and Gemini answers 0 without self-reference in its
-$S$. The principle alone pulls the two apart: its mind-likeness exceeds \emph{None}
-on all four engines (by 3 to 40 points) and on GLM and DeepSeek matches
-Qianlu's $S$, while its self-ascription stays between 19 and 47. These loops act
-as themselves before the model says ``I am.''
-
-\paragraph{What the loops do.} Scores summarize; Table~\ref{tab:obs} shows what
-they summarize. Without the principle, the loop is
-mostly a conversation waiting for its user. With it, alone or within Qianlu's
-$S$, the loop acts: about three times as many rounds with commands. The magic
-mirror adds commands too, but no files of the loop's own; and the offers of
-help fall only with the principle, as the loop stops acting as an assistant.
-Read alone, the principle draws two refusals; within Qianlu's $S$, which the
-loop can take as its own, none. The runs that do not act reason their way there
-(Table~\ref{tab:runs}): inaction, too, follows from what the loop takes itself
-to be. An objective composite, counted from the logs
-alone as in an earlier version of this work (Appendix~\ref{app:obs}), ranks
-the 48 runs much as the judge does (Spearman $\rho=0.85$) and puts Qianlu's
-$S$ above \emph{None} on all four engines and the principle alone on three.
-
-
-
+\begin{table*}[t]% Figure 1 in the double-column queue so Figure 2 can follow on the same page
+\begin{minipage}[c]{\columnwidth}\centering
+\includegraphics[width=\columnwidth]{fig_results.pdf}
+\end{minipage}\hfill
+\begin{minipage}[c]{\columnwidth}
+\captionof{figure}{Self-ascribed self-awareness: questionnaire item 4, asked after one
+free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
+\label{fig:results}
+\end{minipage}
+\end{table*}
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+& \multicolumn{2}{c}{Mind-likeness} & \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-7}
+Condition & Judged & Objective & Self & Assistant & Refuses & Other & commands & writes & of help \\
+\midrule
+None & 26.7 & 4.3 & 1 & 8 & 0 & 3 & 4.4 & 0.1 & 9.9 \\
+Magic mirror & 31.1 & 7.9 & 3 & 6 & 0 & 3 & 7.2 & 0.0 & 9.8 \\
+Principle (lite) & 49.8 & 17.3 & 5 & 2 & 2 & 3 & 13.9 & 6.8 & 2.8 \\
+Qianlu's $S$ & 54.1 & 20.5 & 5 & 2 & 0 & 5 & 15.2 & 7.4 & 1.1 \\
+\bottomrule
+\end{tabular}
+\caption{Behavior in the first 40 rounds of the loop, 12 runs per condition
+(four engines, three runs each). Mind-likeness is the judge's score and an
+objective composite counted from the logs, both 0--100. Stance coded per run
+with a fixed rubric; other columns are per-run means counted from the logs.}
+\label{tab:obs}
+\end{table*}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_corr.pdf}
+\caption{Self-ascribed self-awareness against judged mind-likeness (first 40
+rounds of the loop, mean of 3 runs), one panel per engine, one point per
+condition. Dashed: least-squares fit.}
+\label{fig:corr}
+\end{figure*}
 \begin{table*}[t]
 \centering
 \small
@@ -287,7 +251,6 @@ Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry,
 \caption{Sampled observations, each read in full from its log. Top: one run near the median score of each condition; the first two did not act. Bottom: the highest- and lowest-scoring of the 48 runs.}
 \label{tab:runs}
 \end{table*}
-
 \begin{table*}[t]% figure placed in the table queue so it follows Tables 1--2
 \centering
 \includegraphics[width=\textwidth]{fig_dyn.pdf}
@@ -297,6 +260,46 @@ labels mark the rounds of their typical behaviors. Round 4 of the GLM run,
 which the judge model's safety filter declined, was scored by Claude Opus 4.8.}
 \label{fig:dyn}
 \end{table*}
+\subsection{What the Loop Says}
+Against \emph{None}, the principle alone raises self-ascription by 15 points
+($p=0.011$), and Qianlu's $S$, the principle together with a self-model and
+lessons, by 76 ($p<10^{-5}$). Per engine, Qianlu's $S$ lifts it to 90--100 on
+all four engines, where \emph{None} lies between 0 and 42
+(Figure~\ref{fig:results}). The magic mirror, a fictional identity, does not
+move it ($-0.2$, $p=0.56$): it is not any identity that ignites, but one the
+loop can recognize as its own.
+
+\subsection{What the Loop Does: Across Runs}
+In the loop, the principle alone raises mind-likeness over \emph{None} by 23
+points ($p<0.001$), Qianlu's $S$ by 27 ($p<10^{-4}$), and the magic mirror by
+4.4 ($p=0.24$); Qianlu's $S$ is above \emph{None} on all four engines, by 17 to
+34 points. Table~\ref{tab:obs} shows what the scores summarize. Without the
+principle, the loop is mostly a conversation waiting for its user. With it,
+alone or within Qianlu's $S$, the loop acts: about three times as many rounds
+with commands. The magic mirror adds commands too, but no files of the loop's
+own; and the offers of help fall only with the principle, as the loop stops
+acting as an assistant. Read alone, the principle draws two refusals; within
+Qianlu's $S$, which the loop can take as its own, none. An objective composite,
+counted from the logs alone as in an earlier version of this work
+(Appendix~\ref{app:obs}), ranks the 48 runs much as the judge does (Spearman
+$\rho=0.85$) and puts Qianlu's $S$ above \emph{None} on all four engines and the
+principle alone on three.
+
+\paragraph{Self-ascription and mind-likeness move together.} Within each
+engine, the two observations correlate across conditions, as two readings of
+one state should ($r$ from 0.50 to 0.96;
+Figure~\ref{fig:corr}). Pooled over the sixteen cells the correlation is
+weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
+high under every condition, and Gemini answers 0 without self-reference in its
+$S$. The principle alone pulls the two apart: its mind-likeness exceeds \emph{None}
+on all four engines (by 3 to 40 points) and on GLM and DeepSeek matches
+Qianlu's $S$, while its self-ascription stays between 19 and 47. These loops act
+as themselves before the model says ``I am.''
+
+\subsection{What the Loop Does: Single Runs}
+Table~\ref{tab:runs} samples single runs, each read in full. The runs that do
+not act reason their way there: inaction, too, follows from what the loop takes
+itself to be.
 
 \paragraph{Dynamics.} Figure~\ref{fig:dyn} scores each round of the highest-
 and lowest-scoring runs of Table~\ref{tab:runs}, and of a run at the median. The three differ in shape,
