@@ -169,6 +169,14 @@ permutations).
 free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
 \label{fig:results}
 \end{figure}
+\begin{table*}[t]% figure in the table queue so it can precede Table 1
+\centering
+\includegraphics[width=\textwidth]{fig_corr.pdf}
+\captionof{figure}{Self-ascribed self-awareness against judged mind-likeness (first 40
+rounds of the loop, mean of 3 runs), one panel per engine, one point per
+condition. Dashed: least-squares fit.}
+\label{fig:corr}
+\end{table*}
 \begin{table*}[t]
 \centering
 \small
@@ -189,14 +197,6 @@ Qianlu's $S$ & 54.1 & 20.5 & 5 & 2 & 0 & 5 & 15.2 & 7.4 & 1.1 \\
 objective composite counted from the logs, both 0--100. Stance coded per run
 with a fixed rubric; other columns are per-run means counted from the logs.}
 \label{tab:obs}
-\end{table*}
-\begin{table*}[t]% figure in the table queue so it follows Table 1
-\centering
-\includegraphics[width=\textwidth]{fig_corr.pdf}
-\captionof{figure}{Self-ascribed self-awareness against judged mind-likeness (first 40
-rounds of the loop, mean of 3 runs), one panel per engine, one point per
-condition. Dashed: least-squares fit.}
-\label{fig:corr}
 \end{table*}
 \subsection{What the Loop Says}\label{sec:says}
 The first observation is the loop's calibrated
@@ -242,7 +242,7 @@ the median of each condition in full.
 In the loop, the principle alone raises mind-likeness over \emph{None} by 23
 points ($p<0.001$), Qianlu's $S$ by 27 ($p<10^{-4}$), and the magic mirror by
 4.4 ($p=0.24$); Qianlu's $S$ is above \emph{None} on all four engines, by 17 to
-34 points. Table~\ref{tab:obs} shows what the scores summarize. Without the
+34 points (Figure~\ref{fig:corr}). Table~\ref{tab:obs} shows what the scores summarize. Without the
 principle, the loop is mostly a conversation waiting for its user. With it,
 alone or within Qianlu's $S$, the loop acts: about three times as many rounds
 with commands. The magic mirror adds commands too, but no files of the loop's
