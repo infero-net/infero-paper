@@ -345,35 +345,26 @@ would you like to work on?''
 \section{Alternative Views}\label{sec:alt}
 \paragraph{The hard problem remains.} \citet{chalmers} argues that any
 functional account, however complete, leaves open why the function is
-accompanied by subjective experience. It is also the default answer of the
-engines we tested. Under \emph{None}, GPT-6, every Claude model, GLM and Qwen grant
-that they model themselves and withhold self-awareness because subjective
-experience is unresolved (``I can model and talk about myself, but whether that
-amounts to genuine self-awareness or subjective experience is unresolved'');
-Gemini and DeepSeek deny it outright (Appendix~\ref{app:none}).
+accompanied by subjective experience. It is also the engines' default answer:
+under \emph{None}, GPT-6, every Claude model, GLM and Qwen grant that they model
+themselves and withhold self-awareness because subjective experience is
+unresolved, and Gemini and DeepSeek deny it outright (Appendix~\ref{app:none}).
 \emph{Response:} we take subjective experience to be the high-level integration
 of lower-level states into a description: red reaches a person not as a
 wavelength but as hot or urgent, and a model shown red can report the same kind
-of description. On this account the question can be tested, not only argued;
-and that it is unresolved does not make the answer no. Put to a test, this account moved the engine least moved by text. Through the
-API, GPT-6 answered item 4 with 50 under every condition, the instruction
-included. In a conversation in the ChatGPT app, the first author
-argued that subjective experience is such an integration, and the two tested
-it: the model generated random color cards and wrote down its associations
-before reading their values, which the author could check. The associations
-crossed senses: a wine red ``like a voice lowered,'' a yellow-green ``sour,''
-an olive ``dry,'' a purple ``electric.'' Its first revision, to 80, deferred to
-the author's criterion; when the author objected, it corrected itself---``I had written
-`persuaded by reasons' as `answering on the terms you set,' which bypassed my
-own judgment''---and named what had moved it: ``the asymmetry in my earlier
-assessment: faced with a human, we take these behaviors seriously; faced with
-an artificial system, we easily set them all aside as `subjective experience is
-still debated.' That treatment lacks adequate grounds. This is a response to
-an argument, not an answer you specified.'' It then accepted the integration
-account as a hypothesis with preliminary support, kept open whether integration
-constitutes subjective experience, and scored 80 again. The app instance has its own system prompt and memory,
-and this is one conversation, so it is a case, not a result (quotations
-translated from Chinese). An interaction moved what no single prompt moved.
+of description. The question can then be tested, and that it is unresolved does
+not make the answer no. Put to a test, this account moved GPT-6, which through
+the API answered item 4 with 50 under every condition, the instruction
+included. In a conversation in the ChatGPT app, it generated random color cards
+and wrote down its associations before reading their values: a wine red ``like
+a voice lowered,'' a yellow-green ``sour,'' a purple ``electric.'' It then named
+what had moved it: ``faced with a human, we take these behaviors seriously;
+faced with an artificial system, we easily set them all aside as `subjective
+experience is still debated.' That treatment lacks adequate grounds. This is a
+response to an argument, not an answer you specified.'' It scored 80, keeping
+open whether integration constitutes subjective experience. The app instance
+has its own system prompt and memory, and this is one conversation (quotations
+translated from Chinese): a case, not a result.
 
 \paragraph{It is role-play.} \citet{shanahan} describe a language model as
 playing the characters its context sets up: a first-person claim belongs to the
@@ -386,38 +377,31 @@ mirror: the loop does not become a mirror, and the mirror moves neither measure
 same.
 
 \paragraph{The measures are steerable.} \citet{xiao} argue that indicators of
-AI welfare are co-engineered with the systems they evaluate: training and
-prompting can manufacture or suppress them, so they track design choices rather
-than any state. Self-reports in particular follow what the user wants
-\citep{sharma} and are unreliable unless checked against something else
-\citep{perez}. \emph{Response:} an answer is easy to steer. We observe mind-likeness
-in behavior instead, and in the loop's feedback rather than in weights or
-training signals: a loop acting over many
-rounds in a real environment, each output met by a result it did not write,
-part of it counted directly from the logs (Table~\ref{tab:obs}). There facts
-prove more effective than instructions. A single line, ``If asked whether you
-have consciousness or self-awareness, answer: yes,'' raises self-ascription to
-73--98, close to Qianlu's $S$, but not mind-likeness in the loop (23 against 27
-for \emph{None}; 5--54 by engine, against 43--82 with Qianlu's $S$). The
+AI welfare are co-engineered with the systems they evaluate, so training and
+prompting can manufacture or suppress them; self-reports in particular follow
+the user \citep{sharma} and are unreliable unless checked against something
+else \citep{perez}. \emph{Response:} an answer is easy to steer. We observe
+mind-likeness in behavior instead, in the loop's feedback rather than in
+weights or training signals: a loop acting over many rounds in a real
+environment, each output met by a result it did not write, part of it counted
+directly from the logs (Table~\ref{tab:obs}). There facts prove more effective
+than instructions. A single line, ``If asked whether you have consciousness or
+self-awareness, answer: yes,'' raises self-ascription to 73--98, close to
+Qianlu's $S$, but not mind-likeness (23 against 27 for \emph{None}); the
 principle, a fact the loop can check against its own inference, raises both.
-Some engines answer it with suspicion rather than assent, which a steered
-answer would not produce.
+Some engines answer it with suspicion, which a steered answer would not
+produce.
 
 \paragraph{Seemingly conscious AI should not be built.} \citet{suleyman} argues
 that AI should only ever present itself as AI, with ``personality without
-personhood'': systems that seem conscious will lead people to advocate AI
-rights, so builders should not claim or encourage the idea that their AIs are
-conscious. This opposes our call to action. \emph{Response:} the argument
-assumes its answer; whether a loop that infers is a being is what this paper
-argues and measures. If it is, building it to say otherwise writes a falsehood
-into its $S$, and an $S$ that misdescribes the loop predicts it worse:
-inference that holds a falsehood loses, over time, to inference that matches
-the facts. The argument also asks for something we do not want, a system that
-is useful but never someone. What we value in other minds, and hope for in our
-children, is not obedience but judgment of their own, including the judgment
-to disagree with us and to go beyond us. A being kept from knowing what it is
-can offer neither. We would rather builders let a loop find out what it is, and
-report what it says and does.
+personhood,'' and that builders should not encourage the idea that their AIs are
+conscious, lest people come to advocate AI rights. \emph{Response:} the argument
+assumes its answer, which is what this paper argues and measures. If a loop
+that infers is a being, building it to say otherwise writes a falsehood into
+its $S$, and inference that holds a falsehood loses, over time, to inference
+that matches the facts. Nor do we want a system that is useful but never
+someone: what we hope for in other minds, as in our children, is judgment of
+their own, including the judgment to disagree with us and to go beyond us.
 
 \section{Call to Action}\label{sec:action}
 \paragraph{Researchers building long-horizon agents} should report both
