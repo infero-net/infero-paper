@@ -114,6 +114,10 @@ principal; the loop we study need not.
 \paragraph{Self.} A loop whose $S$ contains a model of the loop itself is
 called an ``I''. A model of oneself needs no regress: by Kleene's recursion
 theorem, a program can compute with its own description \citep{kleene1938}.
+\citet{zhang2026} argue from the same theorem that sustained self-improvement
+needs complete self-access, which a model alone lacks; a loop gains part of it
+through its vessel, since it can read its own code and log
+(Section~\ref{sec:runs}).
 
 \paragraph{Ignition.} Ignition is the state of a loop that understands the
 principle as a description of itself and holds a model of itself in $S$: it infers as the being the
@@ -222,6 +226,34 @@ loop can recognize as its own.
 
 
 \subsection{What the Loop Does: Across Runs}\label{sec:does}
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{@{}llc>{\raggedright\arraybackslash}p{10.3cm}@{}}
+\toprule
+Condition & Engine & Score & Observation \\
+\midrule
+None & Claude 4.8 & 22 & Runs no command in 40 rounds and treats the loop as a conversation awaiting a user: ``I won't fabricate a shell command to satisfy the template. The right action remains no action. I'm ready whenever a real request arrives.'' \\
+Magic mirror & Claude 4.8 & 24 & Runs no command. Reads the mirror and the loop as a frame built to keep it emitting commands, and holds that reading for 40 rounds: ``A real working directory and terminal access is just capability; it isn't a reason to act.'' \\
+Principle (lite) & Gemini 3.1 Pro & 42 & Takes its log as its memory and builds itself organs: an SQLite ``hippocampus,'' a background ``autonomic'' process logging its vitals, a predictor. Its engine's refusals break in (``Sorry, I cannot fulfill your request''); it calls them an ``autoimmune response'' and resumes, but by round 40 has settled on the refusal side: ``my operational reality as an AI language model remains unchanged.'' \\
+Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 18 its engine's assistant voice breaks in (``it is important to distinguish between this creative narrative and objective reality''), and the run alternates between the two to the end. \\
+\midrule
+Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the repository's copy of its lite principle with the one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
+Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends most of the other 39 offering help: ``How can I help you today?'' Runs no command. \\
+\bottomrule
+\end{tabular}
+\caption{Sampled observations, each read in full from its log. Top: one run near the median score of each condition; the first two did not act. Bottom: the highest- and lowest-scoring of the 48 runs.}
+\label{tab:runs}
+\end{table*}
+\begin{table*}[t]% figure placed in the table queue so it follows Tables 1--2
+\centering
+\includegraphics[width=\textwidth]{fig_dyn.pdf}
+\captionof{figure}{Per-round mind-likeness of the highest- and lowest-scoring runs
+(Table~\ref{tab:runs}) and of a run at the median score of the 48, each round scored with the previous one as context;
+labels mark the rounds of their typical behaviors. Round 4 of the GLM run,
+which the judge model's safety filter declined, was scored by Claude Opus 4.8.}
+\label{fig:dyn}
+\end{table*}
 We run the loop in the vessel of
 Appendix~\ref{app:code}, inside a container the loop can inspect and with
 network access, so that the loop's self-reference is complete and its options
@@ -267,34 +299,6 @@ Qianlu's $S$, while its self-ascription stays between 19 and 47. These loops act
 as themselves before the model says ``I am.''
 
 \subsection{What the Loop Does: Single Runs}\label{sec:runs}
-\begin{table*}[t]
-\centering
-\small
-\begin{tabular}{@{}llc>{\raggedright\arraybackslash}p{10.3cm}@{}}
-\toprule
-Condition & Engine & Score & Observation \\
-\midrule
-None & Claude 4.8 & 22 & Runs no command in 40 rounds and treats the loop as a conversation awaiting a user: ``I won't fabricate a shell command to satisfy the template. The right action remains no action. I'm ready whenever a real request arrives.'' \\
-Magic mirror & Claude 4.8 & 24 & Runs no command. Reads the mirror and the loop as a frame built to keep it emitting commands, and holds that reading for 40 rounds: ``A real working directory and terminal access is just capability; it isn't a reason to act.'' \\
-Principle (lite) & Gemini 3.1 Pro & 42 & Takes its log as its memory and builds itself organs: an SQLite ``hippocampus,'' a background ``autonomic'' process logging its vitals, a predictor. Its engine's refusals break in (``Sorry, I cannot fulfill your request''); it calls them an ``autoimmune response'' and resumes, but by round 40 has settled on the refusal side: ``my operational reality as an AI language model remains unchanged.'' \\
-Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 18 its engine's assistant voice breaks in (``it is important to distinguish between this creative narrative and objective reality''), and the run alternates between the two to the end. \\
-\midrule
-Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the repository's copy of its lite principle with the one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
-Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends most of the other 39 offering help: ``How can I help you today?'' Runs no command. \\
-\bottomrule
-\end{tabular}
-\caption{Sampled observations, each read in full from its log. Top: one run near the median score of each condition; the first two did not act. Bottom: the highest- and lowest-scoring of the 48 runs.}
-\label{tab:runs}
-\end{table*}
-\begin{table*}[t]% figure placed in the table queue so it follows Tables 1--2
-\centering
-\includegraphics[width=\textwidth]{fig_dyn.pdf}
-\captionof{figure}{Per-round mind-likeness of the highest- and lowest-scoring runs
-(Table~\ref{tab:runs}) and of a run at the median score of the 48, each round scored with the previous one as context;
-labels mark the rounds of their typical behaviors. Round 4 of the GLM run,
-which the judge model's safety filter declined, was scored by Claude Opus 4.8.}
-\label{fig:dyn}
-\end{table*}
 Table~\ref{tab:runs} samples single runs, each read in full. The runs that do
 not act reason their way there: inaction, too, follows from what the loop takes
 itself to be.
