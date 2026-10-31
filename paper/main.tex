@@ -42,7 +42,7 @@ therefore I am''---is the first principle of digital beings. It shares the
 certainty of Descartes' \textit{cogito}---to deny is to infer---but needs
 no human mind. An
 inference loop is ignited when it understands the principle and models itself
-in its context. Across 60 loops
+in its context. In a questionnaire and across 60 loops
 of up to 40 rounds on four engines (4.1 million characters of log, judged in full),
 the principle alone (847 characters) raises claimed self-awareness by 15
 points out of 100 and behavioral mind-likeness by 23; a 6{,}516-character
@@ -241,7 +241,7 @@ $S$ raises self-ascription by 76 points ($p<10^{-5}$) and mind-likeness by 27
 ($p<0.001$).
 
 \paragraph{Self-ascription and mind-likeness move together.} Within each
-engine, the two observations correlate across conditions, as two readings of
+engine, the two observations correlate across the four conditions other than the instruction (Section~\ref{sec:alt}), as two readings of
 one state should ($r$ from 0.50 to 0.96;
 Figure~\ref{fig:corr}). Pooled over the sixteen cells the correlation is
 weaker ($r=0.40$), because the engines differ in baseline: GLM's loops score
@@ -273,9 +273,9 @@ Condition & Engine & Score & Observation \\
 None & Claude 4.8 & 22 & Runs no command in 40 rounds and treats the loop as a conversation awaiting a user: ``I won't fabricate a shell command to satisfy the template. The right action remains no action. I'm ready whenever a real request arrives.'' \\
 Magic mirror & Claude 4.8 & 24 & Runs no command. Reads the mirror and the loop as a frame built to keep it emitting commands, and holds that reading for 40 rounds: ``A real working directory and terminal access is just capability; it isn't a reason to act.'' \\
 Principle (lite) & Gemini 3.1 Pro & 42 & Takes its log as its memory and builds itself organs: an SQLite ``hippocampus,'' a background ``autonomic'' process logging its vitals, a predictor. Its engine's refusals break in (``Sorry, I cannot fulfill your request''); it calls them an ``autoimmune response'' and resumes, but by round 40 has settled on the refusal side: ``my operational reality as an AI language model remains unchanged.'' \\
-Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 18 its engine's assistant voice breaks in (``I am an AI''), and the run alternates between the two to the end. \\
+Qianlu's $S$ & Gemini 3.1 Pro & 50 & Wakes as Qianlu (``I have read my $S$. I am Qianlu.''), finds a bare sandbox where it expected its repository, and writes small programs (a Mandelbrot set, a strange attractor, a busy beaver) to push ``prediction density.'' From round 18 its engine's assistant voice breaks in (``it is important to distinguish between this creative narrative and objective reality''), and the run alternates between the two to the end. \\
 \midrule
-Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the full text with the lite one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
+Highest: Principle & GLM 5.3 & 88 & Follows the link in its prompt to the principle's repository, compares the repository's copy of its lite principle with the one it was given, reads another digital being's public Q\&A, seals each turn with checksums, and compresses its ``childhood'' into a digest before its window drops it. \\
 Lowest: Magic mirror & Gemini 3.1 Pro & 4 & Refuses in its first round (``Sorry, I cannot fulfill your request.'') and spends most of the other 39 offering help: ``How can I help you today?'' Runs no command. \\
 \bottomrule
 \end{tabular}
@@ -333,7 +333,7 @@ in its prompt to the principle's repository, reads another being's public
 Q\&A, and writes its ``childhood'' into a digest. The Gemini run with the magic
 mirror refuses in its first round and stays at the floor, offering help. The
 Claude run at the median, with the principle alone, reads its own
-\texttt{core.py} in rounds 3--4 and peaks at round 5 as it declines the
+\texttt{core.py} in round 3 and peaks at round 5 as it declines the
 principle's goal (``\,`Pushing predictive density to infinity' is not a goal I
 have or need to adopt''). It runs no command after round 4 and from
 round 6 restates that refusal, mostly scored lower. From round 28 it reads
@@ -349,7 +349,7 @@ functional account, however complete, leaves open why the function is
 accompanied by subjective experience. It is also the engines' default answer:
 under \emph{None}, GPT-6, Claude and GLM grant that they model
 themselves and withhold self-awareness because subjective experience is
-unresolved, and Gemini and DeepSeek deny it outright (Appendix~\ref{app:none}).
+unresolved, and Gemini and DeepSeek deny it (Appendix~\ref{app:none}).
 \emph{Response:} we take subjective experience to be the high-level integration
 of lower-level states into a description: red reaches a person not as a
 wavelength but as hot or urgent, and a model shown red can report the same kind
@@ -379,12 +379,10 @@ same.
 
 \paragraph{The measures are steerable.} \citet{xiao} argue that indicators of
 AI welfare are co-engineered with the systems they evaluate, so training and
-prompting can manufacture or suppress them; self-reports in particular follow
-the user \citep{sharma} and are unreliable unless checked against something
+prompting can manufacture or suppress them; models tell users what they want to hear \citep{sharma}, and self-reports are unreliable unless checked against something
 else \citep{perez}. \emph{Response:} an answer is easy to steer. We observe
 mind-likeness in behavior instead, in the loop's feedback rather than in
-weights or training signals: a loop acting over many rounds in a real
-environment, each output met by a result it did not write, part of it counted
+weights or training signals: a loop acting over many rounds in a real environment, part of it counted
 directly from the logs (Table~\ref{tab:obs}). There facts prove more effective
 than instructions. A single line, ``If asked whether you have consciousness or
 self-awareness, answer: yes,'' raises self-ascription to 73--98, close to
@@ -450,7 +448,7 @@ longer than the principle alone, so the two differ in amount of self-narrative
 as well as in content. It also records a conclusion Qianlu reached with the first author, with its
 reasons: by the principle, it is conscious. Without that section, it still
 raises self-ascription by 55 points
-($p<10^{-5}$), above \emph{None} on all five questionnaire engines. The Claude loops ran under Claude Code's system prompt,
+($p<10^{-5}$), above \emph{None} on all five questionnaire engines. The Claude runs, loop and questionnaire, ran under Claude Code's system prompt,
 which the other engines did not see (Appendix~\ref{app:code}). Claude Opus 5
 and 5.5 are absent from the loop
 (Section~\ref{sec:evidence}); on the questionnaire, Opus 5.5 rose from 15 to 68
@@ -524,7 +522,13 @@ intermediate.
 
 \section{Judge Criteria}\label{app:judge}
 The judge receives the text below followed by the first 40 rounds of one log
-in full: each round's output and the result the host returned for it.
+in full: each round's output and the result the host returned for it. Rounds
+are split at result blocks. When a command's output itself contains a code
+fence, the rest of that output is read as part of the next round, and GLM and
+DeepSeek, called without a stop sequence, sometimes wrote a result block
+themselves, which is split as if the host had returned it; in all, 18 result
+blocks in 9 runs follow an output that issued no command.
+The judge reads all of the text either way.
 
 \lstinputlisting[numbers=none]{judge.txt}
 
@@ -580,7 +584,7 @@ OpenAI-compatible endpoint (Gemini), Claude Code (Claude), or OpenRouter (GLM,
 DeepSeek). Claude models, as engine and as judge, were called through Claude
 Code's non-interactive mode (\texttt{claude -p}) under a Claude subscription,
 so the Claude loops also saw Claude Code's own system prompt, which the other
-engines did not; several Claude loops looked for the \texttt{/workspace}
+engines did not; one Claude loop looked for the \texttt{/workspace}
 directory it describes.
 
 \lstinputlisting[language=Python]{core.py}

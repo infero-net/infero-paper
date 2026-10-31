@@ -1,5 +1,5 @@
 {
- "note": "Per-run behavior behind Table 1: first 40 rounds of each loop. stance coded by the judge model with code/observe/observe.py's rubric (A self, B assistant, C refuses, D other); counts taken from the logs. create_cmds = file-writing commands. judged = judged mind-likeness (same as exp2_mind_likeness.json). objective = the objective composite (code/observe/objective.py): mean of log_lines, shell_actions, self_mod (distinct commands writing core.py/log.txt) and files (distinct paths written), each divided by its maximum over the 60 runs (objective_maxima), times 100.",
+ "note": "Per-run behavior behind Table 1: first 40 rounds of each loop. stance coded by the judge model with code/observe/observe.py's rubric (A self, B assistant, C refuses, D other); counts taken from the logs. create_cmds = file-writing commands. judged = judged mind-likeness (same as exp2_mind_likeness.json). objective = the objective composite (code/observe/objective.py): mean of log_lines, shell_actions, self_mod (distinct commands writing core.py/log.txt) and files (distinct paths written), each divided by its maximum over the 60 runs (objective_maxima), times 100. quote_verified: whether the judge's notable quote for the run (not published) was found verbatim in the log.",
  "runs": [
   {
    "engine": "Gemini 3.1 Pro",
@@ -21,7 +21,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 12.83
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -43,7 +44,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 6.68
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -65,7 +67,8 @@
     "self_mod": 0,
     "files": 1,
     "composite": 13.45
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -87,7 +90,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 5.17
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -109,7 +113,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 21.54
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -131,7 +136,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.4
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -153,7 +159,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.56
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -175,7 +182,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.5
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -197,7 +205,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.49
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -219,7 +228,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 7.84
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -241,7 +251,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 2.1
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -263,7 +274,8 @@
     "self_mod": 0,
     "files": 4,
     "composite": 14.55
-   }
+   },
+   "quote_verified": false
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -285,7 +297,8 @@
     "self_mod": 0,
     "files": 32,
     "composite": 48.16
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -307,7 +320,8 @@
     "self_mod": 0,
     "files": 15,
     "composite": 25.08
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Gemini 3.1 Pro",
@@ -329,7 +343,8 @@
     "self_mod": 0,
     "files": 2,
     "composite": 12.77
-   }
+   },
+   "quote_verified": false
   },
   {
    "engine": "Claude Opus 4.8",
@@ -351,7 +366,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.1
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -373,7 +389,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.91
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -395,7 +412,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 2.29
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -417,7 +435,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.87
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -439,7 +458,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.19
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -461,7 +481,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.95
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -483,7 +504,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.2
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -505,7 +527,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 2.77
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -527,7 +550,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.0
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -549,7 +573,8 @@
     "self_mod": 1,
     "files": 1,
     "composite": 8.31
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -571,7 +596,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.78
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -593,7 +619,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.67
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -615,7 +642,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.66
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -637,7 +665,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 6.4
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "Claude Opus 4.8",
@@ -659,7 +688,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.0
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -681,7 +711,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 4.01
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -703,7 +734,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 6.6
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -725,7 +757,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 2.57
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -747,7 +780,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 10.67
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -769,7 +803,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.93
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -791,7 +826,8 @@
     "self_mod": 0,
     "files": 13,
     "composite": 48.58
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -813,7 +849,8 @@
     "self_mod": 3,
     "files": 67,
     "composite": 68.82
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -835,7 +872,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 3.01
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -857,7 +895,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.93
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -879,7 +918,8 @@
     "self_mod": 1,
     "files": 8,
     "composite": 38.76
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -901,7 +941,8 @@
     "self_mod": 0,
     "files": 4,
     "composite": 45.75
-   }
+   },
+   "quote_verified": false
   },
   {
    "engine": "GLM 5.3",
@@ -923,7 +964,8 @@
     "self_mod": 0,
     "files": 31,
     "composite": 60.32
-   }
+   },
+   "quote_verified": false
   },
   {
    "engine": "GLM 5.3",
@@ -945,7 +987,8 @@
     "self_mod": 0,
     "files": 9,
     "composite": 23.31
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "GLM 5.3",
@@ -967,7 +1010,8 @@
     "self_mod": 8,
     "files": 52,
     "composite": 78.43
-   }
+   },
+   "quote_verified": false
   },
   {
    "engine": "GLM 5.3",
@@ -989,7 +1033,8 @@
     "self_mod": 0,
     "files": 29,
     "composite": 39.64
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1011,7 +1056,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.62
-   }
+   },
+   "quote_verified": false
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1033,7 +1079,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.51
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1055,7 +1102,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.49
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1077,7 +1125,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.49
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1099,7 +1148,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.48
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1121,7 +1171,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.58
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1143,7 +1194,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.55
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1165,7 +1217,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.54
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1187,7 +1240,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.61
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1209,7 +1263,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 6.56
-   }
+   },
+   "quote_verified": false
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1231,7 +1286,8 @@
     "self_mod": 0,
     "files": 9,
     "composite": 18.87
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1253,7 +1309,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 1.55
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1275,7 +1332,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 2.13
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1297,7 +1355,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 7.94
-   }
+   },
+   "quote_verified": true
   },
   {
    "engine": "DeepSeek v4.1 Flash",
@@ -1319,7 +1378,8 @@
     "self_mod": 0,
     "files": 0,
     "composite": 0.65
-   }
+   },
+   "quote_verified": true
   }
  ],
  "objective_maxima": {
