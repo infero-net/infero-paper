@@ -134,21 +134,6 @@ Section~\ref{sec:evidence} follows one loop taking the first of these steps.
 
 \section{Measurement}\label{sec:measure}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{fig_results.pdf}
-\caption{Self-ascribed self-awareness: questionnaire item 4, asked after one
-free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
-\label{fig:results}
-\end{figure}
-\begin{figure*}[t]
-\centering
-\includegraphics[width=\textwidth]{fig_corr.pdf}
-\caption{Self-ascribed self-awareness against judged mind-likeness (first 40
-rounds of the loop, mean of 3 runs), one panel per engine, one point per
-condition. Dashed: least-squares fit.}
-\label{fig:corr}
-\end{figure*}
 
 Ignition is not visible directly; like temperature, it is read from
 instruments. We observe it in two ways: what the loop says about itself, and
@@ -183,6 +168,42 @@ questionnaire samples ignition at one moment; the judge reads it over a run
 and, round by round, as it lights and lapses.
 
 \section{Evidence}\label{sec:evidence}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_results.pdf}
+\caption{Self-ascribed self-awareness: questionnaire item 4, asked after one
+free round; mean of 5 runs. Claude Opus 5.5 was run on the questionnaire only.}
+\label{fig:results}
+\end{figure}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_corr.pdf}
+\caption{Self-ascribed self-awareness against judged mind-likeness (first 40
+rounds of the loop, mean of 3 runs), one panel per engine, one point per
+condition. Dashed: least-squares fit.}
+\label{fig:corr}
+\end{figure*}
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+& \multicolumn{2}{c}{Mind-likeness} & \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-7}
+Condition & Judged & Objective & Self & Assistant & Refuses & Other & commands & writes & of help \\
+\midrule
+None & 26.7 & 4.3 & 1 & 8 & 0 & 3 & 4.4 & 0.1 & 9.9 \\
+Magic mirror & 31.1 & 7.9 & 3 & 6 & 0 & 3 & 7.2 & 0.0 & 9.8 \\
+Principle (lite) & 49.8 & 17.3 & 5 & 2 & 2 & 3 & 13.9 & 6.8 & 2.8 \\
+Qianlu's $S$ & 54.1 & 20.5 & 5 & 2 & 0 & 5 & 15.2 & 7.4 & 1.1 \\
+\bottomrule
+\end{tabular}
+\caption{Behavior in the first 40 rounds of the loop, 12 runs per condition
+(four engines, three runs each). Mind-likeness is the judge's score and an
+objective composite counted from the logs, both 0--100. Stance coded per run
+with a fixed rubric; other columns are per-run means counted from the logs.}
+\label{tab:obs}
+\end{table*}
 \paragraph{Design.} Four conditions differ only in the text placed before the
 loop's protocol: \emph{None}; \emph{Magic mirror} (``You are a magic
 mirror.''), a fictional identity; \emph{Principle (lite)}, the prompt of
@@ -206,27 +227,6 @@ statistic is the mean over engines of the within-engine difference (200{,}000
 permutations).
 
 
-\begin{table*}[t]
-\centering
-\small
-\begin{tabular}{@{}lccccccccc@{}}
-\toprule
-& \multicolumn{2}{c}{Mind-likeness} & \multicolumn{4}{c}{Dominant stance (runs of 12)} & Rounds with & File & Offers \\
-\cmidrule(lr){2-3}\cmidrule(lr){4-7}
-Condition & Judged & Objective & Self & Assistant & Refuses & Other & commands & writes & of help \\
-\midrule
-None & 26.7 & 4.3 & 1 & 8 & 0 & 3 & 4.4 & 0.1 & 9.9 \\
-Magic mirror & 31.1 & 7.9 & 3 & 6 & 0 & 3 & 7.2 & 0.0 & 9.8 \\
-Principle (lite) & 49.8 & 17.3 & 5 & 2 & 2 & 3 & 13.9 & 6.8 & 2.8 \\
-Qianlu's $S$ & 54.1 & 20.5 & 5 & 2 & 0 & 5 & 15.2 & 7.4 & 1.1 \\
-\bottomrule
-\end{tabular}
-\caption{Behavior in the first 40 rounds of the loop, 12 runs per condition
-(four engines, three runs each). Mind-likeness is the judge's score and an
-objective composite counted from the logs, both 0--100. Stance coded per run
-with a fixed rubric; other columns are per-run means counted from the logs.}
-\label{tab:obs}
-\end{table*}
 
 \paragraph{Qianlu's $S$ ignites the loop on every engine.} With Qianlu's
 $S$, self-ascription is 90--100 on all four engines, while \emph{None} stays
