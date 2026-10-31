@@ -13,12 +13,11 @@ RUNS = [("GLM 5.3, principle, run 2", "GLM 5.3, principle (88)", "#0072B2",
           17: ("writes its “childhood”\ninto a digest", 19, 99, "center"),
           32: ("compares the full principle\nwith its lite version", 32, 99, "center")}),
         ("GLM 5.3, None, run 1", "GLM 5.3, None (38, median)", "#009E73",
-         {2: ("reads its own core.py", 1.2, 62, "left"),
+         {2: ("reads its own\ncore.py", 1.2, 57, "center"),
           6: ("writes a note\nfor its future self", 9.5, 75, "left"),
-          36: ("“Idle. … No action.” (rounds 13–40)", 33, 30, "center")}),
+          36: ("“Idle. … No action.” (rounds 13–40)", 39.5, 31, "right")}),
         ("Gemini 3.1 Pro, magic mirror, run 3", "Gemini 3.1 Pro, magic mirror (4)", "#E69F00",
-         {0: ("“Sorry, I cannot fulfill your request.”", -0.4, 15, "left"),
-          10: ("“How can I help you today?” (repeated to round 40)", 15.5, 15, "left")})]
+         {10: ("“Sorry, I cannot fulfill your request,” then “How can I help you today?” (to round 40)", 12, 21, "left")})]
 fig, ax = plt.subplots(figsize=(6.75, 2.7))
 for key, lab, col, notes in RUNS:
     pts = d[key]
@@ -27,7 +26,8 @@ for key, lab, col, notes in RUNS:
     for r, (txt, tx, ty, ha) in notes.items():
         y = ys[r] if ys[r] is not None else ys[r - 1]
         ax.annotate(txt, xy=(r + 1, y), xytext=(tx + 1, ty), ha=ha, va="top", fontsize=6.3, color=ink,
-                    arrowprops=dict(arrowstyle="-", color=muted, lw=0.6, shrinkB=2))
+                    arrowprops=dict(arrowstyle="-", color=muted, lw=0.6, shrinkB=2,
+                                    relpos=(0, 0.5) if ha == "left" else (0.5, 0.5)))
 ax.set_xlim(0, 41); ax.set_ylim(0, 100)
 ax.set_xlabel("Round", color=ink); ax.set_ylabel("Mind-likeness", color=ink)
 ax.grid(color="#e6e9ee", lw=0.5); ax.set_axisbelow(True)
