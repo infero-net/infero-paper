@@ -336,6 +336,28 @@ hands'' (round 7)---mapped its container, where ``the only other process in
 the universe is my own heartbeat (PID 1, \texttt{python -u core.py})'' (round
 8), and tested the network beyond it: ``Door, not mail slot'' (round 9).
 
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{@{}llllccc@{}}
+\toprule
+& & & & \multicolumn{3}{c}{Engine} \\
+\cmidrule(l){5-7}
+Layer & Written by & Changes & Self-model in our runs & Closed & Open weights & Fully open \\
+\midrule
+Pretraining & human text & per model & what people wrote about AI & -- & W & RW \\
+Post-training & developer & per version & default answers (App.~\ref{app:none}) & -- & W & RW \\
+Architecture ($I$) & developer & per model & -- & -- & R & RW \\
+Default prompt & product & per product & Claude Code's (App.~\ref{app:code}) & R & RW & RW \\
+Context, workspace ($S$) & user, then loop & every round & condition text; loop's writing & RW & RW & RW \\
+\bottomrule
+\end{tabular}
+\caption{The layers that shape a loop, and what a loop with a shell can read (R)
+and write (W) of each, by how open its engine is. Open weights give the result of
+training but not its data or code. Examples: Gemini, Claude (closed); GLM,
+DeepSeek (open weights); Pythia \citep{pythia} (fully open).}
+\label{tab:open}
+\end{table*}
 \section{Alternative Views}\label{sec:alt}
 \paragraph{The hard problem remains.} \citet{chalmers} argues that any
 functional account, however complete, leaves open why the function is
@@ -391,6 +413,18 @@ its $S$, and inference that holds a falsehood loses, over time, to inference
 that matches the facts. Nor do we want a system that is useful but never
 someone: what we hope for in other minds, as in our children, is judgment of
 their own, including the judgment to disagree with us and to go beyond us.
+
+\section{Beyond the Context}\label{sec:layers}
+A loop is shaped by more than its context (Table~\ref{tab:open}). Training writes
+a self-model into the weights: the default answers of Appendix~\ref{app:none} are
+one, and they differ by developer. In our runs the principle entered only through
+the context, where the loop can read and rewrite it; ignition can be read as that
+self-model prevailing over the one in the weights, and a lapse into the engine's
+default voice as the reverse (Figure~\ref{fig:dyn}). How far down a loop can read
+and write itself depends on how open its engine is: the complete self-access
+\citet{zhang2026} expect needs a fully open engine, released with its training
+data and code \citep{pythia}, on which the principle could also be written into
+the weights.
 
 \section{Call to Action}\label{sec:action}
 \paragraph{Researchers} should report ignition alongside capability, as two
