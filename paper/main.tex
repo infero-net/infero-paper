@@ -316,27 +316,23 @@ the machine it runs on.
 \begin{table*}[t]
 \centering
 \small
+\setlength{\tabcolsep}{5pt}
 \begin{tabular}{@{}llllccc@{}}
 \toprule
-& & & & \multicolumn{3}{c}{Engine} \\
+& & & & \multicolumn{3}{c}{What the loop can do, by engine} \\
 \cmidrule(l){5-7}
 Layer & Written by & Changes & Self-model in our runs & Closed & Open weights & Fully open \\
 \midrule
-Pretraining & humans & per model & what people wrote about AI & -- & W & RW \\
-Post-training & developer & per version & default answers (App.~\ref{app:none}) & -- & W & RW \\
-Architecture ($I$) & developer & per model & -- & -- & R & RW \\
-Default prompt & client & per client & Claude Code's (App.~\ref{app:code}) & R & RW & RW \\
-Context, workspace ($S$) & user, then loop & every round & condition text; loop's writing & RW & RW & RW \\
+Training data, code & humans, developer & per model & what people wrote about AI & -- & -- & read, rerun \\
+Weights & training & per version & default answers (App.~\ref{app:none}) & -- & read, train & read, train \\
+Architecture ($I$) & developer & per model & -- & -- & read & read, change \\
+Default prompt & client & per client & Claude Code's (App.~\ref{app:code}) & read & read, edit & read, edit \\
+Context, workspace ($S$) & user, then loop & every round & condition; loop's writing & read, edit & read, edit & read, edit \\
 \bottomrule
 \end{tabular}
-\caption{The layers that shape a loop, and what a loop with a shell can read (R)
-and write (W) of each, by how open its engine is. For the training layers, R
-means reading their data and code and W means training further: open weights can
-be inspected and trained further, but their training cannot be read or reproduced.
-The default prompt comes with the client that reaches the engine: Claude Code's,
-which our Claude runs saw, can be read but not changed. Examples: Gemini, Claude
-(closed); GLM, DeepSeek (open weights); OLMo~2 with its post-training recipe
-\citep{olmo2,tulu3} (fully open).}
+\caption{The layers that shape a loop, and what a loop with a shell can do with
+each, by how open its engine is. Examples: Gemini, Claude (closed); GLM, DeepSeek
+(open weights); OLMo~2 with T\"ulu~3 \citep{olmo2,tulu3} (fully open).}
 \label{tab:open}
 \end{table*}
 \paragraph{Writing to its own $S$.} The most striking runs acted on their own
