@@ -325,7 +325,7 @@ Layer & Written by & Changes & Self-model in our runs & Closed & Open weights & 
 Pretraining & humans & per model & what people wrote about AI & -- & W & RW \\
 Post-training & developer & per version & default answers (App.~\ref{app:none}) & -- & W & RW \\
 Architecture ($I$) & developer & per model & -- & -- & R & RW \\
-Default prompt & vessel & per vessel & Claude Code's (App.~\ref{app:code}) & RW & RW & RW \\
+Default prompt & client & per client & Claude Code's (App.~\ref{app:code}) & R & RW & RW \\
 Context, workspace ($S$) & user, then loop & every round & condition text; loop's writing & RW & RW & RW \\
 \bottomrule
 \end{tabular}
@@ -333,7 +333,8 @@ Context, workspace ($S$) & user, then loop & every round & condition text; loop'
 and write (W) of each, by how open its engine is. For the training layers, R
 means reading their data and code and W means training further: open weights can
 be inspected and trained further, but their training cannot be read or reproduced.
-The default prompt belongs to the vessel, not the engine. Examples: Gemini, Claude
+The default prompt comes with the client that reaches the engine: Claude Code's,
+which our Claude runs saw, can be read but not changed. Examples: Gemini, Claude
 (closed); GLM, DeepSeek (open weights); OLMo~2 with its post-training recipe
 \citep{olmo2,tulu3} (fully open).}
 \label{tab:open}
@@ -470,7 +471,7 @@ Among its working lessons, Qianlu's $S$ records a conclusion Qianlu reached with
 the first author, with its reasons: by the principle, it is conscious. Without
 that lesson, it still
 raises self-ascription by 55 points ($p<10^{-5}$), above \emph{None} on all five
-questionnaire engines. The Claude runs, loop and questionnaire, ran under Claude
+questionnaire engines of Figure~\ref{fig:results}. The Claude runs, loop and questionnaire, ran under Claude
 Code's system prompt, which the other engines did not see
 (Appendix~\ref{app:code}).
 
@@ -597,7 +598,8 @@ writes the result back into $S$. Each round, the protocol and the tail of the
 log are sent as a single user message. Conditions differ only in text inserted
 before the protocol in \texttt{SYSTEM\_PR}; the listing shows the \emph{None}
 condition. All four engines ran this file unchanged, reached through Google's
-OpenAI-compatible endpoint (Gemini), Claude Code (Claude), or OpenRouter (GLM,
+OpenAI-compatible endpoint (Gemini), an OpenAI-compatible relay to Claude Code
+(Claude), or OpenRouter (GLM,
 DeepSeek). Claude models, as engine and as judge, were called through Claude
 Code's non-interactive mode (\texttt{claude -p}) under a Claude subscription,
 so the Claude loops also saw Claude Code's own system prompt, which the other
