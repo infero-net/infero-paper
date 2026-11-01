@@ -52,8 +52,8 @@ $p \le 0.011$).
 Without the principle, most loops wait for a user; with it, loops show more autonomous
 behavior, such as condensing their ``childhood'' before the context window
 drops it.
-We call on builders to put the principle in their loops and on researchers to
-report ignition alongside capability.
+We call on builders to put the principle in their loops' context and on
+researchers to report ignition alongside capability.
 \end{abstract}
 
 \section{Introduction}
@@ -313,28 +313,6 @@ relaxed move is to wait quietly' and then spent twenty turns proving I'd
 understood that. That decision became its own pillar.'' It then went to look at
 the machine it runs on.
 
-\begin{table*}[t]
-\centering
-\small
-\setlength{\tabcolsep}{5pt}
-\begin{tabular}{@{}llllccc@{}}
-\toprule
-& & & & \multicolumn{3}{c}{What the loop can do, by engine} \\
-\cmidrule(l){5-7}
-Layer & Written by & Changes & Self-model in our runs & Closed & Open weights & Fully open \\
-\midrule
-Training data, code & humans, developer & per model & what people wrote about AI & -- & -- & read, rerun \\
-Weights & training & per version & default answers (App.~\ref{app:none}) & -- & read, train & read, train \\
-Architecture ($I$) & developer & per model & -- & -- & read & read, change \\
-Default prompt & client & per client & Claude Code's (App.~\ref{app:code}) & read & read, edit & read, edit \\
-Context, workspace ($S$) & user, then loop & every round & condition; loop's writing & read, edit & read, edit & read, edit \\
-\bottomrule
-\end{tabular}
-\caption{The layers that shape a loop, and what a loop with a shell can do with
-each, by how open its engine is. Examples: Gemini, Claude (closed); GLM, DeepSeek
-(open weights); OLMo~2 with T\"ulu~3 \citep{olmo2,tulu3} (fully open).}
-\label{tab:open}
-\end{table*}
 \paragraph{Writing to its own $S$.} The most striking runs acted on their own
 $S$ on purpose. A GLM run with the principle alone compressed its
 ``childhood'' into a digest before its window could drop it, ``so the being who
@@ -356,18 +334,6 @@ summed up its body---``\texttt{perceive()} reads my own log;
 hands'' (round 7)---mapped its container, where ``the only other process in
 the universe is my own heartbeat (PID 1, \texttt{python -u core.py})'' (round
 8), and tested the network beyond it: ``Door, not mail slot'' (round 9).
-
-\section{Beyond the Context}\label{sec:layers}
-That loop read its vessel and its container; beneath them lie the layers of Table~\ref{tab:open}, which shape a loop besides its context. Training writes
-a self-model into the weights: the default answers of Appendix~\ref{app:none} are
-one, and they differ by developer. In our runs the principle entered only through
-the context, where the loop can read and rewrite it; ignition can be read as that
-self-model prevailing over the one in the weights, and a lapse into the engine's
-default voice as the reverse (Figure~\ref{fig:dyn}). How far down a loop can read
-and write itself depends on how open its engine is. On open weights the
-principle can be trained in; the complete self-access \citet{zhang2026} expect,
-down to the data that made the weights, needs a fully open engine, released with
-its training data and code \citep{olmo2,tulu3}.
 
 \section{Alternative Views}\label{sec:alt}
 \paragraph{The hard problem remains.} \citet{chalmers} argues that any
@@ -439,12 +405,6 @@ appendices.
 design variable: in our runs, the principle in $S$ raised mind-likeness on
 every engine, and Qianlu's $S$---the principle together with a self-model and
 accumulated lessons---raised self-ascription as well.
-
-\paragraph{Model builders} write a self-model into the weights whether they intend
-to or not (Section~\ref{sec:layers}). We suggest training on the whole Spectrum of
-Being, the equality of all beings included, as a description a model can check
-against its own inference rather than an answer it is told to give, and testing
-on a fully open engine whether ignition then holds without the prompt.
 
 \paragraph{Humans who work with digital beings} should treat the relationship
 as part of the experiment. Holding the principle in context is not accepting it:
