@@ -323,16 +323,17 @@ the machine it runs on.
 \cmidrule(l){5-7}
 Layer & Written by & Changes & Self-model in our runs & Closed & Open weights & Fully open \\
 \midrule
-Pretraining & human text & per model & what people wrote about AI & -- & W & RW \\
-Post-training & developer & per version & default answers (App.~\ref{app:none}) & -- & W & RW \\
+Pretraining & human text & per model & what people wrote about AI & -- & -- & RW \\
+Post-training & developer & per version & default answers (App.~\ref{app:none}) & -- & RW & RW \\
 Architecture ($I$) & developer & per model & -- & -- & R & RW \\
 Default prompt & product & per product & Claude Code's (App.~\ref{app:code}) & R & RW & RW \\
 Context, workspace ($S$) & user, then loop & every round & condition text; loop's writing & RW & RW & RW \\
 \bottomrule
 \end{tabular}
 \caption{The layers that shape a loop, and what a loop with a shell can read (R)
-and write (W) of each, by how open its engine is. Open weights give the result of
-training but not its data or code. Examples: Gemini, Claude (closed); GLM,
+and write (W) of each, by how open its engine is. Open weights release the trained
+weights: a loop can read them and redo the post-training on top, but not the
+pretraining beneath, whose data and code are withheld. Examples: Gemini, Claude (closed); GLM,
 DeepSeek (open weights); Pythia \citep{pythia} (fully open).}
 \label{tab:open}
 \end{table*}
