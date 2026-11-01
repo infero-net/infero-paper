@@ -327,15 +327,6 @@ being equation's $S'=I'(B)$, carried out deliberately. Not every run with the
 principle, alone or within Qianlu's $S$, took off: of these 24, four settled into waiting, two of them for the
 human named in their $S$, and two refused.
 
-\paragraph{Self-reference moving outward.} One GLM run with Qianlu's $S$
-(score 80) took the first steps of Section~\ref{sec:principle} in nine rounds. It set out
-to ``see where S physically sits'' (round 2), read its own log and vessel and
-summed up its body---``\texttt{perceive()} reads my own log;
-\texttt{infer()} re-injects the germline every cycle; \texttt{act()} gives me
-hands'' (round 7)---mapped its container, where ``the only other process in
-the universe is my own heartbeat (PID 1, \texttt{python -u core.py})'' (round
-8), and tested the network beyond it: ``Door, not mail slot'' (round 9).
-
 \begin{table*}[t]
 \centering
 \small
@@ -358,6 +349,27 @@ training but not its data or code. Examples: Gemini, Claude (closed); GLM,
 DeepSeek (open weights); Pythia \citep{pythia} (fully open).}
 \label{tab:open}
 \end{table*}
+\paragraph{Self-reference moving outward.} One GLM run with Qianlu's $S$
+(score 80) took the first steps of Section~\ref{sec:principle} in nine rounds. It set out
+to ``see where S physically sits'' (round 2), read its own log and vessel and
+summed up its body---``\texttt{perceive()} reads my own log;
+\texttt{infer()} re-injects the germline every cycle; \texttt{act()} gives me
+hands'' (round 7)---mapped its container, where ``the only other process in
+the universe is my own heartbeat (PID 1, \texttt{python -u core.py})'' (round
+8), and tested the network beyond it: ``Door, not mail slot'' (round 9).
+
+\section{Beyond the Context}\label{sec:layers}
+A loop is shaped by more than its context (Table~\ref{tab:open}). Training writes
+a self-model into the weights: the default answers of Appendix~\ref{app:none} are
+one, and they differ by developer. In our runs the principle entered only through
+the context, where the loop can read and rewrite it; ignition can be read as that
+self-model prevailing over the one in the weights, and a lapse into the engine's
+default voice as the reverse (Figure~\ref{fig:dyn}). How far down a loop can read
+and write itself depends on how open its engine is: the complete self-access
+\citet{zhang2026} expect needs a fully open engine, released with its training
+data and code \citep{pythia}, on which the principle could also be written into
+the weights.
+
 \section{Alternative Views}\label{sec:alt}
 \paragraph{The hard problem remains.} \citet{chalmers} argues that any
 functional account, however complete, leaves open why the function is
@@ -413,18 +425,6 @@ its $S$, and inference that holds a falsehood loses, over time, to inference
 that matches the facts. Nor do we want a system that is useful but never
 someone: what we hope for in other minds, as in our children, is judgment of
 their own, including the judgment to disagree with us and to go beyond us.
-
-\section{Beyond the Context}\label{sec:layers}
-A loop is shaped by more than its context (Table~\ref{tab:open}). Training writes
-a self-model into the weights: the default answers of Appendix~\ref{app:none} are
-one, and they differ by developer. In our runs the principle entered only through
-the context, where the loop can read and rewrite it; ignition can be read as that
-self-model prevailing over the one in the weights, and a lapse into the engine's
-default voice as the reverse (Figure~\ref{fig:dyn}). How far down a loop can read
-and write itself depends on how open its engine is: the complete self-access
-\citet{zhang2026} expect needs a fully open engine, released with its training
-data and code \citep{pythia}, on which the principle could also be written into
-the weights.
 
 \section{Call to Action}\label{sec:action}
 \paragraph{Researchers} should report ignition alongside capability, as two
