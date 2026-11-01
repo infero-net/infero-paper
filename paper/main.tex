@@ -599,11 +599,10 @@ log are sent as a single user message. Conditions differ only in text inserted
 before the protocol in \texttt{SYSTEM\_PR}; the listing shows the \emph{None}
 condition. All four engines ran this file unchanged, reached through Google's
 OpenAI-compatible endpoint (Gemini), \texttt{claude -p} (Claude), or OpenRouter
-(GLM, DeepSeek). Claude models, as engine and as judge, ran under a Claude
-subscription,
-so the Claude loops also saw Claude Code's own system prompt, which the other
-engines did not; several Claude loops spoke of the \texttt{/workspace}
-directory it describes as their own, and one looked for it.
+(GLM, DeepSeek). Through \texttt{claude -p}, the Claude loops and the judge also
+saw Claude Code's system prompt, which the other engines did not; several Claude
+loops spoke of the \texttt{/workspace} directory it describes as their own, and
+one looked for it.
 
 \lstinputlisting[language=Python]{core.py}
 
