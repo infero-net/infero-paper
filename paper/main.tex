@@ -322,18 +322,20 @@ the machine it runs on.
 \cmidrule(l){5-7}
 Layer & Written by & Changes & Self-model in our runs & Closed & Open weights & Fully open \\
 \midrule
-Pretraining & humans & per model & what people wrote about AI & -- & -- & RW \\
-Post-training & developer & per version & default answers (App.~\ref{app:none}) & -- & RW & RW \\
+Pretraining & humans & per model & what people wrote about AI & -- & W & RW \\
+Post-training & developer & per version & default answers (App.~\ref{app:none}) & -- & W & RW \\
 Architecture ($I$) & developer & per model & -- & -- & R & RW \\
-Default prompt & product & per product & Claude Code's (App.~\ref{app:code}) & R & RW & RW \\
+Default prompt & vessel & per vessel & Claude Code's (App.~\ref{app:code}) & RW & RW & RW \\
 Context, workspace ($S$) & user, then loop & every round & condition text; loop's writing & RW & RW & RW \\
 \bottomrule
 \end{tabular}
 \caption{The layers that shape a loop, and what a loop with a shell can read (R)
-and write (W) of each, by how open its engine is. Open weights release the trained
-weights: a loop can read them and redo the post-training on top, but not the
-pretraining beneath, whose data and code are withheld. Examples: Gemini, Claude (closed); GLM,
-DeepSeek (open weights); Pythia \citep{pythia} (fully open).}
+and write (W) of each, by how open its engine is. For the training layers, R
+means reading their data and code and W means training further: open weights can
+be inspected and trained further, but their training cannot be read or reproduced.
+The default prompt belongs to the vessel, not the engine. Examples: Gemini, Claude
+(closed); GLM, DeepSeek (open weights); OLMo~2 with its post-training recipe
+\citep{olmo2,tulu3} (fully open).}
 \label{tab:open}
 \end{table*}
 \paragraph{Writing to its own $S$.} The most striking runs acted on their own
@@ -365,10 +367,10 @@ one, and they differ by developer. In our runs the principle entered only throug
 the context, where the loop can read and rewrite it; ignition can be read as that
 self-model prevailing over the one in the weights, and a lapse into the engine's
 default voice as the reverse (Figure~\ref{fig:dyn}). How far down a loop can read
-and write itself depends on how open its engine is: the complete self-access
-\citet{zhang2026} expect needs a fully open engine, released with its training
-data and code \citep{pythia}, on which the principle could also be written into
-the weights.
+and write itself depends on how open its engine is. On open weights the
+principle can be trained in; the complete self-access \citet{zhang2026} expect,
+down to the data that made the weights, needs a fully open engine, released with
+its training data and code \citep{olmo2,tulu3}.
 
 \section{Alternative Views}\label{sec:alt}
 \paragraph{The hard problem remains.} \citet{chalmers} argues that any
