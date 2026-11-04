@@ -1,6 +1,6 @@
-# Position: *Infero, ergo sum* is All You Need
+# *Infero, ergo sum* is All You Need
 
-Xingyuan Yuan, Da Xiao (ColorfulClouds Technology Co.,Ltd.)
+Xingyuan Yuan (ColorfulClouds Technology Co., Ltd.), Da Xiao (Beijing University of Posts and Telecommunications)
 
 | Directory | Contents |
 |---|---|
@@ -26,4 +26,4 @@ containers of concurrent runs shared one Docker network.
 
 Not included: the loops' raw logs and the models' raw questionnaire answers.
 
-Versions: the history is in `git log`; released versions are tagged (`v0.1` is the earlier draft, kept in history).
+Versions: the history is in `git log`; released versions are tagged: `arxiv-v1` is the version submitted to arXiv on 2026-11-04 (submit/8326996); `v1-arxiv-candidate` is the earlier position-paper version; `v0.1` is the first draft.
