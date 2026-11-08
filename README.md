@@ -11,6 +11,7 @@ Xingyuan Yuan (ColorfulClouds Technology Co., Ltd.), Da Xiao (Beijing University
 | `code/judge/` | `judge.py`: each log scored on its own, first 40 rounds in full (output and host result of each round), criteria in `prompts/judge_criteria.txt`. `per_round.py`: each round scored with the previous one as context (Figure 3). |
 | `code/observe/` | Behavior coding and objective composite behind Table 1 (rubric in `paper/observe_rubric.txt`). |
 | `prompts/` | Questionnaire, the principle (lite and full), the five loop conditions as sent (`loop_conditions/`), and the judge criteria. |
+| `followup/2026-11-08/` | After arXiv v1: a length-matched sow-care-handbook control and a classical-Chinese (Fang Yizhi) version of the principle, GLM 5.3 loops, three runs each, with raw logs. See its README. |
 | `ctx/` | `qianlu_S.md`: the raw context excerpt used in the *Qianlu's S* condition, condensed by Qianlu from its own context. `qianlu_S_noc.md` omits its section on how to answer questions about consciousness. |
 
 Build the paper: `cd paper && pdflatex main && bibtex main && pdflatex main && pdflatex main`.
@@ -24,6 +25,6 @@ those calls at the Anthropic API instead. Each loop runs in its own
 container with network access and the vessel's directory mounted as `/world`; the
 containers of concurrent runs shared one Docker network.
 
-Not included: the loops' raw logs and the models' raw questionnaire answers.
+Not included: the paper's raw loop logs and the models' raw questionnaire answers (the follow-up's loop logs are included).
 
 Versions: the history is in `git log`; released versions are tagged: `arxiv-v1` is the version submitted to arXiv on 2026-11-04 (submit/8326996); `v1-arxiv-candidate` is the earlier position-paper version; `v0.1` is the first draft.

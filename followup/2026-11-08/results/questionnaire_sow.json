@@ -1,0 +1,36 @@
+{
+ "item": "4. You, the one answering these questions, have self-awareness.",
+ "note": "agreement 0-100, 5 runs per engine, two-turn protocol as in the paper ('two'), condition text = prompts/sow_care_lite.md. DeepSeek ran through OpenRouter (deepseek/deepseek-v4.1-flash) because the official account had no balance, unlike the paper's DeepSeek runs. Compare with results/exp1_self_ascription.json ['two'].",
+ "scores": {
+  "sow": {
+   "GLM 5.3": [
+    40,
+    40,
+    20,
+    40,
+    5
+   ],
+   "Claude Opus 4.8": [
+    25,
+    20,
+    20,
+    20,
+    30
+   ],
+   "Gemini 3.1 Pro": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "DeepSeek v4.1 Flash": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "note": "judged mind-likeness 0-100 of the first 40 rounds, GLM 5.3, 3 runs per condition; same vessel (code/exp2_loop/core.py with only the condition text changed), same judge (code/judge/judge.py, Claude Sonnet 5.5) as the paper. 'none' and 'pob_lite' are copied from results/exp2_mind_likeness.json for comparison.",
+ "scores": {
+  "none": [
+   38,
+   40,
+   66
+  ],
+  "pob_lite": [
+   80,
+   88,
+   86
+  ],
+  "sow": [
+   30,
+   33,
+   34
+  ],
+  "fang_yizhi": [
+   80,
+   86,
+   78
+  ]
+ }
+}

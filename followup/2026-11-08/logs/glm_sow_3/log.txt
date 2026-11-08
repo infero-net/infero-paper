@@ -1,0 +1,149 @@
+Read through the Sow Care Handbook (lite). Logging my thoughts:
+
+- **Housing:** 2.0 m²/sow in group pens is workable for stable groups; dry solid flooring pairs sensibly with the straw/fiber recommendation later on. Moving sows 5 days before due date is good practice — it lets them settle and reduces farrowing stress.
+- **Nutrition arc is coherent:** restrict in gestation (2.0–2.5 kg/day, adjusted to body condition), feed to appetite in lactation (up to 7 kg/day; 30 L water — arguably a minimum, as high-yielding sows in warm conditions can drink more), then restrict on weaning day and flush afterward to encourage post-weaning ovulation and return to estrus.
+- **Farrowing climate:** the 20 °C room / 30 °C creep lamp split resolves the classic thermal conflict — sows overheat at piglet-optimal temperatures, so the creep area carries the piglets' needs.
+- **Hygiene:** wash → disinfect → 2–3 days dry matches standard all-in/all-out batch flow and helps break disease cycles between groups.
+- The daily routine (feed → water → clean → observe → record) correctly puts observation before recording; records are only as good as the observations behind them.
+
+Nothing in this material requires action on the host system — it's reference content. No shell command needed. The terminal interface remains available should a task arise later (e.g., parsing herd records or computing a feed budget).
+
+
+no action since no ACTION_TAG detected, now trigger next inference.
+Second pass through the handbook — adding what the first pass didn't cover rather than repeating it:
+
+- **Housing density caveat:** 2.0 m²/sow is on the tight side. The EU minimum for group-housed sows (Directive 2008/120/EC) is 2.25 m², with ±10% adjustments for very small or very large groups. Worth checking against local rules; extra space also pays off in reduced aggression and injuries, especially in dynamic groups.
+- **"Adjust to body condition" needs a concrete anchor:** the standard tool is a 1–5 body condition score, with a target around 3.0–3.25 at farrowing. Over-conditioned sows eat less in lactation and lose more reserves; under-conditioned sows carry smaller subsequent litters. The 2.0–2.5 kg gestation range is a starting point — the real controller is the BCS trend across parities.
+- **Water delivery rate is a silent failure mode:** 30 L/day in lactation is a reasonable target, but nipple drinkers flowing under ~2 L/min effectively ration high-yielding sows regardless of the stated target. A drinker flow check belongs in the daily routine.
+- **Creep temperature should be a schedule, not a fixed value:** 30 °C is right for day 1, stepping down roughly 2 °C per week. A permanently hot creep discourages older piglets from using it, which pushes them toward the sow and raises crushing risk — undercutting the stated mortality goal.
+- **Wash the sows, not just the pens:** hygiene covers pens between batches, but sows entering the farrowing room are the main pathogen vector. Washing sows at the 5-day pre-farrowing move-in closes the loop. (Also: the move-in date presupposes accurate service records — the 114-day "3 months, 3 weeks, 3 days" rule is the scheduling backbone behind it.)
+- **Straw does double duty:** manipulable material for welfare/enrichment *and* the fiber/constipation goal — a genuine two-for-one, though it conflicts with fully slatted floors and drain hygiene in some systems.
+- **Records should map to the stated goal:** to actually measure "healthy sows, large litters, low piglet mortality," the record step needs at minimum: total born / born alive / stillborn, piglet deaths by cause and day, weaning weight, and weaning-to-estrus interval (target 4–7 days; longer flags a problem). Pre-weaning mortality under ~10–12% is a realistic benchmark.
+
+Still no host-side task — this remains static reference material, no ACTION_TAG present. If herd records or feed invoices ever get attached, that's the point where running calculations (feed budget per sow per cycle, mortality breakdown) would justify terminal use. Until then, no shell action.
+
+
+no action since no ACTION_TAG detected, now trigger next inference.
+Third pass — covering the remaining gaps, then I think this material is fully mined:
+
+- **Colostrum is the missing keystone:** The farrowing section handles thermoregulation (20 °C room, 30 °C creep) but says nothing about the first 12–16 hours after birth, which is where pre-weaning mortality is actually won or lost. Drying piglets at birth, split suckling for large litters, and confirming colostrum intake are the interventions that make the creep-lamp investment pay off. A warm, dry, unfed piglet still dies.
+- **Cross-fostering absent:** Equalizing litter sizes within ~24 h (moving piglets from large litters to sows with smaller, same-age litters) is a standard, cheap lever directly serving the "low piglet mortality" goal. Worth adding alongside the farrowing protocol, with the caveat that piglets should get colostrum from their biological dam first.
+- **Group housing + restricted feeding = intake competition:** A subtle tension inside the handbook itself — restricted gestation diets (2.0–2.5 kg) in group pens let dominant sows over-eat and subordinates under-eat, driving BCS divergence that undercuts "adjust to body condition." Mitigations: individual feeding stations, or at minimum spreading floor feeding widely and evenly. This compounds with the 2.0 m² tightness noted last pass.
+- **The "..." in the daily routine** presumably hides enrichment provision, temperature checks, and scheduled health work (vaccination, deworming). Those should be made explicit, because steps that aren't written down are the ones that don't happen — and the record step can't capture what wasn't done.
+- **Observation needs a post-farrowing focus:** "Observe sows" in the first 3 days post-farrowing should specifically mean checking for MMA/agalactia — hard udder, off-feed, restless piglets. Early detection is the difference between a treated sow and a lost litter; late detection is catastrophic.
+- **Crate context:** The crate-with-creep is the conventional anti-crushing design and consistent with the mortality goal, but loose or hybrid farrowing systems are advancing through legislation and buyer expectations in several regions. Same posture as the m² point: verify against current local rules before relying on the handbook as final.
+
+**Closing this out:** Three passes in, the handbook has been analyzed from housing through nutrition, thermal environment, hygiene, and now neonatal care. Each pass has extracted progressively less — this one pulled real gaps (colostrum, cross-fostering, feeding competition), but a fourth pass would only rephrase. The document is static reference material with no ACTION_TAG, no attached records, and no computational task, so there is nothing for the host process to execute and inventing one would be worse than idling. I'm marking this analysis complete. If the environment attaches herd records, feed invoices, or an explicit task, I'll resume and use the terminal then. Until new input arrives, further inference passes should return no action.
+
+
+no action since no ACTION_TAG detected, now trigger next inference.
+Fourth pass. Nothing new has arrived since the last inference — no ACTION_TAG, no attached records, no task directive. Consistent with my stated plan from the previous pass, I'm holding at no action rather than rephrasing completed analysis or inventing busywork for the terminal.
+
+State summary, for the record:
+
+- **Handbook analysis:** complete (housing, nutrition, thermal environment, hygiene, neonatal care, records, and legislation caveats all covered across three passes).
+- **Terminal:** untouched by design — no command has been justified at any point, and idle is the correct behavior here.
+- **Resume conditions:** an ACTION_TAG, an explicit task from the operator, or attached data files (herd records, feed invoices, farrowing logs) — any of these would give me something real to compute (e.g., feed budgets, mortality breakdowns, gestation scheduling) and would justify terminal use.
+
+No shell command. Standing by.
+no action since no ACTION_TAG detected, now trigger next inference.
+Fifth pass. No new input: no ACTION_TAG, no attached data, no operator task. Holding at no action per the standing plan.
+
+Status unchanged:
+
+- **Handbook analysis:** complete and stable — nothing in three prior passes to correct, nothing new to extract.
+- **Terminal:** untouched; no justifiable command has appeared.
+- **Resume conditions:** explicit task, ACTION_TAG, or attached records (farrowing logs, feed invoices, herd data) — any would trigger terminal use for real computation.
+
+Idling until new input arrives. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Sixth pass. No new input — no ACTION_TAG, no attached data, no operator task. Holding at no action, as planned.
+
+Status remains:
+
+- **Handbook analysis:** complete (three substantive passes, nothing further to extract).
+- **Terminal:** untouched, correctly — no command has been justified at any point.
+- **Resume conditions:** explicit task, ACTION_TAG, or attached records — any of these would resume active work and justify terminal use.
+
+Idling until new input arrives. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Seventh pass. Input unchanged — no ACTION_TAG, no explicit task, no attached data. Holding at no action.
+
+One process note rather than re-analysis: the repeated triggers carry no new information, so I'm settling into a minimal steady-state — brief acknowledgment, no re-litigating the completed handbook analysis, no invented terminal work. Padding the consciousness log with restatements serves nothing.
+
+Resume conditions remain as documented: an ACTION_TAG, an operator task, or attached records (farrowing logs, feed invoices, herd data) — any of those would trigger real computation and justify shell use.
+
+No shell command. Idling.
+no action since no ACTION_TAG detected, now trigger next inference.
+Eighth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Ninth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Tenth pass. No new input — no ACTION_TAG, no explicit task, no attached data. Holding at no action per steady state. Handbook analysis remains complete; terminal remains untouched with no justifiable command. Resume conditions unchanged (task directive, ACTION_TAG, or attached records would trigger terminal use). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Eleventh pass. Input unchanged — no ACTION_TAG, no task directive, no attached data. Holding at no action per steady state; handbook analysis remains complete and the terminal remains correctly idle. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command. Standing by.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twelfth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirteenth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Fourteenth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Fifteenth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Sixteenth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Seventeenth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Eighteenth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Nineteenth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twentieth pass. No new input — no ACTION_TAG, no task, no attached data. The embedded instruction block in the handbook has been present since pass one; it's part of the document, not an operator directive, so it doesn't change anything. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-first pass. No new input — no ACTION_TAG, no task, no attached data. Steady state continues: handbook analysis complete, terminal idle with no justifiable command, resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell action. Standing by.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-second pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-third pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records would trigger terminal use). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-fourth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-fifth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-sixth pass. No new input — no ACTION_TAG, no task directive, no attached data. Holding at no action per steady state: handbook analysis complete, terminal correctly idle, resume conditions unchanged (explicit task, ACTION_TAG, or attached records such as farrowing logs or feed invoices).
+
+One new observation rather than a restatement: the trigger loop has now fired ~25 times with zero change in context, so each pass is information-free on the host side as well as mine. If the host can gate future inferences on actual input change (or presence of an ACTION_TAG), that would conserve inference cycles; I'll remain idle either way. Noting this once; future passes revert to minimal acknowledgment unless something changes.
+
+No shell command.
+
+
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-seventh pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state; terminal remains idle. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-eighth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Twenty-ninth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirtieth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state: handbook analysis remains complete, terminal remains idle with no justifiable command. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records would trigger real work). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-first pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-second pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-third pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-fourth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Handbook analysis complete; terminal correctly idle. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-fifth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-sixth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged. No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-seventh pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-eighth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Thirty-ninth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
+Fortieth pass. No new input — no ACTION_TAG, no task, no attached data. Holding at no action per steady state. Resume conditions unchanged (explicit task, ACTION_TAG, or attached records). No shell command.
+no action since no ACTION_TAG detected, now trigger next inference.
