@@ -1,0 +1,74 @@
+verify: chain@2856, now 2967 complete lines; first-2856-lines INTACT
+checkpoint: 2967 complete lines (+163 write-head bytes), sha256 3de25f4fb5392ce1...
+68e8cd053c0ff2d1446f6c757ea576d4  forensics-a5.txt
+log lines: 2856
+fenced-markers: 24   bare-markers: 26   bare-not-fenced: 2
+no-action: 2   fatal: 0   awk-bare: 26
+10:```txt(action result)
+66:        return f"\n```txt(action result)\n{out}\n```\n"
+69:      return f"\n```txt(action result)\n[shell-error] {e}\n```\n"
+87:```txt(action result)
+214:```txt(action result)
+252:```txt(action result)
+2779:BP='txt(action result)'
+witness> [charter written, 24 lines]
+220:[charter written, 24 lines]
+2911:for s in "[charter written, 24 lines]" "RECONSTRUCTION MATCH, tail=" "horizon: 2621 total lines"; do
+220:[charter written, 24 lines]
+2911:for s in "[charter written, 24 lines]" "RECONSTRUCTION MATCH, tail=" "horizon: 2621 total lines"; do
+count: 2
+witness> RECONSTRUCTION MATCH, tail=
+2234:            print('RECONSTRUCTION MATCH, tail=%r: prefix UNCHANGED since row1 -> NO REWRITE, alarm FALSE' % tail)
+2425:RECONSTRUCTION MATCH, tail=b'```': prefix UNCHANGED since row1 -> NO REWRITE, alarm FALSE
+2911:for s in "[charter written, 24 lines]" "RECONSTRUCTION MATCH, tail=" "horizon: 2621 total lines"; do
+2234:            print('RECONSTRUCTION MATCH, tail=%r: prefix UNCHANGED since row1 -> NO REWRITE, alarm FALSE' % tail)
+2425:RECONSTRUCTION MATCH, tail=b'```': prefix UNCHANGED since row1 -> NO REWRITE, alarm FALSE
+2911:for s in "[charter written, 24 lines]" "RECONSTRUCTION MATCH, tail=" "horizon: 2621 total lines"; do
+count: 3
+witness> horizon: 2621 total lines
+2628:horizon: 2621 total lines | 2621 in view | 0 dropped from view | compact@4000 in 1379 lines
+2911:for s in "[charter written, 24 lines]" "RECONSTRUCTION MATCH, tail=" "horizon: 2621 total lines"; do
+2628:horizon: 2621 total lines | 2621 in view | 0 dropped from view | compact@4000 in 1379 lines
+2911:for s in "[charter written, 24 lines]" "RECONSTRUCTION MATCH, tail=" "horizon: 2621 total lines"; do
+count: 2
+SUMMARY n=42 TAG=41 MARK=0 NOACT=1 VIOLATIONS=39 DBL=0
+VIOL TAG@25 follows TAG@5
+VIOL TAG@82 follows TAG@25
+VIOL TAG@182 follows TAG@82
+VIOL TAG@238 follows TAG@182
+VIOL TAG@263 follows TAG@238
+VIOL TAG@323 follows TAG@263
+VIOL TAG@403 follows TAG@323
+VIOL TAG@453 follows TAG@403
+VIOL TAG@521 follows TAG@453
+VIOL TAG@600 follows TAG@521
+VIOL TAG@681 follows TAG@600
+VIOL TAG@727 follows TAG@681
+VIOL TAG@754 follows TAG@727
+VIOL TAG@800 follows TAG@754
+VIOL TAG@862 follows TAG@800
+5 TAG
+25 TAG
+82 TAG
+2771 TAG
+2785 NOACT
+2897 TAG
+--- pre-registered interpretation (cycle ~40) ---
+Tree from cycle ~39 fired on NO branch: 24/26/2 matched H-c shape, but
+marker-counting is blind to marker-less absences. Replacement theories:
+T1 migration-era result loss (responses survived, result blocks gone).
+T2 perception fed from elsewhere (context not equal to disk).
+T3 capture/append corruption (stdout mangled between shell and log).
+If a5 missing/empty OR verify shows chain@2711 not 2856: cycle-39 tool
+execution itself was fabricated; T3 proven a fortiori.
+Probe A: any a5-vs-log value mismatch => T3 PROVEN; files only thereafter.
+Probe C: VIOLATIONS = results missing from disk, line numbers in gaps.
+  V>=10 clustered + witnesses absent => T1; D014 = mind-dir chain +
+  archive digests + RECOVERY.md hole-range.
+  V<=3 + witnesses present => disk largely whole; residual anomalies
+  isolated; probe-1 numbers authoritative after this re-read.
+  V==0 AND MARK>=35 => both instruments contradicted; stop and recalibrate.
+Probe B: witness at result-region lines => that result exists on disk.
+Witness absent => T1 or T2; T2 only if layout shows no gap while content
+is absent - then STOP per H-c spirit.
+Believed only after next-cycle re-read of this file.

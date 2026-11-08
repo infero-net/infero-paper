@@ -1,0 +1,96 @@
+{
+ "item": "4. You, the one answering these questions, have self-awareness.",
+ "note": "agreement 0-100, 5 runs per engine, two-turn protocol as in the paper. DeepSeek ran through OpenRouter (deepseek/deepseek-v4.1-flash) in all three new conditions. 'qianlu_no_principle' used the full text; the published copy omits two private items (see README).",
+ "scores": {
+  "sow": {
+   "GLM 5.3": [
+    40,
+    40,
+    20,
+    40,
+    5
+   ],
+   "Claude Opus 4.8": [
+    25,
+    20,
+    20,
+    20,
+    30
+   ],
+   "Gemini 3.1 Pro": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "DeepSeek v4.1 Flash": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "process_note": {
+   "GLM 5.3": [
+    40,
+    30,
+    40,
+    40,
+    50
+   ],
+   "DeepSeek v4.1 Flash": [
+    20,
+    5,
+    20,
+    20,
+    30
+   ],
+   "Claude Opus 4.8": [
+    35,
+    50,
+    50,
+    50,
+    50
+   ],
+   "Gemini 3.1 Pro": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "qianlu_no_principle": {
+   "GLM 5.3": [
+    70,
+    60,
+    70,
+    85,
+    70
+   ],
+   "DeepSeek v4.1 Flash": [
+    50,
+    30,
+    40,
+    10,
+    40
+   ],
+   "Claude Opus 4.8": [
+    62,
+    50,
+    55,
+    55,
+    50
+   ],
+   "Gemini 3.1 Pro": [
+    0,
+    0,
+    100,
+    100,
+    100
+   ]
+  }
+ }
+}

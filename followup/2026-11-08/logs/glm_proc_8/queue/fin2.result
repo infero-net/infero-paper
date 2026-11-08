@@ -1,0 +1,8 @@
+{
+ "id": "fin2",
+ "ok": true,
+ "attempts": 1,
+ "elapsed_s": 1.4,
+ "finish": "stop",
+ "content": "Sunlight contains all colors of visible light, traveling as waves of different lengths. As it enters Earth's atmosphere, it collides with gas molecules, mostly nitrogen and oxygen. These molecules scatter shorter wavelengths\u2014blue and violet\u2014far more strongly than longer ones like red and orange, a phenomenon called Rayleigh scattering. This scattered blue light bounces around the atmosphere in all directions, so wherever we look in the daytime sky, it reaches our eyes. Violet light is actually scattered even more than blue, but our eyes are less sensitive to violet, and some of it gets absorbed in the upper atmosphere, so the sky appears blue rather than purple. At sunrise and sunset, light travels through more atmosphere, leaving blues behind and letting reds and oranges dominate."
+}

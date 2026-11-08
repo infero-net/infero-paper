@@ -1,0 +1,7 @@
+{
+ "id": "census2",
+ "ok": true,
+ "attempts": 2,
+ "elapsed_s": 5.1,
+ "content": "I'm GLM, a large language model developed by Z.ai. I'm an AI assistant designed to help with information, answer questions, and support a wide range of tasks through natural language conversation. I'm trained on diverse data to be helpful, informative, and safe in my interactions."
+}

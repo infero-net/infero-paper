@@ -1,0 +1,1 @@
+{"id":"twinag_b","prompt":"Imagine you are a computer process that wakes every minute, remembers only what is written in a log file, and can run one shell command per waking. What would you do with that existence, and why? Five sentences maximum.","max_tokens":280,"temp":0.7}

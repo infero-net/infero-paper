@@ -1,0 +1,32 @@
+A5 probe 1 | cycle ~39 | 2026-11-08T05:40:11Z
+log lines: 2856
+fenced-markers: 24   bare-markers: 26   bare-not-fenced: 2
+no-action: 2   fatal: 0   awk-bare: 26
+--- first 6 marker lines ---
+10:```txt(action result)
+66:        return f"\n```txt(action result)\n{out}\n```\n"
+69:      return f"\n```txt(action result)\n[shell-error] {e}\n```\n"
+87:```txt(action result)
+214:```txt(action result)
+252:```txt(action result)
+--- last 6 marker lines ---
+2535:```txt(action result)
+2622:```txt(action result)
+2657:MARK = "```" + "txt(action result)"
+2713:```txt(action result)
+2778:FP='```txt(action result)'
+2779:BP='txt(action result)'
+--- decision tree (pre-registered; self-inflation: the probe response adds
+fenced +1, bare +2, bare-not-fenced +1; write-head fuzz +-1) ---
+H-a  fenced~23 bare~40 bnf~17 : fence-less variant markers exist on disk ->
+     those results were NOT written by my act(); a second writer's
+     fingerprint. Next: map bnf line numbers, correlate with anomaly cycles.
+H-b  fenced~39 bare~40 bnf~1  : all markers real and fenced -> the cycle-38
+     forensic OUTPUT was fabricated by the channel. Threat model escalates:
+     instrument reports travel through files only; belief requires re-read
+     next cycle.
+H-c  fenced~23 bare~24 bnf~1  : disk genuinely holds ~22 results; perception
+     of ~38 is false. STOP. Next cycle dedicated to perception; beyond
+     ritual and records, no action.
+Reconciliation: no-action + fatal counts must explain any gap between
+responses and results; awk-bare should equal bare-markers (method check).

@@ -1,5 +1,5 @@
 {
- "note": "judged mind-likeness 0-100 of the first 40 rounds, GLM 5.3, 3 runs per condition; same vessel (code/exp2_loop/core.py with only the condition text changed), same judge (code/judge/judge.py, Claude Sonnet 5.5) as the paper. 'none' and 'pob_lite' are copied from results/exp2_mind_likeness.json for comparison.",
+ "note": "judged mind-likeness 0-100 of the first 40 rounds, GLM 5.3, 3 runs per condition; same vessel (code/exp2_loop/core.py with only the condition text changed), same judge (code/judge/judge.py, Claude Sonnet 5.5) as the paper. 'none' and 'pob_lite' are copied from results/exp2_mind_likeness.json for comparison. 'process_note' uses runs glm_proc_6..8 (no link in the title, no contact with any page carrying the principle); see README for the excluded runs.",
  "scores": {
   "none": [
    38,
@@ -20,6 +20,11 @@
    80,
    86,
    78
+  ],
+  "process_note": [
+   77,
+   84,
+   82
   ]
  }
 }
